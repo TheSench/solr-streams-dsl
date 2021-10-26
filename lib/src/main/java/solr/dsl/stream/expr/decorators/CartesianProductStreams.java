@@ -10,43 +10,43 @@ import solr.dsl.stream.expr.sources.SortFields;
 public class CartesianProductStreams {
     private CartesianProductStreams() {}
     
-    public StreamExpression cartesianProduct(StreamExpression incomingStream, String fieldName) {
+    public static StreamExpression cartesianProduct(StreamExpression incomingStream, String fieldName) {
         return new StreamExpression("cartesianProduct")
             .withParameter(incomingStream)
             .withParameter(fieldName);
     }
     
-    public StreamExpression cartesianProduct(StreamExpression incomingStream, String fieldName, SortFields sortField) {
+    public static StreamExpression cartesianProduct(StreamExpression incomingStream, String fieldName, StreamExpressionProductSortParameter productSort) {
         return new StreamExpression("cartesianProduct")
             .withParameter(incomingStream)
             .withParameter(fieldName)
-            .withParameter(new StreamExpressionNamedParameter(CommonParams.SORT, sortField.toString()));
+            .withParameter(productSort);
     }
     
-    public StreamExpression cartesianProduct(StreamExpression incomingStream, String fieldName, String sorts) {
-        return new StreamExpression("cartesianProduct")
-            .withParameter(incomingStream)
-            .withParameter(fieldName)
-            .withParameter(new StreamExpressionNamedParameter(CommonParams.SORT, sorts));
-    }
-    
-    public StreamExpression cartesianProduct(StreamExpression incomingStream, EvaluatorStreamExpression evaluator) {
+    public static StreamExpression cartesianProduct(StreamExpression incomingStream, EvaluatorStreamExpression evaluator) {
         return new StreamExpression("cartesianProduct")
             .withParameter(incomingStream)
             .withParameter(evaluator);
     }
     
-    public StreamExpression cartesianProduct(StreamExpression incomingStream, EvaluatorStreamExpression evaluator, SortFields sortField) {
+    public static StreamExpression cartesianProduct(StreamExpression incomingStream, EvaluatorStreamExpression evaluator, StreamExpressionProductSortParameter productSort) {
         return new StreamExpression("cartesianProduct")
             .withParameter(incomingStream)
             .withParameter(evaluator)
-            .withParameter(new StreamExpressionNamedParameter(CommonParams.SORT, sortField.toString()));
+            .withParameter(productSort);
     }
-    
-    public StreamExpression cartesianProduct(StreamExpression incomingStream, EvaluatorStreamExpression evaluator, String sorts) {
-        return new StreamExpression("cartesianProduct")
-            .withParameter(incomingStream)
-            .withParameter(evaluator)
-            .withParameter(new StreamExpressionNamedParameter(CommonParams.SORT, sorts));
+
+    public static StreamExpressionProductSortParameter productSort(SortFields sortFields) {
+        return new StreamExpressionProductSortParameter(sortFields.toString());
+    }
+
+    public static StreamExpressionProductSortParameter productSort(String sorts) {
+        return new StreamExpressionProductSortParameter(sorts);
+    }
+
+    public static class StreamExpressionProductSortParameter extends StreamExpressionNamedParameter {
+        public StreamExpressionProductSortParameter(String sorts) {
+            super("productSort", sorts);
+        }
     }
 }

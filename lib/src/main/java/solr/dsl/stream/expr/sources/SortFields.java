@@ -31,17 +31,13 @@ public class SortFields {
     }
 
     private static class SortField {
-        String field;
-        SortDirection sortDirection;
-        SortField nextSortField;
+        private final String field;
+        private final SortDirection sortDirection;
+        private SortField nextSortField;
     
         SortField(String field, SortDirection sortDirection) {
             this.field = field;
             this.sortDirection = sortDirection;
-        }
-    
-        public void setNextSortField(SortField nextSortField) {
-            this.nextSortField = nextSortField;
         }
     
         public void appendSelf(StringBuilder stringBuilder) {
