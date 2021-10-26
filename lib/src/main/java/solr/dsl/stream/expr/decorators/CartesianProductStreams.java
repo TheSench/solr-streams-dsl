@@ -5,7 +5,7 @@ import org.apache.solr.client.solrj.io.stream.expr.StreamExpressionNamedParamete
 import org.apache.solr.common.params.CommonParams;
 
 import solr.dsl.stream.expr.evaluators.EvaluatorStreamExpression;
-import solr.dsl.stream.expr.sources.SortField;
+import solr.dsl.stream.expr.sources.SortFields;
 
 public class CartesianProductStreams {
     private CartesianProductStreams() {}
@@ -16,7 +16,7 @@ public class CartesianProductStreams {
             .withParameter(fieldName);
     }
     
-    public StreamExpression cartesianProduct(StreamExpression incomingStream, String fieldName, SortField sortField) {
+    public StreamExpression cartesianProduct(StreamExpression incomingStream, String fieldName, SortFields sortField) {
         return new StreamExpression("cartesianProduct")
             .withParameter(incomingStream)
             .withParameter(fieldName)
@@ -36,7 +36,7 @@ public class CartesianProductStreams {
             .withParameter(evaluator);
     }
     
-    public StreamExpression cartesianProduct(StreamExpression incomingStream, EvaluatorStreamExpression evaluator, SortField sortField) {
+    public StreamExpression cartesianProduct(StreamExpression incomingStream, EvaluatorStreamExpression evaluator, SortFields sortField) {
         return new StreamExpression("cartesianProduct")
             .withParameter(incomingStream)
             .withParameter(evaluator)

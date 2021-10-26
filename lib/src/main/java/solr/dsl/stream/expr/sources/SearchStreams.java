@@ -1,42 +1,42 @@
 package solr.dsl.stream.expr.sources;
 
-import java.util.Arrays;
-
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 import org.apache.solr.common.params.CommonParams;
 
 public class SearchStreams {
-    public StreamExpression search(String collectionName, StreamExpressionSearchParameter ...params) {
-        return new StreamExpression("search")
-            .withParameter(collectionName)
-            .withParameters(Arrays.asList(params));
+    public static StreamExpression search(String collectionName, StreamExpressionSearchParameter ...params) {
+        StreamExpression searchExpression = new StreamExpression("search").withParameter(collectionName);
+        for (StreamExpressionSearchParameter param : params) {
+            searchExpression.addParameter(param);
+        }
+        return searchExpression;
     }
 
-    public StreamExpressionSearchParameter q(String query) {
+    public static StreamExpressionSearchParameter q(String query) {
         return new StreamExpressionSearchParameter(CommonParams.Q, query);
     }
 
-    public StreamExpressionSearchParameter sort(SortField sortField) {
+    public static StreamExpressionSearchParameter sort(SortFields sortField) {
         return new StreamExpressionSearchParameter(CommonParams.SORT, sortField.toString());
     }
 
-    public StreamExpressionSearchParameter sort(String sorts) {
+    public static StreamExpressionSearchParameter sort(String sorts) {
         return new StreamExpressionSearchParameter(CommonParams.SORT, sorts);
     }
 
-    public StreamExpressionSearchParameter fl(String ...fields) {
+    public static StreamExpressionSearchParameter fl(String ...fields) {
         return new StreamExpressionSearchParameter(CommonParams.FL, String.join(",", fields));
     }
 
-    public StreamExpressionSearchParameter rows(int numRows) {
+    public static StreamExpressionSearchParameter rows(int numRows) {
         return new StreamExpressionSearchParameter(CommonParams.ROWS, Integer.toString(numRows));
     }
 
-    public StreamExpressionSearchParameter qt(RequestHandler requsetHandler) {
-        return new StreamExpressionSearchParameter(CommonParams.QT, requsetHandler.toString());
+    public static StreamExpressionSearchParameter qt(RequestHandler requestHandler) {
+        return new StreamExpressionSearchParameter(CommonParams.QT, requestHandler.toString());
     }
 
-    public StreamExpressionSearchParameter raw(String name, String value) {
+    public static StreamExpressionSearchParameter raw(String name, String value) {
         return new StreamExpressionSearchParameter(name, value);
     }
 }
