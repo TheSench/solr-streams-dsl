@@ -16,12 +16,4 @@ public class OnClause extends StreamExpressionNamedParameter {
     private void setParameter(String fieldInLeft, String fieldInRight) {
         super.setParameter(fieldInLeft + "=" + fieldInRight);
     }
-
-    public static OnClause on(String fieldInBoth) {
-        return new OnClause(fieldInBoth);
-    }
-
-    public static OnClause on(String fieldInLeft, String fieldInRight) {
-        return new OnClause(fieldInLeft, fieldInRight);
-    }
 }
