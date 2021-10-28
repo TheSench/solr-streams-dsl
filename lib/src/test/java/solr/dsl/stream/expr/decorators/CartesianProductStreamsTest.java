@@ -5,10 +5,9 @@ import static solr.dsl.stream.expr.decorators.CartesianProductStreams.cartesianP
 import static solr.dsl.stream.expr.decorators.CartesianProductStreams.productSort;
 import static solr.dsl.stream.expr.evaluators.AbsEvaluators.abs;
 import static solr.dsl.stream.expr.sources.SearchStreams.search;
-import static solr.dsl.stream.expr.sources.SearchStreams.sort;
-import static solr.dsl.stream.expr.sources.SortFields.by;
 import static solr.dsl.stream.expr.sources.SortDirection.ASC;
 import static solr.dsl.stream.expr.sources.SortDirection.DESC;
+import static solr.dsl.stream.expr.sources.SortFields.by;
 
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 import org.junit.jupiter.api.Test;
