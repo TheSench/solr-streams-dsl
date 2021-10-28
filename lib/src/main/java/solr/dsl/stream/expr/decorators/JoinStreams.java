@@ -12,6 +12,13 @@ public class JoinStreams {
             .withParameter(rightStream)
             .withParameter(onClause);
     }
+    
+    public static StreamExpression innerJoin(StreamExpression leftStream, StreamExpression rightStream, OnClause onClause) {
+        return new StreamExpression("innerJoin")
+            .withParameter(leftStream)
+            .withParameter(rightStream)
+            .withParameter(onClause);
+    }
 
     public static OnClause on(String fieldInBoth) {
         return new OnClause(fieldInBoth);
