@@ -62,14 +62,6 @@ public class JoinStreams {
             .withParameter(onClause);
     }
 
-    public static OnClause on(String fieldInBoth) {
-        return new OnClause(fieldInBoth);
-    }
-
-    public static OnClause on(String fieldInLeft, String fieldInRight) {
-        return new OnClause(fieldInLeft, fieldInRight);
-    }
-
     public static HashedClause hashed(StreamExpression stream) {
         return new HashedClause(stream);
     }

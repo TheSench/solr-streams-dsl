@@ -22,16 +22,16 @@ public class SearchStreams {
         return new StreamExpressionSearchParameter(CommonParams.Q, query);
     }
 
+    public static StreamExpressionSearchParameter fq(String filterQuery) {
+        return new StreamExpressionSearchParameter(CommonParams.FQ, filterQuery);
+    }
+
     public static StreamExpressionSearchParameter sort(SortFields sortField) {
         return new StreamExpressionSearchParameter(CommonParams.SORT, sortField.toString());
     }
 
     public static StreamExpressionSearchParameter sort(String sorts) {
         return new StreamExpressionSearchParameter(CommonParams.SORT, sorts);
-    }
-
-    public static StreamExpressionSearchParameter fl(String ...fields) {
-        return new StreamExpressionSearchParameter(CommonParams.FL, String.join(",", fields));
     }
 
     public static StreamExpressionSearchParameter rows(int numRows) {
