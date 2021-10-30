@@ -1,8 +1,9 @@
 package com.github.TheSench.solr.dsl.stream.expr.decorators;
 
-import static com.github.TheSench.solr.dsl.stream.expr.decorators.FetchStreams.fetch;
+import static com.github.TheSench.solr.dsl.stream.expr.params.ByClause.by;
 import static com.github.TheSench.solr.dsl.stream.expr.params.FieldListClause.fl;
-import static com.github.TheSench.solr.dsl.stream.expr.params.OnClause.on;
+import static com.github.TheSench.solr.dsl.stream.expr.params.NClause.n;
+import static com.github.TheSench.solr.dsl.stream.expr.params.ReducerClause.group;
 import static com.github.TheSench.solr.dsl.stream.expr.params.SortClause.sort;
 import static com.github.TheSench.solr.dsl.stream.expr.sources.RequestHandler.EXPORT;
 import static com.github.TheSench.solr.dsl.stream.expr.sources.SearchStreams.q;
@@ -13,23 +14,21 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 import org.junit.jupiter.api.Test;
 
-public class FetchStreamsTest {
+public class ReduceStreamsTest {
     @Test
-    void fetchTest() {
+    void reduceTest() {
         String expected =
-            "fetch(" +
-                "addresses," +
-                "search(people,q=\"*:*\",qt=\"/export\",fl=\"username,firstName,lastName\",sort=\"username asc\")," +
-                "fl=\"streetAddress,city,state,country,zip\"," +
-                "on=\"username=userId\"" +
+            "reduce(" +
+                "search(collection1,q=\"*:*\",qt=\"/export\",fl=\"id,a_s,a_i,a_f\",sort=\"a_s asc,a_f asc\")," +
+                "by=a_s," +
+                "group(sort=\"a_f desc\",n=4)" +
             ")";
 
         StreamExpression expression =
-            fetch(
-                "addresses",
-                search("people", q("*:*"), qt(EXPORT), fl("username", "firstName", "lastName"), sort("username asc")),
-                fl("streetAddress", "city", "state", "country", "zip"),
-                on("username","userId")
+            ReduceStreams.reduce(
+                search("collection1", q("*:*"), qt(EXPORT), fl("id", "a_s", "a_i", "a_f"), sort("a_s asc", "a_f asc")),
+                by("a_s"),
+                group(sort("a_f desc"), n(4))
             );
 
         assertEquals(expected, expression.toString());

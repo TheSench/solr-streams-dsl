@@ -1,12 +1,12 @@
 package com.github.TheSench.solr.dsl.stream.expr.sources;
 
 import static com.github.TheSench.solr.dsl.stream.expr.params.FieldListClause.fl;
+import static com.github.TheSench.solr.dsl.stream.expr.params.SortClause.sort;
 import static com.github.TheSench.solr.dsl.stream.expr.sources.RequestHandler.EXPORT;
 import static com.github.TheSench.solr.dsl.stream.expr.sources.SearchStreams.q;
 import static com.github.TheSench.solr.dsl.stream.expr.sources.SearchStreams.qt;
 import static com.github.TheSench.solr.dsl.stream.expr.sources.SearchStreams.rows;
 import static com.github.TheSench.solr.dsl.stream.expr.sources.SearchStreams.search;
-import static com.github.TheSench.solr.dsl.stream.expr.sources.SearchStreams.sort;
 import static com.github.TheSench.solr.dsl.stream.expr.sources.SortDirection.ASC;
 import static com.github.TheSench.solr.dsl.stream.expr.sources.SortDirection.DESC;
 import static com.github.TheSench.solr.dsl.stream.expr.sources.SortFields.by;

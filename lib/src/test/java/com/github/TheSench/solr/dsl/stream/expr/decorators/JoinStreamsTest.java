@@ -7,11 +7,11 @@ import static com.github.TheSench.solr.dsl.stream.expr.decorators.JoinStreams.le
 import static com.github.TheSench.solr.dsl.stream.expr.decorators.JoinStreams.outerHashJoin;
 import static com.github.TheSench.solr.dsl.stream.expr.params.FieldListClause.fl;
 import static com.github.TheSench.solr.dsl.stream.expr.params.OnClause.on;
+import static com.github.TheSench.solr.dsl.stream.expr.params.SortClause.sort;
 import static com.github.TheSench.solr.dsl.stream.expr.sources.RequestHandler.EXPORT;
 import static com.github.TheSench.solr.dsl.stream.expr.sources.SearchStreams.q;
 import static com.github.TheSench.solr.dsl.stream.expr.sources.SearchStreams.qt;
 import static com.github.TheSench.solr.dsl.stream.expr.sources.SearchStreams.search;
-import static com.github.TheSench.solr.dsl.stream.expr.sources.SearchStreams.sort;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
