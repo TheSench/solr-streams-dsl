@@ -32,10 +32,6 @@ public class Todo {
         throw new NotImplementedException();
     }
 
-    public static StreamExpression fetch() {
-        throw new NotImplementedException();
-    }
-
     public static StreamExpression having() {
         throw new NotImplementedException();
     }
@@ -77,10 +73,6 @@ public class Todo {
     }
 
     public static StreamExpression scoreNodes() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression select() {
         throw new NotImplementedException();
     }
 
