@@ -1,6 +1,6 @@
 package com.github.thesench.solr.dsl.stream.expr.decorators;
 
-import static com.github.thesench.solr.dsl.stream.expr.decorators.FetchStreams.fetch;
+import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.fetch;
 import static com.github.thesench.solr.dsl.stream.expr.params.RequestHandler.EXPORT;
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.fl;
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.on;
@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 import org.junit.jupiter.api.Test;
 
-public class FetchStreamsTest {
+public class FetchTest {
     @Test
     void fetchTest() {
         String expected =

@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 import org.junit.jupiter.api.Test;
 
-public class SelectStreamsTest {
+public class SelectTest {
     
     @Test
     void selectTest() {

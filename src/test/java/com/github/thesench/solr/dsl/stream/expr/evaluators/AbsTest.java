@@ -6,7 +6,7 @@ import static com.github.thesench.solr.dsl.stream.expr.evaluators.StreamEvaluato
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 import org.junit.jupiter.api.Test;
 
-public class AbsStreamTest {
+public class AbsTest {
     @Test
     void abs_givenFieldName_createsAbsEvaluator() {
         StreamExpression expression = abs("someField");

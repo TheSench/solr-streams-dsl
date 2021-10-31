@@ -1,6 +1,9 @@
 package com.github.thesench.solr.dsl.stream.expr.decorators;
 
 import com.github.thesench.solr.dsl.stream.expr.evaluators.EvaluatorStreamExpression;
+import com.github.thesench.solr.dsl.stream.expr.params.BatchSize;
+import com.github.thesench.solr.dsl.stream.expr.params.FL;
+import com.github.thesench.solr.dsl.stream.expr.params.On;
 import com.github.thesench.solr.dsl.stream.expr.params.ProductSort;
 
 import org.apache.commons.lang.NotImplementedException;
@@ -87,6 +90,40 @@ public class StreamDecorators {
 
     public static StreamExpression executor() {
         throw new NotImplementedException();
+    }
+    
+    /**
+     * @see <a href="https://solr.apache.org/guide/8_10/stream-decorator-reference.html#fetch">Stream Decorator Reference: fetch</a>
+     * @param collection
+     * @param stream
+     * @param fl
+     * @param on
+     * @return
+     */
+    public static StreamExpression fetch(String collection, StreamExpression stream, FL fl, On on) {
+        return new StreamExpression("fetch")
+            .withParameter(collection)
+            .withParameter(stream)
+            .withParameter(fl)
+            .withParameter(on);
+    }
+
+    /**
+     * @see <a href="https://solr.apache.org/guide/8_10/stream-decorator-reference.html#fetch">Stream Decorator Reference: fetch</a>
+     * @param collection
+     * @param stream
+     * @param fl
+     * @param on
+     * @param batchSize
+     * @return
+     */
+    public static StreamExpression fetch(String collection, StreamExpression stream, FL fl, On on, BatchSize batchSize) {
+        return new StreamExpression("fetch")
+            .withParameter(collection)
+            .withParameter(stream)
+            .withParameter(fl)
+            .withParameter(on)
+            .withParameter(batchSize);
     }
 
     public static StreamExpression having() {
