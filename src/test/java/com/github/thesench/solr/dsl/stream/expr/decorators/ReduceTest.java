@@ -1,5 +1,6 @@
 package com.github.thesench.solr.dsl.stream.expr.decorators;
 
+import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.reduce;
 import static com.github.thesench.solr.dsl.stream.expr.params.RequestHandler.EXPORT;
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.by;
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.fl;
@@ -25,7 +26,7 @@ public class ReduceTest {
             ")";
 
         StreamExpression expression =
-            ReduceStreams.reduce(
+            reduce(
                 search("collection1", q("*:*"), qt(EXPORT), fl("id", "a_s", "a_i", "a_f"), sort("a_s asc", "a_f asc")),
                 by("a_s"),
                 group(sort("a_f desc"), n(4))

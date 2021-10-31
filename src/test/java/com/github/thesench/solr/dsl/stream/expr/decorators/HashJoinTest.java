@@ -1,9 +1,9 @@
 package com.github.thesench.solr.dsl.stream.expr.decorators;
 
-import static com.github.thesench.solr.dsl.stream.expr.decorators.JoinStreams.hashJoin;
-import static com.github.thesench.solr.dsl.stream.expr.decorators.JoinStreams.hashed;
+import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.hashJoin;
 import static com.github.thesench.solr.dsl.stream.expr.params.RequestHandler.EXPORT;
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.fl;
+import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.hashed;
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.on;
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.q;
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.qt;

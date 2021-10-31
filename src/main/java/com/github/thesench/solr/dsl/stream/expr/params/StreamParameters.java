@@ -1,8 +1,6 @@
 package com.github.thesench.solr.dsl.stream.expr.params;
 
-import com.github.thesench.solr.dsl.stream.expr.sources.SearchParameter;
-
-import org.apache.solr.common.params.CommonParams;
+import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 
 public class StreamParameters {
     private StreamParameters() {}
@@ -33,6 +31,10 @@ public class StreamParameters {
 
     public static Reducer group(Sort sort, N n) {
         return new Reducer("group", sort, n);
+    }
+
+    public static Hashed hashed(StreamExpression stream) {
+        return new Hashed(stream);
     }
 
     public static N n(int n) {

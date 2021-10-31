@@ -1,6 +1,6 @@
 package com.github.thesench.solr.dsl.stream.expr.decorators;
 
-import static com.github.thesench.solr.dsl.stream.expr.decorators.JoinStreams.leftOuterJoin;
+import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.leftOuterJoin;
 import static com.github.thesench.solr.dsl.stream.expr.params.RequestHandler.EXPORT;
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.fl;
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.on;

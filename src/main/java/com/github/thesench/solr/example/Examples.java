@@ -1,6 +1,6 @@
 package com.github.thesench.solr.example;
 
-import static com.github.thesench.solr.dsl.stream.expr.decorators.ReduceStreams.reduce;
+import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.reduce;
 import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.select;
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.by;
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.group;
