@@ -5,8 +5,8 @@ import com.github.thesench.solr.dsl.stream.expr.sources.SearchParameter;
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpressionNamedParameter;
 import org.apache.solr.common.params.CommonParams;
 
-public class FL extends StreamExpressionNamedParameter implements SearchParameter {
-    public FL(String ...fields) {
-        super(CommonParams.FL, String.join(",", fields));
+public class Q extends StreamExpressionNamedParameter implements SearchParameter {
+    public Q(String query) {
+        super(CommonParams.Q, query);
     }
 }

@@ -12,9 +12,9 @@ public class SearchStreams {
      * @param params
      * @return
      */
-    public static StreamExpression search(String collectionName, StreamExpressionSearchParameter ...params) {
+    public static StreamExpression search(String collectionName, SearchParameter ...params) {
         StreamExpression searchExpression = new StreamExpression("search").withParameter(collectionName);
-        for (StreamExpressionSearchParameter param : params) {
+        for (SearchParameter param : params) {
             searchExpression.addParameter(param);
         }
         return searchExpression;

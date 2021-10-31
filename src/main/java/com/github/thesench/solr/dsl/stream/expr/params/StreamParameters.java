@@ -1,6 +1,6 @@
 package com.github.thesench.solr.dsl.stream.expr.params;
 
-import com.github.thesench.solr.dsl.stream.expr.sources.StreamExpressionSearchParameter;
+import com.github.thesench.solr.dsl.stream.expr.sources.SearchParameter;
 
 import org.apache.solr.common.params.CommonParams;
 
@@ -27,11 +27,11 @@ public class StreamParameters {
         return new FL(fields);
     }
 
-    public static StreamExpressionSearchParameter fq(String filterQuery) {
-        return new StreamExpressionSearchParameter(CommonParams.FQ, filterQuery);
+    public static FQ fq(String filterQuery) {
+        return new FQ(filterQuery);
     }
 
-    public static Reducer group(SortClause sort, N n) {
+    public static Reducer group(Sort sort, N n) {
         return new Reducer("group", sort, n);
     }
 
@@ -55,31 +55,31 @@ public class StreamParameters {
         return new ProductSort(sorts);
     }
 
-    public static StreamExpressionSearchParameter q(String query) {
-        return new StreamExpressionSearchParameter(CommonParams.Q, query);
+    public static Q q(String query) {
+        return new Q(query);
     }
 
-    public static StreamExpressionSearchParameter qt(RequestHandler requestHandler) {
-        return new StreamExpressionSearchParameter(CommonParams.QT, requestHandler.toString());
+    public static QT qt(RequestHandler requestHandler) {
+        return new QT(requestHandler);
     }
 
-    public static StreamExpressionSearchParameter raw(String name, String value) {
-        return new StreamExpressionSearchParameter(name, value);
+    public static RawSearchParameter raw(String name, String value) {
+        return new RawSearchParameter(name, value);
     }
 
-    public static StreamExpressionSearchParameter rows(int numRows) {
-        return new StreamExpressionSearchParameter(CommonParams.ROWS, Integer.toString(numRows));
+    public static Rows rows(int numRows) {
+        return new Rows(numRows);
     }
 
-    public static SortClause sort(SortFields sortField) {
-        return new SortClause(sortField.toString());
+    public static Sort sort(SortFields sortField) {
+        return new Sort(sortField.toString());
     }
 
-    public static SortClause sort(String sort) {
-        return new SortClause(sort);
+    public static Sort sort(String sort) {
+        return new Sort(sort);
     }
 
-    public static SortClause sort(String... sorts) {
-        return new SortClause(String.join(",", sorts));
+    public static Sort sort(String... sorts) {
+        return new Sort(String.join(",", sorts));
     }
 }
