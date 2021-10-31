@@ -46,6 +46,20 @@ public class StreamSources {
         throw new NotImplementedException();
     }
 
+    /**
+     * @see <a href="https://solr.apache.org/guide/8_10/stream-source-reference.html#search">Stream Source Reference: search</a>
+     * @param collectionName
+     * @param params
+     * @return
+     */
+    public static StreamExpression search(String collectionName, SearchParameter ...params) {
+        StreamExpression searchExpression = new StreamExpression("search").withParameter(collectionName);
+        for (SearchParameter param : params) {
+            searchExpression.addParameter(param);
+        }
+        return searchExpression;
+    }
+
     public static StreamExpression significantTerms() {
         throw new NotImplementedException();
     }

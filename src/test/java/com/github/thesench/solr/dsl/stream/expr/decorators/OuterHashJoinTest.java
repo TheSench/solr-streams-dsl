@@ -8,7 +8,7 @@ import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.o
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.q;
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.qt;
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.sort;
-import static com.github.thesench.solr.dsl.stream.expr.sources.SearchStreams.search;
+import static com.github.thesench.solr.dsl.stream.expr.sources.StreamSources.search;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;

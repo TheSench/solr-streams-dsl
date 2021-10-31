@@ -8,7 +8,7 @@ import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.n
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.q;
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.rows;
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.sort;
-import static com.github.thesench.solr.dsl.stream.expr.sources.SearchStreams.search;
+import static com.github.thesench.solr.dsl.stream.expr.sources.StreamSources.search;
 
 import java.io.IOException;
 import java.util.HashMap;

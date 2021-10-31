@@ -6,7 +6,7 @@ import static com.github.thesench.solr.dsl.stream.expr.params.SortDirection.ASC;
 import static com.github.thesench.solr.dsl.stream.expr.params.SortDirection.DESC;
 import static com.github.thesench.solr.dsl.stream.expr.params.SortFields.by;
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.productSort;
-import static com.github.thesench.solr.dsl.stream.expr.sources.SearchStreams.search;
+import static com.github.thesench.solr.dsl.stream.expr.sources.StreamSources.search;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
