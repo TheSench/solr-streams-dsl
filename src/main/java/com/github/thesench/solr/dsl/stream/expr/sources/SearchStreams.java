@@ -1,5 +1,7 @@
 package com.github.thesench.solr.dsl.stream.expr.sources;
 
+import com.github.thesench.solr.dsl.stream.expr.params.RequestHandler;
+
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 import org.apache.solr.common.params.CommonParams;
 
@@ -16,25 +18,5 @@ public class SearchStreams {
             searchExpression.addParameter(param);
         }
         return searchExpression;
-    }
-
-    public static StreamExpressionSearchParameter q(String query) {
-        return new StreamExpressionSearchParameter(CommonParams.Q, query);
-    }
-
-    public static StreamExpressionSearchParameter fq(String filterQuery) {
-        return new StreamExpressionSearchParameter(CommonParams.FQ, filterQuery);
-    }
-
-    public static StreamExpressionSearchParameter rows(int numRows) {
-        return new StreamExpressionSearchParameter(CommonParams.ROWS, Integer.toString(numRows));
-    }
-
-    public static StreamExpressionSearchParameter qt(RequestHandler requestHandler) {
-        return new StreamExpressionSearchParameter(CommonParams.QT, requestHandler.toString());
-    }
-
-    public static StreamExpressionSearchParameter raw(String name, String value) {
-        return new StreamExpressionSearchParameter(name, value);
     }
 }

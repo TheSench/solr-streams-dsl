@@ -1,7 +1,7 @@
 package com.github.thesench.solr.dsl.stream.expr.evaluators;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static com.github.thesench.solr.dsl.stream.expr.evaluators.AbsEvaluators.abs;
+import static com.github.thesench.solr.dsl.stream.expr.evaluators.StreamEvaluators.abs;
 
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 import org.junit.jupiter.api.Test;

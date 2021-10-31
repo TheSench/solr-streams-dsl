@@ -2,8 +2,8 @@ package com.github.thesench.solr.dsl.stream.expr.decorators;
 
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 
-import com.github.thesench.solr.dsl.stream.expr.params.HashedClause;
-import com.github.thesench.solr.dsl.stream.expr.params.OnClause;
+import com.github.thesench.solr.dsl.stream.expr.params.Hashed;
+import com.github.thesench.solr.dsl.stream.expr.params.On;
 
 public class JoinStreams {
     /**
@@ -13,7 +13,7 @@ public class JoinStreams {
      * @param onClause
      * @return
      */
-    public static StreamExpression leftOuterJoin(StreamExpression leftStream, StreamExpression rightStream, OnClause onClause) {
+    public static StreamExpression leftOuterJoin(StreamExpression leftStream, StreamExpression rightStream, On onClause) {
         return new StreamExpression("leftOuterJoin")
             .withParameter(leftStream)
             .withParameter(rightStream)
@@ -27,7 +27,7 @@ public class JoinStreams {
      * @param onClause
      * @return
      */
-    public static StreamExpression innerJoin(StreamExpression leftStream, StreamExpression rightStream, OnClause onClause) {
+    public static StreamExpression innerJoin(StreamExpression leftStream, StreamExpression rightStream, On onClause) {
         return new StreamExpression("innerJoin")
             .withParameter(leftStream)
             .withParameter(rightStream)
@@ -41,7 +41,7 @@ public class JoinStreams {
      * @param onClause
      * @return
      */
-    public static StreamExpression hashJoin(StreamExpression leftStream, HashedClause rightStream, OnClause onClause) {
+    public static StreamExpression hashJoin(StreamExpression leftStream, Hashed rightStream, On onClause) {
         return new StreamExpression("hashJoin")
             .withParameter(leftStream)
             .withParameter(rightStream)
@@ -55,14 +55,14 @@ public class JoinStreams {
      * @param onClause
      * @return
      */
-    public static StreamExpression outerHashJoin(StreamExpression leftStream, HashedClause rightStream, OnClause onClause) {
+    public static StreamExpression outerHashJoin(StreamExpression leftStream, Hashed rightStream, On onClause) {
         return new StreamExpression("outerHashJoin")
             .withParameter(leftStream)
             .withParameter(rightStream)
             .withParameter(onClause);
     }
 
-    public static HashedClause hashed(StreamExpression stream) {
-        return new HashedClause(stream);
+    public static Hashed hashed(StreamExpression stream) {
+        return new Hashed(stream);
     }
 }

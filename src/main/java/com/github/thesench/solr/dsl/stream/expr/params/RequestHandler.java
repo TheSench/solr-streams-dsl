@@ -1,4 +1,4 @@
-package com.github.thesench.solr.dsl.stream.expr.sources;
+package com.github.thesench.solr.dsl.stream.expr.params;
 
 public enum RequestHandler {
     

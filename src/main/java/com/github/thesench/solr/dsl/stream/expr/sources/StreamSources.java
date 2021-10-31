@@ -3,7 +3,9 @@ package com.github.thesench.solr.dsl.stream.expr.sources;
 import org.apache.commons.lang.NotImplementedException;
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 
-public class Todo {
+public class StreamSources {
+    private StreamSources() {}
+
     public static StreamExpression jdbc() {
         throw new NotImplementedException();
     }

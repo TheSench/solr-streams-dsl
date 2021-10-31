@@ -1,13 +1,13 @@
 package com.github.thesench.solr.dsl.stream.expr.decorators;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static com.github.thesench.solr.dsl.stream.expr.decorators.CartesianProductStreams.cartesianProduct;
-import static com.github.thesench.solr.dsl.stream.expr.decorators.CartesianProductStreams.productSort;
-import static com.github.thesench.solr.dsl.stream.expr.evaluators.AbsEvaluators.abs;
+import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.cartesianProduct;
+import static com.github.thesench.solr.dsl.stream.expr.evaluators.StreamEvaluators.abs;
+import static com.github.thesench.solr.dsl.stream.expr.params.SortDirection.ASC;
+import static com.github.thesench.solr.dsl.stream.expr.params.SortDirection.DESC;
+import static com.github.thesench.solr.dsl.stream.expr.params.SortFields.by;
+import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.productSort;
 import static com.github.thesench.solr.dsl.stream.expr.sources.SearchStreams.search;
-import static com.github.thesench.solr.dsl.stream.expr.sources.SortDirection.ASC;
-import static com.github.thesench.solr.dsl.stream.expr.sources.SortDirection.DESC;
-import static com.github.thesench.solr.dsl.stream.expr.sources.SortFields.by;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 import org.junit.jupiter.api.Test;
