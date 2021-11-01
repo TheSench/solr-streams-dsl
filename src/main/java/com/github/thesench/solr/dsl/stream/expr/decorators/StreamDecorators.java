@@ -5,9 +5,11 @@ import com.github.thesench.solr.dsl.stream.expr.params.BatchSize;
 import com.github.thesench.solr.dsl.stream.expr.params.By;
 import com.github.thesench.solr.dsl.stream.expr.params.FL;
 import com.github.thesench.solr.dsl.stream.expr.params.Hashed;
+import com.github.thesench.solr.dsl.stream.expr.params.N;
 import com.github.thesench.solr.dsl.stream.expr.params.On;
 import com.github.thesench.solr.dsl.stream.expr.params.ProductSort;
 import com.github.thesench.solr.dsl.stream.expr.params.Reducer;
+import com.github.thesench.solr.dsl.stream.expr.params.Sort;
 
 import org.apache.commons.lang.NotImplementedException;
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
@@ -286,8 +288,18 @@ public class StreamDecorators {
             .withParameter(by);
     }
 
-    public static StreamExpression top() {
-        throw new NotImplementedException();
+    /**
+     * @see <ahref="https://solr.apache.org/guide/8_10/stream-decorator-reference.html#top">Stream Decorator Reference: top</a>
+     * @param n
+     * @param stream
+     * @param sort
+     * @return
+     */
+    public static StreamExpression top(N n, StreamExpression stream, Sort sort) {
+        return new StreamExpression("top")
+            .withParameter(n)
+            .withParameter(stream)
+            .withParameter(sort);
     }
 
     public static StreamExpression unique() {
