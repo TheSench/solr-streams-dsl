@@ -274,8 +274,16 @@ public class StreamDecorators {
         return selectStream;
     }
 
-    public static StreamExpression sort() {
-        throw new NotImplementedException();
+    /**
+     * @see <a href="https://solr.apache.org/guide/8_10/stream-decorator-reference.html#sort">Stream Decorator Reference: sort</a>
+     * @param stream
+     * @param by
+     * @return
+     */
+    public static StreamExpression sort(StreamExpression stream, By by) {
+        return new StreamExpression("sort")
+            .withParameter(stream)
+            .withParameter(by);
     }
 
     public static StreamExpression top() {
