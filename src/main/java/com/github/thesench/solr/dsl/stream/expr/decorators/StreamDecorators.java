@@ -75,8 +75,18 @@ public class StreamDecorators {
         throw new NotImplementedException();
     }
 
-    public static StreamExpression complement() {
-        throw new NotImplementedException();
+    /**
+     * @see <a href="https://solr.apache.org/guide/8_10/stream-decorator-reference.html#complement">Stream Decorator Reference: complement</a>
+     * @param leftStream
+     * @param rightStream
+     * @param onClause
+     * @return
+     */
+    public static StreamExpression complement(StreamExpression leftStream, StreamExpression rightStream, On onClause) {
+        return new StreamExpression("complement")
+            .withParameter(leftStream)
+            .withParameter(rightStream)
+            .withParameter(onClause);
     }
 
     public static StreamExpression daemon() {
@@ -147,8 +157,18 @@ public class StreamDecorators {
         throw new NotImplementedException();
     }
 
-    public static StreamExpression intersect() {
-        throw new NotImplementedException();
+    /**
+     * @see <a href="https://solr.apache.org/guide/8_10/stream-decorator-reference.html#intersect">Stream Decorator Reference: intersect</a>
+     * @param leftStream
+     * @param rightStream
+     * @param onClause
+     * @return
+     */
+    public static StreamExpression intersect(StreamExpression leftStream, StreamExpression rightStream, On onClause) {
+        return new StreamExpression("intersect")
+            .withParameter(leftStream)
+            .withParameter(rightStream)
+            .withParameter(onClause);
     }
     
     /**
@@ -164,6 +184,7 @@ public class StreamDecorators {
             .withParameter(rightStream)
             .withParameter(onClause);
     }
+
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-decorator-reference.html#leftOuterJoin">Stream Decorator Reference: leftOuterJoin</a>
      * @param leftStream
