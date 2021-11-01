@@ -13,9 +13,9 @@ public class StreamEvaluators {
      * @param fieldName
      * @return
      */
-    public static EvaluatorStreamExpression abs(String fieldName) {
-        StreamExpression expression = new EvaluatorStreamExpression("abs").withParameter(fieldName);
-        return (EvaluatorStreamExpression) expression;
+    public static Evaluator abs(String fieldName) {
+        StreamExpression expression = new Evaluator("abs").withParameter(fieldName);
+        return (Evaluator) expression;
     }
 
     /**
@@ -23,9 +23,9 @@ public class StreamEvaluators {
      * @param rawNumber
      * @return
      */
-    public static EvaluatorStreamExpression abs(int rawNumber) {
-        StreamExpression expression = new EvaluatorStreamExpression("abs").withParameter(Integer.toString(rawNumber));
-        return (EvaluatorStreamExpression) expression;
+    public static Evaluator abs(int rawNumber) {
+        StreamExpression expression = new Evaluator("abs").withParameter(Integer.toString(rawNumber));
+        return (Evaluator) expression;
     }
 
     /**
@@ -33,9 +33,9 @@ public class StreamEvaluators {
      * @param rawNumber
      * @return
      */
-    public static EvaluatorStreamExpression abs(short rawNumber) {
-        StreamExpression expression = new EvaluatorStreamExpression("abs").withParameter(Short.toString(rawNumber));
-        return (EvaluatorStreamExpression) expression;
+    public static Evaluator abs(short rawNumber) {
+        StreamExpression expression = new Evaluator("abs").withParameter(Short.toString(rawNumber));
+        return (Evaluator) expression;
     }
 
     /**
@@ -43,9 +43,9 @@ public class StreamEvaluators {
      * @param rawNumber
      * @return
      */
-    public static EvaluatorStreamExpression abs(long rawNumber) {
-        StreamExpression expression = new EvaluatorStreamExpression("abs").withParameter(Long.toString(rawNumber));
-        return (EvaluatorStreamExpression) expression;
+    public static Evaluator abs(long rawNumber) {
+        StreamExpression expression = new Evaluator("abs").withParameter(Long.toString(rawNumber));
+        return (Evaluator) expression;
     }
 
     /**
@@ -53,9 +53,9 @@ public class StreamEvaluators {
      * @param rawNumber
      * @return
      */
-    public static EvaluatorStreamExpression abs(double rawNumber) {
-        StreamExpression expression = new EvaluatorStreamExpression("abs").withParameter(Double.toString(rawNumber));
-        return (EvaluatorStreamExpression) expression;
+    public static Evaluator abs(double rawNumber) {
+        StreamExpression expression = new Evaluator("abs").withParameter(Double.toString(rawNumber));
+        return (Evaluator) expression;
     }
 
     /**
@@ -63,9 +63,9 @@ public class StreamEvaluators {
      * @param rawNumber
      * @return
      */
-    public static EvaluatorStreamExpression abs(float rawNumber) {
-        StreamExpression expression = new EvaluatorStreamExpression("abs").withParameter(Float.toString(rawNumber));
-        return (EvaluatorStreamExpression) expression;
+    public static Evaluator abs(float rawNumber) {
+        StreamExpression expression = new Evaluator("abs").withParameter(Float.toString(rawNumber));
+        return (Evaluator) expression;
     }
 
     public static StreamExpression add() {

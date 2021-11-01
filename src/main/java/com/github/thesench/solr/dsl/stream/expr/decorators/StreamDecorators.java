@@ -1,6 +1,6 @@
 package com.github.thesench.solr.dsl.stream.expr.decorators;
 
-import com.github.thesench.solr.dsl.stream.expr.evaluators.EvaluatorStreamExpression;
+import com.github.thesench.solr.dsl.stream.expr.evaluators.Evaluator;
 import com.github.thesench.solr.dsl.stream.expr.params.BatchSize;
 import com.github.thesench.solr.dsl.stream.expr.params.By;
 import com.github.thesench.solr.dsl.stream.expr.params.FL;
@@ -49,7 +49,7 @@ public class StreamDecorators {
      * @param evaluator
      * @return
      */
-    public static StreamExpression cartesianProduct(StreamExpression incomingStream, EvaluatorStreamExpression evaluator) {
+    public static StreamExpression cartesianProduct(StreamExpression incomingStream, Evaluator evaluator) {
         return new StreamExpression("cartesianProduct")
             .withParameter(incomingStream)
             .withParameter(evaluator);
@@ -62,7 +62,7 @@ public class StreamDecorators {
      * @param productSort
      * @return
      */
-    public static StreamExpression cartesianProduct(StreamExpression incomingStream, EvaluatorStreamExpression evaluator, ProductSort productSort) {
+    public static StreamExpression cartesianProduct(StreamExpression incomingStream, Evaluator evaluator, ProductSort productSort) {
         return new StreamExpression("cartesianProduct")
             .withParameter(incomingStream)
             .withParameter(evaluator)
