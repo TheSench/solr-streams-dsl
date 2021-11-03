@@ -2,7 +2,7 @@ package com.github.thesench.solr.dsl.stream.expr.params;
 
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpressionValue;
 
-public class Field extends StreamExpressionValue implements FieldOrAlias {
+public class Field extends StreamExpressionValue implements FieldOrAlias, FieldOrAliasOrReplace, FieldOrEvaluator {
 
     public Field(String fieldName) {
         super(fieldName);
