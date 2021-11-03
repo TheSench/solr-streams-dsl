@@ -1,5 +1,7 @@
 package com.github.thesench.solr.dsl.stream.expr.evaluators;
 
+import com.sun.jdi.Field;
+
 import org.apache.commons.lang.NotImplementedException;
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 
@@ -13,9 +15,17 @@ public class StreamEvaluators {
      * @param fieldName
      * @return
      */
-    public static Evaluator abs(String fieldName) {
-        StreamExpression expression = new Evaluator("abs").withParameter(fieldName);
-        return (Evaluator) expression;
+    public static NumberEvaluator abs(String fieldName) {
+        return (NumberEvaluator) new NumberEvaluator("abs").withParameter(fieldName);
+    }
+
+    /**
+     * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#abs">Stream Evaluator Reference: abs</a>
+     * @param field
+     * @return
+     */
+    public static NumberEvaluator abs(Field field) {
+        return (NumberEvaluator) new NumberEvaluator("abs").withParameter(field.toString());
     }
 
     /**
@@ -23,9 +33,8 @@ public class StreamEvaluators {
      * @param rawNumber
      * @return
      */
-    public static Evaluator abs(int rawNumber) {
-        StreamExpression expression = new Evaluator("abs").withParameter(Integer.toString(rawNumber));
-        return (Evaluator) expression;
+    public static NumberEvaluator abs(int rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("abs").withParameter(Integer.toString(rawNumber));
     }
 
     /**
@@ -33,9 +42,8 @@ public class StreamEvaluators {
      * @param rawNumber
      * @return
      */
-    public static Evaluator abs(short rawNumber) {
-        StreamExpression expression = new Evaluator("abs").withParameter(Short.toString(rawNumber));
-        return (Evaluator) expression;
+    public static NumberEvaluator abs(long rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("abs").withParameter(Long.toString(rawNumber));
     }
 
     /**
@@ -43,9 +51,8 @@ public class StreamEvaluators {
      * @param rawNumber
      * @return
      */
-    public static Evaluator abs(long rawNumber) {
-        StreamExpression expression = new Evaluator("abs").withParameter(Long.toString(rawNumber));
-        return (Evaluator) expression;
+    public static NumberEvaluator abs(double rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("abs").withParameter(Double.toString(rawNumber));
     }
 
     /**
@@ -53,19 +60,8 @@ public class StreamEvaluators {
      * @param rawNumber
      * @return
      */
-    public static Evaluator abs(double rawNumber) {
-        StreamExpression expression = new Evaluator("abs").withParameter(Double.toString(rawNumber));
-        return (Evaluator) expression;
-    }
-
-    /**
-     * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#abs">Stream Evaluator Reference: abs</a>
-     * @param rawNumber
-     * @return
-     */
-    public static Evaluator abs(float rawNumber) {
-        StreamExpression expression = new Evaluator("abs").withParameter(Float.toString(rawNumber));
-        return (Evaluator) expression;
+    public static NumberEvaluator abs(float rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("abs").withParameter(Float.toString(rawNumber));
     }
 
     public static StreamExpression add() {
