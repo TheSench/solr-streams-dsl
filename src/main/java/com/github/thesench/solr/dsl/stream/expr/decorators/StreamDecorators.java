@@ -4,6 +4,7 @@ import com.github.thesench.solr.dsl.stream.expr.evaluators.Evaluator;
 import com.github.thesench.solr.dsl.stream.expr.params.BatchSize;
 import com.github.thesench.solr.dsl.stream.expr.params.By;
 import com.github.thesench.solr.dsl.stream.expr.params.FL;
+import com.github.thesench.solr.dsl.stream.expr.params.Field;
 import com.github.thesench.solr.dsl.stream.expr.params.Hashed;
 import com.github.thesench.solr.dsl.stream.expr.params.N;
 import com.github.thesench.solr.dsl.stream.expr.params.On;
@@ -40,6 +41,32 @@ public class StreamDecorators {
         return new StreamExpression("cartesianProduct")
             .withParameter(incomingStream)
             .withParameter(fieldName)
+            .withParameter(productSort);
+    }
+
+    /**
+     * @see <a href="https://solr.apache.org/guide/8_10/stream-decorator-reference.html#cartesianproduct">Stream Decorator Reference: cartesianProduct</a>
+     * @param incomingStream
+     * @param field
+     * @return
+     */
+    public static StreamExpression cartesianProduct(StreamExpression incomingStream, Field field) {
+        return new StreamExpression("cartesianProduct")
+            .withParameter(incomingStream)
+            .withParameter(field.toString());
+    }
+    
+    /**
+     * @see <a href="https://solr.apache.org/guide/8_10/stream-decorator-reference.html#cartesianproduct">Stream Decorator Reference: cartesianProduct</a>
+     * @param incomingStream
+     * @param field
+     * @param productSort
+     * @return
+     */
+    public static StreamExpression cartesianProduct(StreamExpression incomingStream, Field field, ProductSort productSort) {
+        return new StreamExpression("cartesianProduct")
+            .withParameter(incomingStream)
+            .withParameter(field.toString())
             .withParameter(productSort);
     }
     
