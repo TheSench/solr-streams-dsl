@@ -1,7 +1,7 @@
 package com.github.thesench.solr.dsl.stream.expr.params;
 
-import java.util.function.BiFunction;
+import org.apache.solr.client.solrj.io.stream.expr.StreamExpressionParameter;
 
-public interface FieldOrAlias {
-    public String format(BiFunction<String, String, String> aliasFormatter);
+public interface FieldOrAlias extends StreamExpressionParameter {
+    public StreamExpressionParameter format(AliasType aliasType);
 }

@@ -1,25 +1,18 @@
 package com.github.thesench.solr.dsl.stream.expr.params;
 
-import java.util.function.BiFunction;
+import org.apache.solr.client.solrj.io.stream.expr.StreamExpressionValue;
 
-public class Field implements FieldOrAlias {
-    private final String fieldName;
+public class Field extends StreamExpressionValue implements FieldOrAlias {
 
     public Field(String fieldName) {
-        this.fieldName = fieldName;
-    }
-
-    @Override
-    public String format(BiFunction<String, String, String> aliasFormatter) {
-        return fieldName;
-    }
-
-    @Override
-    public String toString() {
-        return fieldName;
+        super(fieldName);
     }
 
     public Alias as(String alias) {
-        return new Alias(this.fieldName, alias);
+        return new Alias(this.getValue(), alias);
+    }
+
+    public StreamExpressionValue format(AliasType aliasType) {
+        return this;
     }
 }
