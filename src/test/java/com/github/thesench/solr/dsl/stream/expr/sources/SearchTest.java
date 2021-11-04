@@ -5,10 +5,10 @@ import static com.github.thesench.solr.dsl.stream.expr.params.SortDirection.ASC;
 import static com.github.thesench.solr.dsl.stream.expr.params.SortDirection.DESC;
 import static com.github.thesench.solr.dsl.stream.expr.params.SortFields.by;
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.fl;
-import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.q;
-import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.qt;
-import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.rows;
-import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.sort;
+import static com.github.thesench.solr.dsl.stream.expr.params.Q.q;
+import static com.github.thesench.solr.dsl.stream.expr.params.QT.qt;
+import static com.github.thesench.solr.dsl.stream.expr.params.Rows.rows;
+import static com.github.thesench.solr.dsl.stream.expr.params.Sort.sort;
 import static com.github.thesench.solr.dsl.stream.expr.sources.StreamSources.search;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

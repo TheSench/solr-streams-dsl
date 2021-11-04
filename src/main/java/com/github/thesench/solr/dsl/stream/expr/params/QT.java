@@ -9,4 +9,8 @@ public class QT extends StreamExpressionNamedParameter implements SearchParamete
     public QT(RequestHandler requestHandler) {
         super(CommonParams.QT, requestHandler.toString());
     }
+
+    public static QT qt(RequestHandler requestHandler) {
+        return new QT(requestHandler);
+    }
 }

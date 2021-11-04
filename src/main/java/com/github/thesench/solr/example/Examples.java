@@ -4,10 +4,10 @@ import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorato
 import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.select;
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.by;
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.group;
-import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.n;
-import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.q;
-import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.rows;
-import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.sort;
+import static com.github.thesench.solr.dsl.stream.expr.params.N.n;
+import static com.github.thesench.solr.dsl.stream.expr.params.Q.q;
+import static com.github.thesench.solr.dsl.stream.expr.params.Rows.rows;
+import static com.github.thesench.solr.dsl.stream.expr.params.Sort.sort;
 import static com.github.thesench.solr.dsl.stream.expr.sources.StreamSources.search;
 
 import java.io.IOException;

@@ -9,4 +9,8 @@ public class FQ extends StreamExpressionNamedParameter implements SearchParamete
     public FQ(String filterQuery) {
         super(CommonParams.FQ, filterQuery);
     }
+
+    public static FQ fq(String filterQuery) {
+        return new FQ(filterQuery);
+    }
 }

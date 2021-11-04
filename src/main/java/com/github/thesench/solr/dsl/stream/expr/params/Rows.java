@@ -9,4 +9,8 @@ public class Rows extends StreamExpressionNamedParameter implements SearchParame
     public Rows(int rows) {
         super(CommonParams.ROWS, Integer.toString(rows));
     }
+
+    public static Rows rows(int numRows) {
+        return new Rows(numRows);
+    }
 }
