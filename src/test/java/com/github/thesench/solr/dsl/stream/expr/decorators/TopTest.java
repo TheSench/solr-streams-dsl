@@ -2,11 +2,11 @@ package com.github.thesench.solr.dsl.stream.expr.decorators;
 
 import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.top;
 import static com.github.thesench.solr.dsl.stream.expr.params.RequestHandler.EXPORT;
-import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.fl;
-import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.n;
-import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.q;
-import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.qt;
-import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.sort;
+import static com.github.thesench.solr.dsl.stream.expr.params.FL.fl;
+import static com.github.thesench.solr.dsl.stream.expr.params.N.n;
+import static com.github.thesench.solr.dsl.stream.expr.params.Q.q;
+import static com.github.thesench.solr.dsl.stream.expr.params.QT.qt;
+import static com.github.thesench.solr.dsl.stream.expr.params.Sort.sort;
 import static com.github.thesench.solr.dsl.stream.expr.sources.StreamSources.search;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

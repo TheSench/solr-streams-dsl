@@ -6,4 +6,8 @@ public class N extends StreamExpressionNamedParameter {
     public N(int n) {
         super("n", Integer.toString(n));
     }
+
+    public static N n(int n) {
+        return new N(n);
+    }
 }

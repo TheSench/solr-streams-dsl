@@ -9,4 +9,8 @@ public class Q extends StreamExpressionNamedParameter implements SearchParameter
     public Q(String query) {
         super(CommonParams.Q, query);
     }
+
+    public static Q q(String query) {
+        return new Q(query);
+    }
 }

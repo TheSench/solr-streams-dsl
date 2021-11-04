@@ -9,4 +9,8 @@ public class FL extends StreamExpressionNamedParameter implements SearchParamete
     public FL(String ...fields) {
         super(CommonParams.FL, String.join(",", fields));
     }
+
+    public static FL fl(String... fields) {
+        return new FL(fields);
+    }
 }

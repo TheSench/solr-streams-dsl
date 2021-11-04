@@ -10,4 +10,12 @@ public class Reducer extends StreamExpression {
             addParameter(parameter);
         }
     }
+
+    public static Reducer distinct() {
+        return new Reducer("distinct");
+    }
+
+    public static Reducer group(Sort sort, N n) {
+        return new Reducer("group", sort, n);
+    }
 }

@@ -3,12 +3,12 @@ package com.github.thesench.solr.dsl.stream.expr.decorators;
 import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.innerJoin;
 import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.sort;
 import static com.github.thesench.solr.dsl.stream.expr.params.RequestHandler.EXPORT;
-import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.by;
-import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.fl;
+import static com.github.thesench.solr.dsl.stream.expr.params.By.by;
+import static com.github.thesench.solr.dsl.stream.expr.params.FL.fl;
 import static com.github.thesench.solr.dsl.stream.expr.params.On.on;
-import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.q;
-import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.qt;
-import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.sort;
+import static com.github.thesench.solr.dsl.stream.expr.params.Q.q;
+import static com.github.thesench.solr.dsl.stream.expr.params.QT.qt;
+import static com.github.thesench.solr.dsl.stream.expr.params.Sort.sort;
 import static com.github.thesench.solr.dsl.stream.expr.sources.StreamSources.search;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

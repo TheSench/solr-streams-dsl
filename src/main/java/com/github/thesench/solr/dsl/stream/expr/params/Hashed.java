@@ -7,4 +7,8 @@ public class Hashed extends StreamExpressionNamedParameter {
     public Hashed(StreamExpression stream) {
         super("hashed", stream);
     }
+
+    public static Hashed hashed(StreamExpression stream) {
+        return new Hashed(stream);
+    }
 }
