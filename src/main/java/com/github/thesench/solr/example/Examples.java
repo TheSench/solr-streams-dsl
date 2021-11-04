@@ -2,8 +2,8 @@ package com.github.thesench.solr.example;
 
 import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.reduce;
 import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.select;
-import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.by;
-import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.group;
+import static com.github.thesench.solr.dsl.stream.expr.params.By.by;
+import static com.github.thesench.solr.dsl.stream.expr.params.Reducer.group;
 import static com.github.thesench.solr.dsl.stream.expr.params.N.n;
 import static com.github.thesench.solr.dsl.stream.expr.params.Q.q;
 import static com.github.thesench.solr.dsl.stream.expr.params.Rows.rows;

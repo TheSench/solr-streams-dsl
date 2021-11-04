@@ -1,7 +1,7 @@
 package com.github.thesench.solr.dsl.stream.expr.decorators;
 
 import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.list;
-import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.fl;
+import static com.github.thesench.solr.dsl.stream.expr.params.FL.fl;
 import static com.github.thesench.solr.dsl.stream.expr.params.Q.q;
 import static com.github.thesench.solr.dsl.stream.expr.params.Sort.sort;
 import static com.github.thesench.solr.dsl.stream.expr.sources.StreamSources.search;

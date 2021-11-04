@@ -8,7 +8,7 @@ import static com.github.thesench.solr.dsl.stream.expr.evaluators.If.if_;
 import static com.github.thesench.solr.dsl.stream.expr.params.Replace.replace;
 import static com.github.thesench.solr.dsl.stream.expr.params.Replace.WithValue.withValue;
 import static com.github.thesench.solr.dsl.stream.expr.params.RequestHandler.EXPORT;
-import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.fl;
+import static com.github.thesench.solr.dsl.stream.expr.params.FL.fl;
 import static com.github.thesench.solr.dsl.stream.expr.params.Q.q;
 import static com.github.thesench.solr.dsl.stream.expr.params.QT.qt;
 import static com.github.thesench.solr.dsl.stream.expr.params.Sort.sort;

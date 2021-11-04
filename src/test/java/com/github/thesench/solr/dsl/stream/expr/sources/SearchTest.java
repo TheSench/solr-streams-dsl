@@ -4,7 +4,7 @@ import static com.github.thesench.solr.dsl.stream.expr.params.RequestHandler.EXP
 import static com.github.thesench.solr.dsl.stream.expr.params.SortDirection.ASC;
 import static com.github.thesench.solr.dsl.stream.expr.params.SortDirection.DESC;
 import static com.github.thesench.solr.dsl.stream.expr.params.SortFields.by;
-import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.fl;
+import static com.github.thesench.solr.dsl.stream.expr.params.FL.fl;
 import static com.github.thesench.solr.dsl.stream.expr.params.Q.q;
 import static com.github.thesench.solr.dsl.stream.expr.params.QT.qt;
 import static com.github.thesench.solr.dsl.stream.expr.params.Rows.rows;

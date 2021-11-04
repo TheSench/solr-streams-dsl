@@ -6,4 +6,8 @@ public class BatchSize extends StreamExpressionNamedParameter{
     public BatchSize(int batchSize) {
         super("batchSize", Integer.toString(batchSize));
     }
+
+    public static BatchSize batchSize(int batchSize) {
+        return new BatchSize(batchSize);
+    }
 }

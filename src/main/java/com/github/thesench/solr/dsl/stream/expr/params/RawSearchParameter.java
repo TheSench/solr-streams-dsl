@@ -8,4 +8,8 @@ public class RawSearchParameter extends StreamExpressionNamedParameter implement
     public RawSearchParameter(String name, String value) {
         super(name, value);
     }
+
+    public static RawSearchParameter raw(String name, String value) {
+        return new RawSearchParameter(name, value);
+    }
 }
