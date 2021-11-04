@@ -16,8 +16,20 @@ public class SortFields {
         return new SortFields(sortField);
     }
 
+    public static SortFields by(Field field, SortDirection sortDirection) {
+        SortField sortField = new SortField(field.getValue(), sortDirection);
+        return new SortFields(sortField);
+    }
+
     public SortFields thenBy(String field, SortDirection sortDirection) {
         SortField sortField = new SortField(field, sortDirection);
+        lastSortField.nextSortField = sortField;
+        lastSortField = sortField;
+        return this;
+    }
+
+    public SortFields thenBy(Field field, SortDirection sortDirection) {
+        SortField sortField = new SortField(field.getValue(), sortDirection);
         lastSortField.nextSortField = sortField;
         lastSortField = sortField;
         return this;
