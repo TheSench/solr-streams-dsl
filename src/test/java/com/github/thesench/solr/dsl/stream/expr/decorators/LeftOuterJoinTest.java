@@ -3,7 +3,7 @@ package com.github.thesench.solr.dsl.stream.expr.decorators;
 import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.leftOuterJoin;
 import static com.github.thesench.solr.dsl.stream.expr.params.RequestHandler.EXPORT;
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.fl;
-import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.on;
+import static com.github.thesench.solr.dsl.stream.expr.params.On.on;
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.q;
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.qt;
 import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.sort;

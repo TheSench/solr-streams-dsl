@@ -41,14 +41,6 @@ public class StreamParameters {
         return new N(n);
     }
 
-    public static On on(String fieldInBoth) {
-        return new On(fieldInBoth);
-    }
-
-    public static On on(String fieldInLeft, String fieldInRight) {
-        return new On(fieldInLeft, fieldInRight);
-    }
-
     public static ProductSort productSort(SortFields sortFields) {
         return new ProductSort(sortFields.toString());
     }
