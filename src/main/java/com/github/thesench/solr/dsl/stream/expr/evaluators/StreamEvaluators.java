@@ -1,8 +1,10 @@
 package com.github.thesench.solr.dsl.stream.expr.evaluators;
 
+import com.github.thesench.solr.dsl.stream.expr.params.FieldOrEvaluator;
 import com.sun.jdi.Field;
 
 import org.apache.commons.lang.NotImplementedException;
+import org.apache.solr.client.solrj.io.stream.expr.Expressible;
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 
 public class StreamEvaluators {
@@ -62,10 +64,6 @@ public class StreamEvaluators {
      */
     public static NumberEvaluator abs(float rawNumber) {
         return (NumberEvaluator) new NumberEvaluator("abs").withParameter(Float.toString(rawNumber));
-    }
-
-    public static StreamExpression add() {
-        throw new NotImplementedException();
     }
 
     public static StreamExpression analyze() {
@@ -212,10 +210,6 @@ public class StreamEvaluators {
         throw new NotImplementedException();
     }
 
-    public static StreamExpression eq() {
-        throw new NotImplementedException();
-    }
-
     public static StreamExpression expMovingAge() {
         throw new NotImplementedException();
     }
@@ -283,10 +277,6 @@ public class StreamEvaluators {
     public static StreamExpression hsin() {
         throw new NotImplementedException();
     }
-
-    // public static StreamExpression if() {
-    //     throw new NotImplementedException();
-    // }
 
     public static StreamExpression indexOf() {
         throw new NotImplementedException();

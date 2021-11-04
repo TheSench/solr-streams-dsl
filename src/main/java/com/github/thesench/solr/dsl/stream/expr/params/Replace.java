@@ -20,7 +20,7 @@ interface ReplaceMissingReplacement {
     Replace withReplacement(WithValue withValue);
 }
 
-public class Replace extends StreamExpression implements FieldAliasOrReplace {
+public class Replace extends StreamExpression implements FieldOrAliasOrReplace {
 
     public Replace() {
         super("replace");
@@ -39,7 +39,7 @@ public class Replace extends StreamExpression implements FieldAliasOrReplace {
     }
 
     public static class ReplaceBuilder implements EmptyReplace, ReplaceWithField, ReplaceMissingReplacement {
-        public Replace replace;
+        public Replace replace = new Replace();
 
         @Override
         public ReplaceWithField withFieldName(String fieldName) {

@@ -3,7 +3,7 @@ package com.github.thesench.solr.dsl.stream.expr.params;
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpressionParameter;
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpressionValue;
 
-public class Alias extends StreamExpressionValue implements FieldOrAlias {
+public class Alias extends StreamExpressionValue implements FieldOrAlias, FieldOrAliasOrReplace {
     private final String alias;
 
     public Alias(String fieldName, String alias) {

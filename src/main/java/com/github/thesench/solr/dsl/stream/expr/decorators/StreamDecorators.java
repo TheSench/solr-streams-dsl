@@ -1,10 +1,12 @@
 package com.github.thesench.solr.dsl.stream.expr.decorators;
 
 import com.github.thesench.solr.dsl.stream.expr.evaluators.Evaluator;
+import com.github.thesench.solr.dsl.stream.expr.params.AliasType;
 import com.github.thesench.solr.dsl.stream.expr.params.BatchSize;
 import com.github.thesench.solr.dsl.stream.expr.params.By;
 import com.github.thesench.solr.dsl.stream.expr.params.FL;
 import com.github.thesench.solr.dsl.stream.expr.params.Field;
+import com.github.thesench.solr.dsl.stream.expr.params.FieldOrAliasOrReplace;
 import com.github.thesench.solr.dsl.stream.expr.params.Hashed;
 import com.github.thesench.solr.dsl.stream.expr.params.N;
 import com.github.thesench.solr.dsl.stream.expr.params.On;
@@ -14,6 +16,7 @@ import com.github.thesench.solr.dsl.stream.expr.params.Sort;
 
 import org.apache.commons.lang.NotImplementedException;
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
+import org.apache.solr.client.solrj.io.stream.expr.StreamExpressionParameter;
 
 public class StreamDecorators {
     private StreamDecorators() {}
@@ -320,6 +323,22 @@ public class StreamDecorators {
             .withParameter(stream);
         for (String field : fields) {
             selectStream.addParameter(field);
+        }
+        return selectStream;
+    }
+
+    /**
+     * @see <a href="https://solr.apache.org/guide/8_10/stream-decorator-reference.html#select">Stream Decorator Reference: select</a>
+     * @param stream
+     * @param fields
+     * @return
+     */
+    public static StreamExpression select(StreamExpression stream, FieldOrAliasOrReplace... fields) {
+        StreamExpression selectStream = new StreamExpression("select")
+            .withParameter(stream);
+        for (FieldOrAliasOrReplace fieldOrAlias : fields) {
+            StreamExpressionParameter formattedField = fieldOrAlias.format(AliasType.AS);
+            selectStream.addParameter(formattedField);
         }
         return selectStream;
     }
