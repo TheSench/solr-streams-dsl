@@ -1,10 +1,8 @@
 package com.github.thesench.solr.dsl.stream.expr.evaluators;
 
-import com.github.thesench.solr.dsl.stream.expr.params.FieldOrEvaluator;
 import com.sun.jdi.Field;
 
 import org.apache.commons.lang.NotImplementedException;
-import org.apache.solr.client.solrj.io.stream.expr.Expressible;
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 
 public class StreamEvaluators {

@@ -1,7 +1,6 @@
 package com.github.thesench.solr.dsl.stream.expr.evaluators;
 
 import com.github.thesench.solr.dsl.stream.expr.params.Field;
-import com.github.thesench.solr.dsl.stream.expr.params.FieldOrEvaluator;
 
 public class Div {
     private Div() {}
