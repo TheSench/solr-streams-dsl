@@ -1,7 +1,7 @@
 package com.github.thesench.solr.dsl.stream.expr.decorators;
 
 import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.cartesianProduct;
-import static com.github.thesench.solr.dsl.stream.expr.evaluators.StreamEvaluators.abs;
+import static com.github.thesench.solr.dsl.stream.expr.evaluators.Abs.abs;
 import static com.github.thesench.solr.dsl.stream.expr.params.SortDirection.ASC;
 import static com.github.thesench.solr.dsl.stream.expr.params.SortDirection.DESC;
 import static com.github.thesench.solr.dsl.stream.expr.params.SortFields.by;

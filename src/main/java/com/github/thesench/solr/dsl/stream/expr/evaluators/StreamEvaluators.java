@@ -1,67 +1,11 @@
 package com.github.thesench.solr.dsl.stream.expr.evaluators;
 
-import com.sun.jdi.Field;
-
 import org.apache.commons.lang.NotImplementedException;
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 
 public class StreamEvaluators {
     public static StreamExpression acos() {
         throw new NotImplementedException();
-    }
-
-    /**
-     * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#abs">Stream Evaluator Reference: abs</a>
-     * @param fieldName
-     * @return
-     */
-    public static NumberEvaluator abs(String fieldName) {
-        return (NumberEvaluator) new NumberEvaluator("abs").withParameter(fieldName);
-    }
-
-    /**
-     * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#abs">Stream Evaluator Reference: abs</a>
-     * @param field
-     * @return
-     */
-    public static NumberEvaluator abs(Field field) {
-        return (NumberEvaluator) new NumberEvaluator("abs").withParameter(field.toString());
-    }
-
-    /**
-     * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#abs">Stream Evaluator Reference: abs</a>
-     * @param rawNumber
-     * @return
-     */
-    public static NumberEvaluator abs(int rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("abs").withParameter(Integer.toString(rawNumber));
-    }
-
-    /**
-     * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#abs">Stream Evaluator Reference: abs</a>
-     * @param rawNumber
-     * @return
-     */
-    public static NumberEvaluator abs(long rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("abs").withParameter(Long.toString(rawNumber));
-    }
-
-    /**
-     * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#abs">Stream Evaluator Reference: abs</a>
-     * @param rawNumber
-     * @return
-     */
-    public static NumberEvaluator abs(double rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("abs").withParameter(Double.toString(rawNumber));
-    }
-
-    /**
-     * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#abs">Stream Evaluator Reference: abs</a>
-     * @param rawNumber
-     * @return
-     */
-    public static NumberEvaluator abs(float rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("abs").withParameter(Float.toString(rawNumber));
     }
 
     public static StreamExpression analyze() {
@@ -169,10 +113,6 @@ public class StreamEvaluators {
     }
 
     public static StreamExpression distance() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression div() {
         throw new NotImplementedException();
     }
 
