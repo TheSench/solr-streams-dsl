@@ -16,4 +16,20 @@ public class On extends StreamExpressionNamedParameter {
     private void setParameter(String fieldInLeft, String fieldInRight) {
         super.setParameter(fieldInLeft + "=" + fieldInRight);
     }
+
+    public static On on(String fieldInBoth) {
+        return new On(fieldInBoth);
+    }
+
+    public static On on(String fieldInLeft, String fieldInRight) {
+        return new On(fieldInLeft, fieldInRight);
+    }
+
+    public static On on(Field fieldInBoth) {
+        return new On(fieldInBoth.getValue());
+    }
+
+    public static On on(Field fieldInLeft, Field fieldInRight) {
+        return new On(fieldInLeft.getValue(), fieldInRight.getValue());
+    }
 }

@@ -9,6 +9,8 @@ import static com.github.thesench.solr.dsl.stream.expr.params.StreamParameters.p
 import static com.github.thesench.solr.dsl.stream.expr.sources.StreamSources.search;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.github.thesench.solr.dsl.stream.expr.params.Field;
+
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 import org.junit.jupiter.api.Test;
 
@@ -29,6 +31,7 @@ public class CartesianProductTest {
         
         assertEquals(expected, expression.toString());
     }
+
     @Test
     void cartesianProduct_givenStreamFieldNameAndSort_returnsCartesianProductStream() {
         String expected =
@@ -42,6 +45,44 @@ public class CartesianProductTest {
             cartesianProduct(
                 search("testCollection"),
                 "someField",
+                productSort(by("someField", ASC).thenBy("someOtherField", DESC))
+            );
+        
+        assertEquals(expected, expression.toString());
+    }
+
+    @Test
+    void cartesianProduct_givenStreamAndField_returnsCartesianProductStream() {
+        Field someField = new Field("someField");
+        String expected =
+           "cartesianProduct(" +
+                "search(testCollection)," +
+                "someField" +
+            ")";
+
+        StreamExpression expression =
+            cartesianProduct(
+                search("testCollection"),
+                someField
+            );
+        
+        assertEquals(expected, expression.toString());
+    }
+
+    @Test
+    void cartesianProduct_givenStreamFieldAndSort_returnsCartesianProductStream() {
+        Field someField = new Field("someField");
+        String expected =
+            "cartesianProduct(" +
+                "search(testCollection)," +
+                "someField," +
+                "productSort=\"someField asc,someOtherField desc\"" +
+            ")";
+
+        StreamExpression expression =
+            cartesianProduct(
+                search("testCollection"),
+                someField,
                 productSort(by("someField", ASC).thenBy("someOtherField", DESC))
             );
         
