@@ -1,6 +1,5 @@
 package com.github.thesench.solr.dsl.stream.expr.decorators;
 
-import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.select;
 import static com.github.thesench.solr.dsl.stream.expr.evaluators.Add.add;
 import static com.github.thesench.solr.dsl.stream.expr.evaluators.Div.div;
 import static com.github.thesench.solr.dsl.stream.expr.evaluators.Eq.eq;
@@ -12,10 +11,10 @@ import static com.github.thesench.solr.dsl.stream.expr.params.FL.fl;
 import static com.github.thesench.solr.dsl.stream.expr.params.Q.q;
 import static com.github.thesench.solr.dsl.stream.expr.params.QT.qt;
 import static com.github.thesench.solr.dsl.stream.expr.params.Sort.sort;
-import static com.github.thesench.solr.dsl.stream.expr.sources.StreamSources.search;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.github.thesench.solr.dsl.stream.expr.params.Field;
+import com.github.thesench.solr.dsl.stream.expr.sources.Search;
 
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 import org.junit.jupiter.api.Test;
@@ -36,8 +35,8 @@ public class SelectTest {
             ")";
         
         StreamExpression expression =
-            select(
-                search("collection1", fl("id", "teamName_s", "wins", "losses"), q("*:*"), qt(EXPORT), sort("id asc")),
+            Select.select(
+                Search.search("collection1", fl("id", "teamName_s", "wins", "losses"), q("*:*"), qt(EXPORT), sort("id asc")),
                 "teamName_s as teamName",
                 "wins",
                 "losses",
@@ -66,8 +65,8 @@ public class SelectTest {
             ")";
         
         StreamExpression expression =
-            select(
-                search("collection1", fl("id", "teamName_s", "wins", "losses"), q("*:*"), qt(EXPORT), sort("id asc")),
+            Select.select(
+                Search.search("collection1", fl("id", "teamName_s", "wins", "losses"), q("*:*"), qt(EXPORT), sort("id asc")),
                 teamName_s.as("teamName"),
                 wins,
                 losses,

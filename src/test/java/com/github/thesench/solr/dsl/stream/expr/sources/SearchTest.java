@@ -9,7 +9,6 @@ import static com.github.thesench.solr.dsl.stream.expr.params.Q.q;
 import static com.github.thesench.solr.dsl.stream.expr.params.QT.qt;
 import static com.github.thesench.solr.dsl.stream.expr.params.Rows.rows;
 import static com.github.thesench.solr.dsl.stream.expr.params.Sort.sort;
-import static com.github.thesench.solr.dsl.stream.expr.sources.StreamSources.search;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
@@ -18,7 +17,7 @@ import org.junit.jupiter.api.Test;
 public class SearchTest {
     @Test
     void search_withOnlyCollection() {
-        StreamExpression expression = search("someCollection");
+        StreamExpression expression = Search.search("someCollection");
 
         assertEquals("search(someCollection)", expression.toString());
     }
@@ -36,7 +35,7 @@ public class SearchTest {
             ")";
 
         StreamExpression expression =
-            search(
+            Search.search(
                 "someCollection",
                 q("someField:someValue"),
                 fl("field1", "field2", "field3 as someAlias"),
