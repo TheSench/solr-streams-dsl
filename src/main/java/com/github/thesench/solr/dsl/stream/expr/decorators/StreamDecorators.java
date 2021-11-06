@@ -3,7 +3,6 @@ package com.github.thesench.solr.dsl.stream.expr.decorators;
 import com.github.thesench.solr.dsl.stream.expr.params.AliasType;
 import com.github.thesench.solr.dsl.stream.expr.params.By;
 import com.github.thesench.solr.dsl.stream.expr.params.FieldOrAliasOrReplace;
-import com.github.thesench.solr.dsl.stream.expr.params.Hashed;
 import com.github.thesench.solr.dsl.stream.expr.params.N;
 import com.github.thesench.solr.dsl.stream.expr.params.On;
 import com.github.thesench.solr.dsl.stream.expr.params.Reducer;
@@ -40,20 +39,6 @@ public class StreamDecorators {
         throw new NotImplementedException();
     }
     
-    /**
-     * @see <a href="https://solr.apache.org/guide/8_10/stream-decorator-reference.html#hashJoin">Stream Decorator Reference: hashJoin</a>
-     * @param leftStream
-     * @param rightStream
-     * @param onClause
-     * @return
-     */
-    public static StreamExpression hashJoin(StreamExpression leftStream, Hashed rightStream, On onClause) {
-        return new StreamExpression("hashJoin")
-            .withParameter(leftStream)
-            .withParameter(rightStream)
-            .withParameter(onClause);
-    }
-
     public static StreamExpression having() {
         throw new NotImplementedException();
     }
@@ -72,34 +57,6 @@ public class StreamDecorators {
             .withParameter(onClause);
     }
     
-    /**
-     * @see <a href="https://solr.apache.org/guide/8_10/stream-decorator-reference.html#innerJoin">Stream Decorator Reference: innerJoin</a>
-     * @param leftStream
-     * @param rightStream
-     * @param onClause
-     * @return
-     */
-    public static StreamExpression innerJoin(StreamExpression leftStream, StreamExpression rightStream, On onClause) {
-        return new StreamExpression("innerJoin")
-            .withParameter(leftStream)
-            .withParameter(rightStream)
-            .withParameter(onClause);
-    }
-
-    /**
-     * @see <a href="https://solr.apache.org/guide/8_10/stream-decorator-reference.html#leftOuterJoin">Stream Decorator Reference: leftOuterJoin</a>
-     * @param leftStream
-     * @param rightStream
-     * @param onClause
-     * @return
-     */
-    public static StreamExpression leftOuterJoin(StreamExpression leftStream, StreamExpression rightStream, On onClause) {
-        return new StreamExpression("leftOuterJoin")
-            .withParameter(leftStream)
-            .withParameter(rightStream)
-            .withParameter(onClause);
-    }
-
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-decorator-reference.html#list">Stream Decorator Reference: list</a>
      * @param stream1
@@ -133,20 +90,6 @@ public class StreamDecorators {
         throw new NotImplementedException();
     }
     
-    /**
-     * @see <a href="https://solr.apache.org/guide/8_10/stream-decorator-reference.html#outerHashJoin">Stream Decorator Reference: outerHashJoin</a>
-     * @param leftStream
-     * @param rightStream
-     * @param onClause
-     * @return
-     */
-    public static StreamExpression outerHashJoin(StreamExpression leftStream, Hashed rightStream, On onClause) {
-        return new StreamExpression("outerHashJoin")
-            .withParameter(leftStream)
-            .withParameter(rightStream)
-            .withParameter(onClause);
-    }
-
     public static StreamExpression parallel() {
         throw new NotImplementedException();
     }

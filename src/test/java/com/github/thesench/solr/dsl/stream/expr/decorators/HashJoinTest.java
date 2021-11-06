@@ -1,6 +1,5 @@
 package com.github.thesench.solr.dsl.stream.expr.decorators;
 
-import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.hashJoin;
 import static com.github.thesench.solr.dsl.stream.expr.params.RequestHandler.EXPORT;
 import static com.github.thesench.solr.dsl.stream.expr.params.FL.fl;
 import static com.github.thesench.solr.dsl.stream.expr.params.Hashed.hashed;
@@ -25,7 +24,7 @@ class HashJoinTest {
             ")";
 
         StreamExpression expression =
-            hashJoin(
+            HashJoin.hashJoin(
                 search("people", q("*:*"), qt(EXPORT), fl("personId,name"), sort("personId asc")),
                 hashed(search("pets", q("type:cat"), qt(EXPORT), fl("personId,petName"), sort("personId asc"))),
                 on("personId")
@@ -44,7 +43,7 @@ class HashJoinTest {
             ")";
 
         StreamExpression expression =
-            hashJoin(
+            HashJoin.hashJoin(
                 search("people", q("*:*"), qt(EXPORT), fl("personId,name"), sort("personId asc")),
                 hashed(search("pets", q("type:cat"), qt(EXPORT), fl("ownerId,petName"), sort("ownerId asc"))),
                 on("personId", "ownerId")

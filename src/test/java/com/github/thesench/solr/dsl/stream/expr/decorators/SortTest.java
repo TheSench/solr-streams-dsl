@@ -1,6 +1,5 @@
 package com.github.thesench.solr.dsl.stream.expr.decorators;
 
-import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.innerJoin;
 import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.sort;
 import static com.github.thesench.solr.dsl.stream.expr.params.RequestHandler.EXPORT;
 import static com.github.thesench.solr.dsl.stream.expr.params.By.by;
@@ -31,7 +30,7 @@ public class SortTest {
         
         StreamExpression expression =
             sort(
-                innerJoin(
+                InnerJoin.innerJoin(
                     search("people", q("*:*"), qt(EXPORT), fl("id", "name"), sort("id asc")),
                     search("pets", q("type:dog"), qt(EXPORT), fl("owner", "petName"), sort("owner asc")),
                     on("id", "owner")

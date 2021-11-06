@@ -1,6 +1,5 @@
 package com.github.thesench.solr.dsl.stream.expr.decorators;
 
-import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.leftOuterJoin;
 import static com.github.thesench.solr.dsl.stream.expr.params.RequestHandler.EXPORT;
 import static com.github.thesench.solr.dsl.stream.expr.params.FL.fl;
 import static com.github.thesench.solr.dsl.stream.expr.params.On.on;
@@ -24,7 +23,7 @@ class LeftOuterJoinTest {
             ")";
 
         StreamExpression expression =
-            leftOuterJoin(
+            LeftOuterJoin.leftOuterJoin(
                 search("people", q("*:*"), qt(EXPORT), fl("personId,name"), sort("personId asc")),
                 search("pets", q("type:cat"), qt(EXPORT), fl("personId,petName"), sort("personId asc")),
                 on("personId")
@@ -43,7 +42,7 @@ class LeftOuterJoinTest {
             ")";
 
         StreamExpression expression =
-            leftOuterJoin(
+            LeftOuterJoin.leftOuterJoin(
                 search("people", q("*:*"), qt(EXPORT), fl("personId,name"), sort("personId asc")),
                 search("pets", q("type:cat"), qt(EXPORT), fl("ownerId,petName"), sort("ownerId asc")),
                 on("personId", "ownerId")
