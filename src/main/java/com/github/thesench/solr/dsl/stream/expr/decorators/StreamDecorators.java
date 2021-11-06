@@ -107,18 +107,6 @@ public class StreamDecorators {
     }
 
     /**
-     * @see <a href="https://solr.apache.org/guide/8_10/stream-decorator-reference.html#sort">Stream Decorator Reference: sort</a>
-     * @param stream
-     * @param by
-     * @return
-     */
-    public static StreamExpression sort(StreamExpression stream, By by) {
-        return new StreamExpression("sort")
-            .withParameter(stream)
-            .withParameter(by);
-    }
-
-    /**
      * @see <ahref="https://solr.apache.org/guide/8_10/stream-decorator-reference.html#top">Stream Decorator Reference: top</a>
      * @param n
      * @param stream
