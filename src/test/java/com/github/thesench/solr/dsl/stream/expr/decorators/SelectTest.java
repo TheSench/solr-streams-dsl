@@ -1,6 +1,5 @@
 package com.github.thesench.solr.dsl.stream.expr.decorators;
 
-import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.select;
 import static com.github.thesench.solr.dsl.stream.expr.evaluators.Add.add;
 import static com.github.thesench.solr.dsl.stream.expr.evaluators.Div.div;
 import static com.github.thesench.solr.dsl.stream.expr.evaluators.Eq.eq;
@@ -36,7 +35,7 @@ public class SelectTest {
             ")";
         
         StreamExpression expression =
-            select(
+            Select.select(
                 search("collection1", fl("id", "teamName_s", "wins", "losses"), q("*:*"), qt(EXPORT), sort("id asc")),
                 "teamName_s as teamName",
                 "wins",
@@ -66,7 +65,7 @@ public class SelectTest {
             ")";
         
         StreamExpression expression =
-            select(
+            Select.select(
                 search("collection1", fl("id", "teamName_s", "wins", "losses"), q("*:*"), qt(EXPORT), sort("id asc")),
                 teamName_s.as("teamName"),
                 wins,

@@ -1,7 +1,6 @@
 package com.github.thesench.solr.example;
 
 import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.reduce;
-import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.select;
 import static com.github.thesench.solr.dsl.stream.expr.params.By.by;
 import static com.github.thesench.solr.dsl.stream.expr.params.Reducer.group;
 import static com.github.thesench.solr.dsl.stream.expr.params.N.n;
@@ -13,6 +12,8 @@ import static com.github.thesench.solr.dsl.stream.expr.sources.StreamSources.sea
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+
+import com.github.thesench.solr.dsl.stream.expr.decorators.Select;
 
 import org.apache.solr.client.solrj.io.Tuple;
 import org.apache.solr.client.solrj.io.comp.ComparatorOrder;
@@ -181,7 +182,7 @@ public class Examples {
 
     public static void searchUsingDsl() throws IOException {
         StreamExpression streamExpression =
-            select(
+            Select.select(
                 reduce(
                     search(
                         "techproducts",
