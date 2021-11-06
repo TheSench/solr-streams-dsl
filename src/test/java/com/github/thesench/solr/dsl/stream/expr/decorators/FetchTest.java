@@ -1,6 +1,5 @@
 package com.github.thesench.solr.dsl.stream.expr.decorators;
 
-import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.fetch;
 import static com.github.thesench.solr.dsl.stream.expr.params.RequestHandler.EXPORT;
 import static com.github.thesench.solr.dsl.stream.expr.params.FL.fl;
 import static com.github.thesench.solr.dsl.stream.expr.params.On.on;
@@ -25,7 +24,7 @@ public class FetchTest {
             ")";
 
         StreamExpression expression =
-            fetch(
+            Fetch.fetch(
                 "addresses",
                 search("people", q("*:*"), qt(EXPORT), fl("username", "firstName", "lastName"), sort("username asc")),
                 fl("streetAddress", "city", "state", "country", "zip"),
