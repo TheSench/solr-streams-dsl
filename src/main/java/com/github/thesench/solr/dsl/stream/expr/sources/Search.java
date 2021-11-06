@@ -1,5 +1,7 @@
 package com.github.thesench.solr.dsl.stream.expr.sources;
 
+import com.github.thesench.solr.dsl.stream.expr.params.SearchParameter;
+
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 
 public class Search {
