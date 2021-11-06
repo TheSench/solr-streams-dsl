@@ -1,6 +1,5 @@
 package com.github.thesench.solr.dsl.stream.expr.decorators;
 
-import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.cartesianProduct;
 import static com.github.thesench.solr.dsl.stream.expr.evaluators.Abs.abs;
 import static com.github.thesench.solr.dsl.stream.expr.params.SortDirection.ASC;
 import static com.github.thesench.solr.dsl.stream.expr.params.SortDirection.DESC;
@@ -24,7 +23,7 @@ public class CartesianProductTest {
             ")";
 
         StreamExpression expression =
-            cartesianProduct(
+            CartesianProduct.cartesianProduct(
                 search("testCollection"),
                 "someField"
             );
@@ -42,7 +41,7 @@ public class CartesianProductTest {
             ")";
 
         StreamExpression expression =
-            cartesianProduct(
+            CartesianProduct.cartesianProduct(
                 search("testCollection"),
                 "someField",
                 productSort(by("someField", ASC).thenBy("someOtherField", DESC))
@@ -61,7 +60,7 @@ public class CartesianProductTest {
             ")";
 
         StreamExpression expression =
-            cartesianProduct(
+            CartesianProduct.cartesianProduct(
                 search("testCollection"),
                 someField
             );
@@ -80,7 +79,7 @@ public class CartesianProductTest {
             ")";
 
         StreamExpression expression =
-            cartesianProduct(
+            CartesianProduct.cartesianProduct(
                 search("testCollection"),
                 someField,
                 productSort(by("someField", ASC).thenBy("someOtherField", DESC))
@@ -98,7 +97,7 @@ public class CartesianProductTest {
             ")";
 
         StreamExpression expression = 
-            cartesianProduct(
+            CartesianProduct.cartesianProduct(
                 search("testCollection"),
                 abs(12)
             );
@@ -116,7 +115,7 @@ public class CartesianProductTest {
         ")";
         
         StreamExpression expression =
-            cartesianProduct(
+            CartesianProduct.cartesianProduct(
                 search("testCollection"),
                 abs(12),
                 productSort("someField ASC")
