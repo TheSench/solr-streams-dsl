@@ -6,8 +6,9 @@ import static com.github.thesench.solr.dsl.stream.expr.params.On.on;
 import static com.github.thesench.solr.dsl.stream.expr.params.Q.q;
 import static com.github.thesench.solr.dsl.stream.expr.params.QT.qt;
 import static com.github.thesench.solr.dsl.stream.expr.params.Sort.sort;
-import static com.github.thesench.solr.dsl.stream.expr.sources.StreamSources.search;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import com.github.thesench.solr.dsl.stream.expr.sources.Search;
 
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 import org.junit.jupiter.api.Test;
@@ -24,8 +25,8 @@ class IntersectTest {
 
         StreamExpression expression =
             Intersect.intersect(
-                search("people", q("*:*"), qt(EXPORT), fl("personId,name"), sort("personId asc")),
-                search("pets", q("type:cat"), qt(EXPORT), fl("personId,petName"), sort("personId asc")),
+                Search.search("people", q("*:*"), qt(EXPORT), fl("personId,name"), sort("personId asc")),
+                Search.search("pets", q("type:cat"), qt(EXPORT), fl("personId,petName"), sort("personId asc")),
                 on("personId")
             );
         
@@ -43,8 +44,8 @@ class IntersectTest {
 
         StreamExpression expression =
             Intersect.intersect(
-                search("people", q("*:*"), qt(EXPORT), fl("personId,name"), sort("personId asc")),
-                search("pets", q("type:cat"), qt(EXPORT), fl("ownerId,petName"), sort("ownerId asc")),
+                Search.search("people", q("*:*"), qt(EXPORT), fl("personId,name"), sort("personId asc")),
+                Search.search("pets", q("type:cat"), qt(EXPORT), fl("ownerId,petName"), sort("ownerId asc")),
                 on("personId", "ownerId")
             );
         

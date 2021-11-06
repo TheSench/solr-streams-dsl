@@ -7,13 +7,13 @@ import static com.github.thesench.solr.dsl.stream.expr.params.N.n;
 import static com.github.thesench.solr.dsl.stream.expr.params.Q.q;
 import static com.github.thesench.solr.dsl.stream.expr.params.Rows.rows;
 import static com.github.thesench.solr.dsl.stream.expr.params.Sort.sort;
-import static com.github.thesench.solr.dsl.stream.expr.sources.StreamSources.search;
 
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 import com.github.thesench.solr.dsl.stream.expr.decorators.Select;
+import com.github.thesench.solr.dsl.stream.expr.sources.Search;
 
 import org.apache.solr.client.solrj.io.Tuple;
 import org.apache.solr.client.solrj.io.comp.ComparatorOrder;
@@ -184,7 +184,7 @@ public class Examples {
         StreamExpression streamExpression =
             Select.select(
                 reduce(
-                    search(
+                    Search.search(
                         "techproducts",
                         q("popularity:[6 TO 10]"),
                         rows(25),

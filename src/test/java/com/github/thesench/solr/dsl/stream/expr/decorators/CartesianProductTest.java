@@ -5,10 +5,10 @@ import static com.github.thesench.solr.dsl.stream.expr.params.SortDirection.ASC;
 import static com.github.thesench.solr.dsl.stream.expr.params.SortDirection.DESC;
 import static com.github.thesench.solr.dsl.stream.expr.params.SortFields.by;
 import static com.github.thesench.solr.dsl.stream.expr.params.ProductSort.productSort;
-import static com.github.thesench.solr.dsl.stream.expr.sources.StreamSources.search;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.github.thesench.solr.dsl.stream.expr.params.Field;
+import com.github.thesench.solr.dsl.stream.expr.sources.Search;
 
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 import org.junit.jupiter.api.Test;
@@ -24,7 +24,7 @@ public class CartesianProductTest {
 
         StreamExpression expression =
             CartesianProduct.cartesianProduct(
-                search("testCollection"),
+                Search.search("testCollection"),
                 "someField"
             );
         
@@ -42,7 +42,7 @@ public class CartesianProductTest {
 
         StreamExpression expression =
             CartesianProduct.cartesianProduct(
-                search("testCollection"),
+                Search.search("testCollection"),
                 "someField",
                 productSort(by("someField", ASC).thenBy("someOtherField", DESC))
             );
@@ -61,7 +61,7 @@ public class CartesianProductTest {
 
         StreamExpression expression =
             CartesianProduct.cartesianProduct(
-                search("testCollection"),
+                Search.search("testCollection"),
                 someField
             );
         
@@ -80,7 +80,7 @@ public class CartesianProductTest {
 
         StreamExpression expression =
             CartesianProduct.cartesianProduct(
-                search("testCollection"),
+                Search.search("testCollection"),
                 someField,
                 productSort(by("someField", ASC).thenBy("someOtherField", DESC))
             );
@@ -98,7 +98,7 @@ public class CartesianProductTest {
 
         StreamExpression expression = 
             CartesianProduct.cartesianProduct(
-                search("testCollection"),
+                Search.search("testCollection"),
                 abs(12)
             );
 
@@ -116,7 +116,7 @@ public class CartesianProductTest {
         
         StreamExpression expression =
             CartesianProduct.cartesianProduct(
-                search("testCollection"),
+                Search.search("testCollection"),
                 abs(12),
                 productSort("someField ASC")
             );
