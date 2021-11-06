@@ -4,7 +4,6 @@ import com.github.thesench.solr.dsl.stream.expr.params.AliasType;
 import com.github.thesench.solr.dsl.stream.expr.params.By;
 import com.github.thesench.solr.dsl.stream.expr.params.FieldOrAliasOrReplace;
 import com.github.thesench.solr.dsl.stream.expr.params.N;
-import com.github.thesench.solr.dsl.stream.expr.params.On;
 import com.github.thesench.solr.dsl.stream.expr.params.Reducer;
 import com.github.thesench.solr.dsl.stream.expr.params.Sort;
 
@@ -43,20 +42,6 @@ public class StreamDecorators {
         throw new NotImplementedException();
     }
 
-    /**
-     * @see <a href="https://solr.apache.org/guide/8_10/stream-decorator-reference.html#intersect">Stream Decorator Reference: intersect</a>
-     * @param leftStream
-     * @param rightStream
-     * @param onClause
-     * @return
-     */
-    public static StreamExpression intersect(StreamExpression leftStream, StreamExpression rightStream, On onClause) {
-        return new StreamExpression("intersect")
-            .withParameter(leftStream)
-            .withParameter(rightStream)
-            .withParameter(onClause);
-    }
-    
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-decorator-reference.html#list">Stream Decorator Reference: list</a>
      * @param stream1
