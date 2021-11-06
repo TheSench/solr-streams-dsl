@@ -26,20 +26,6 @@ public class StreamDecorators {
         throw new NotImplementedException();
     }
 
-    /**
-     * @see <a href="https://solr.apache.org/guide/8_10/stream-decorator-reference.html#complement">Stream Decorator Reference: complement</a>
-     * @param leftStream
-     * @param rightStream
-     * @param onClause
-     * @return
-     */
-    public static StreamExpression complement(StreamExpression leftStream, StreamExpression rightStream, On onClause) {
-        return new StreamExpression("complement")
-            .withParameter(leftStream)
-            .withParameter(rightStream)
-            .withParameter(onClause);
-    }
-
     public static StreamExpression daemon() {
         throw new NotImplementedException();
     }
