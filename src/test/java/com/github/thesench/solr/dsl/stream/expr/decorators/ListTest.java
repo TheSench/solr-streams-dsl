@@ -1,6 +1,5 @@
 package com.github.thesench.solr.dsl.stream.expr.decorators;
 
-import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.list;
 import static com.github.thesench.solr.dsl.stream.expr.params.FL.fl;
 import static com.github.thesench.solr.dsl.stream.expr.params.Q.q;
 import static com.github.thesench.solr.dsl.stream.expr.params.Sort.sort;
@@ -18,7 +17,7 @@ public class ListTest {
                 "search(collection2,q=\"*:*\",fl=\"id,prod_ss\",sort=\"id asc\"))";
         
         StreamExpression expression =
-        list(search("collection1", q("*:*"), fl("id", "prod_ss"), sort("id asc")),
+        List.list(search("collection1", q("*:*"), fl("id", "prod_ss"), sort("id asc")),
             search("collection2", q("*:*"), fl("id", "prod_ss"), sort("id asc")));
         
         assertEquals(expected, expression.toString());
@@ -34,7 +33,7 @@ public class ListTest {
                 "search(collection5,q=\"*:*\",fl=\"id,prod_ss\",sort=\"id asc\"))";
         
         StreamExpression expression =
-        list(search("collection1", q("*:*"), fl("id", "prod_ss"), sort("id asc")),
+        List.list(search("collection1", q("*:*"), fl("id", "prod_ss"), sort("id asc")),
             search("collection2", q("*:*"), fl("id", "prod_ss"), sort("id asc")),
             search("collection3", q("*:*"), fl("id", "prod_ss"), sort("id asc")),
             search("collection4", q("*:*"), fl("id", "prod_ss"), sort("id asc")),
