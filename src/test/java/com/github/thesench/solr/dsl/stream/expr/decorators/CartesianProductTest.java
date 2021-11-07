@@ -1,9 +1,6 @@
 package com.github.thesench.solr.dsl.stream.expr.decorators;
 
 import static com.github.thesench.solr.dsl.stream.expr.evaluators.Abs.abs;
-import static com.github.thesench.solr.dsl.stream.expr.params.SortDirection.ASC;
-import static com.github.thesench.solr.dsl.stream.expr.params.SortDirection.DESC;
-import static com.github.thesench.solr.dsl.stream.expr.params.SortFields.by;
 import static com.github.thesench.solr.dsl.stream.expr.params.ProductSort.productSort;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -44,7 +41,7 @@ public class CartesianProductTest {
             CartesianProduct.cartesianProduct(
                 Search.search("testCollection"),
                 "someField",
-                productSort(by("someField", ASC).thenBy("someOtherField", DESC))
+                productSort("someField asc", "someOtherField desc")
             );
         
         assertEquals(expected, expression.toString());
@@ -71,6 +68,7 @@ public class CartesianProductTest {
     @Test
     void cartesianProduct_givenStreamFieldAndSort_returnsCartesianProductStream() {
         Field someField = new Field("someField");
+        Field someOtherField = new Field("someOtherField");
         String expected =
             "cartesianProduct(" +
                 "search(testCollection)," +
@@ -82,7 +80,7 @@ public class CartesianProductTest {
             CartesianProduct.cartesianProduct(
                 Search.search("testCollection"),
                 someField,
-                productSort(by("someField", ASC).thenBy("someOtherField", DESC))
+                productSort(someField.asc(), someOtherField.desc())
             );
         
         assertEquals(expected, expression.toString());

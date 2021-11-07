@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.stream.Collectors;
 
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpressionNamedParameter;
+import org.apache.solr.client.solrj.io.stream.expr.StreamExpressionParameter;
 import org.apache.solr.common.params.CommonParams;
 
 public class FL extends StreamExpressionNamedParameter implements SearchParameter {
@@ -19,9 +20,10 @@ public class FL extends StreamExpressionNamedParameter implements SearchParamete
         return new FL(fields);
     }
 
-    public static FL fl(Field... fields) {
-        String fieldList = Arrays.stream(fields)
-            .map(Field::toString)
+    public static FL fl(FieldOrAlias... fieldsAndAliases) {
+        String fieldList = Arrays.stream(fieldsAndAliases)
+            .map(fieldOrAlias -> fieldOrAlias.format(AliasType.COLON))
+            .map(StreamExpressionParameter::toString)
             .collect(Collectors.joining(","));
         return new FL(fieldList);
     }

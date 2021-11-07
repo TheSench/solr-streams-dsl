@@ -18,15 +18,15 @@ public class FieldTest {
 
         Alias alias = field.as("someAlias");
 
-        assertEquals("someField as someAlias", alias.format(AliasType.AS).getValue());
-        assertEquals("someAlias:someField", alias.format(AliasType.COLON).getValue());
+        assertEquals("someField as someAlias", alias.format(AliasType.AS).toString());
+        assertEquals("someAlias:someField", alias.format(AliasType.COLON).toString());
     }
 
     @Test
     void asc_createsSortFieldInAscendingOrder() {
         Field field = new Field("someField");
 
-        SortFields sort = field.asc();
+        SortedField sort = field.asc();
 
         assertEquals("someField asc", sort.toString());
     }
@@ -35,7 +35,7 @@ public class FieldTest {
     void desc_createsSortFieldInDescendingOrder() {
         Field field = new Field("someField");
 
-        SortFields sort = field.desc();
+        SortedField sort = field.desc();
 
         assertEquals("someField desc", sort.toString());
     }
