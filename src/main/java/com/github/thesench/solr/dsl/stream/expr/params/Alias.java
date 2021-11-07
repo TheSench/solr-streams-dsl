@@ -1,6 +1,5 @@
 package com.github.thesench.solr.dsl.stream.expr.params;
 
-import org.apache.solr.client.solrj.io.stream.expr.StreamExpressionParameter;
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpressionValue;
 
 public class Alias extends StreamExpressionValue implements FieldOrAlias, FieldOrAliasOrReplace {
@@ -12,7 +11,7 @@ public class Alias extends StreamExpressionValue implements FieldOrAlias, FieldO
     }
 
     @Override
-    public StreamExpressionParameter format(AliasType aliasType) {
+    public StreamExpressionValue format(AliasType aliasType) {
         String value;
         switch(aliasType) {
             case AS:

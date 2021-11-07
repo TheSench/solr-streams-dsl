@@ -1,10 +1,8 @@
 package com.github.thesench.solr.dsl.stream.expr.params;
 
 public class SortFields {
-    String field;
-    SortDirection sortDirection;
-    SortField firstSortField;
-    SortField lastSortField;
+    private final SortField firstSortField;
+    private SortField lastSortField;
 
     SortFields(SortField sortField) {
         this.firstSortField = sortField;
@@ -25,6 +23,12 @@ public class SortFields {
         SortField sortField = new SortField(field, sortDirection);
         lastSortField.nextSortField = sortField;
         lastSortField = sortField;
+        return this;
+    }
+
+    public SortFields thenBy(SortFields thenBy) {
+        lastSortField.nextSortField = thenBy.firstSortField;
+        lastSortField = thenBy.lastSortField;
         return this;
     }
 

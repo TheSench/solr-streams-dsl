@@ -12,6 +12,14 @@ public class Field extends StreamExpressionValue implements FieldOrAlias, FieldO
         return new Alias(this.getValue(), alias);
     }
 
+    public SortFields asc() {
+        return SortFields.by(this.getValue(), SortDirection.ASC);
+    }
+
+    public SortFields desc() {
+        return SortFields.by(this.getValue(), SortDirection.DESC);
+    }
+
     public StreamExpressionValue format(AliasType aliasType) {
         return this;
     }
