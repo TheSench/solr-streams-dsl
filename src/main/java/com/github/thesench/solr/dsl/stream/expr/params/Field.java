@@ -1,5 +1,6 @@
 package com.github.thesench.solr.dsl.stream.expr.params;
 
+import org.apache.solr.client.solrj.io.stream.expr.StreamExpressionParameter;
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpressionValue;
 
 public class Field extends StreamExpressionValue implements FieldOrAlias, FieldOrAliasOrReplace, FieldOrEvaluator {
@@ -12,7 +13,16 @@ public class Field extends StreamExpressionValue implements FieldOrAlias, FieldO
         return new Alias(this.getValue(), alias);
     }
 
-    public StreamExpressionValue format(AliasType aliasType) {
+    public SortedField asc() {
+        return new SortedField(this.getValue(), SortDirection.ASC);
+    }
+
+    public SortedField desc() {
+        return new SortedField(this.getValue(), SortDirection.DESC);
+    }
+
+    @Override
+    public StreamExpressionParameter format(AliasType aliasType) {
         return this;
     }
 }

@@ -8,11 +8,21 @@ public class ProductSort extends StreamExpressionNamedParameter {
         super("productSort", sorts);
     }
 
-    public static ProductSort productSort(SortFields sortFields) {
-        return new ProductSort(sortFields.toString());
+    public static ProductSort productSort(SortedField firstSortedField, SortedField... otherSortedFields) {
+        StringBuilder sb = new StringBuilder();
+        firstSortedField.appendSelf(sb);
+        for(SortedField sortedField : otherSortedFields) {
+            sb.append(',');
+            sortedField.appendSelf(sb);
+        }
+        return new ProductSort(sb.toString());
     }
 
-    public static ProductSort productSort(String sorts) {
-        return new ProductSort(sorts);
+    public static ProductSort productSort(String sort) {
+        return new ProductSort(sort);
+    }
+
+    public static ProductSort productSort(String... sorts) {
+        return new ProductSort(String.join(",", sorts));
     }
 }

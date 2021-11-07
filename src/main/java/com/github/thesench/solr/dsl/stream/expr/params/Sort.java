@@ -8,15 +8,22 @@ public class Sort extends StreamExpressionNamedParameter implements SearchParame
         super(CommonParams.SORT, sort);
     }
 
-    public static Sort sort(SortFields sortField) {
-        return new Sort(sortField.toString());
-    }
-
     public static Sort sort(String sort) {
         return new Sort(sort);
     }
 
     public static Sort sort(String... sorts) {
         return new Sort(String.join(",", sorts));
+    }
+
+    public static Sort sort(SortedField firstSortedField, SortedField... otherSortedFields) {
+        
+        StringBuilder sb = new StringBuilder();
+        firstSortedField.appendSelf(sb);
+        for(SortedField sortedField : otherSortedFields) {
+            sb.append(',');
+            sortedField.appendSelf(sb);
+        }
+        return new Sort(sb.toString());
     }
 }
