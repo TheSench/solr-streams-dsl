@@ -171,6 +171,18 @@ Unfortunately, it's not all good.  We've now lost all parameter validation.  Not
 This is where this library fills the gaps.  Here's how this same stream would be built using this library:
 
 ```java
+// We  could use Strings as well, but declaring Fields will
+// allow us to not rely on "magic strings" and make it easier
+// to rename them in the future.  Additionally, it allows us 
+// to use the Field APIs for sorting/aliasing.
+// We can now also Find References on a field and see every
+// place we use it, including sorts/aliases.
+Field manu = new Field("manu");
+Field name = new Field("name");
+Field popularity = new Field("popularity");
+Field manu_id_s = new Field("manu_id_s");
+Field group = new Field("group");
+
 StreamExpression streamExpression =
     select(
         reduce(
@@ -178,14 +190,16 @@ StreamExpression streamExpression =
                 "techproducts",
                 q("popularity:[6 TO 10]"),
                 rows(25),
-                sort("manu asc", "name asc", "popularity desc")
+                sort(manu.asc(), name.asc(), popularity.desc())
             ),
-            by("manu"),
-            group(sort("name asc"), n(10))
+            by(manu),
+            group(sort(name.asc()), n(10))
         ),
-        "manu AS manufacturer",
-        "manu_id_s AS manufacturerId",
-        "group"
+        // No need to care if we use "field as alias" or "alias:field here.
+        // We just create an Alais and which format to use is handled for us.
+        manu.as("manufacturer"),
+        manu_id_s.as("manufacturerId"),
+        group
     );
 
 ModifiableSolrParams paramsLoc = new ModifiableSolrParams();
