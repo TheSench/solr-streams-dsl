@@ -2,9 +2,9 @@ package com.github.thesench.solr.example;
 
 import static com.github.thesench.solr.dsl.stream.expr.decorators.StreamDecorators.reduce;
 import static com.github.thesench.solr.dsl.stream.expr.params.By.by;
-import static com.github.thesench.solr.dsl.stream.expr.params.Reducer.group;
 import static com.github.thesench.solr.dsl.stream.expr.params.N.n;
 import static com.github.thesench.solr.dsl.stream.expr.params.Q.q;
+import static com.github.thesench.solr.dsl.stream.expr.params.Reducer.group;
 import static com.github.thesench.solr.dsl.stream.expr.params.Rows.rows;
 import static com.github.thesench.solr.dsl.stream.expr.params.Sort.sort;
 
@@ -13,6 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.github.thesench.solr.dsl.stream.expr.decorators.Select;
+import com.github.thesench.solr.dsl.stream.expr.params.Field;
 import com.github.thesench.solr.dsl.stream.expr.sources.Search;
 
 import org.apache.solr.client.solrj.io.Tuple;
@@ -181,6 +182,12 @@ public class Examples {
     }
 
     public static void searchUsingDsl() throws IOException {
+        Field manu = new Field("manu");
+        Field name = new Field("name");
+        Field popularity = new Field("popularity");
+        Field manu_id_s = new Field("manu_id_s");
+        Field group = new Field("group");
+        
         StreamExpression streamExpression =
             Select.select(
                 reduce(
@@ -188,14 +195,14 @@ public class Examples {
                         "techproducts",
                         q("popularity:[6 TO 10]"),
                         rows(25),
-                        sort("manu asc", "name asc", "popularity desc")
+                        sort(manu.asc(), name.asc(), popularity.desc())
                     ),
-                    by("manu"),
-                    group(sort("name asc"), n(10))
+                    by(manu),
+                    group(sort(name.asc()), n(10))
                 ),
-                "manu AS manufacturer",
-                "manu_id_s AS manufacturerId",
-                "group"
+                manu.as("manufacturer"),
+                manu_id_s.as("manufacturerId"),
+                group
             );
         ModifiableSolrParams paramsLoc = new ModifiableSolrParams();
         paramsLoc.set("expr", streamExpression.toString());
