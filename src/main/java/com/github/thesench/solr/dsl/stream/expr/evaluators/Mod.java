@@ -7,301 +7,301 @@ public class Mod {
 
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(Field firstValue, Field secondValue) {
+    public static NumberEvaluator mod(Field divisor, Field dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(firstValue)
-            .withParameter(secondValue);
+            .withParameter(divisor)
+            .withParameter(dividend);
     }
 
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(Field firstValue, NumberEvaluator secondValue) {
+    public static NumberEvaluator mod(Field divisor, NumberEvaluator dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(firstValue)
-            .withParameter(secondValue);
+            .withParameter(divisor)
+            .withParameter(dividend);
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(Field firstValue, int secondValue) {
+    public static NumberEvaluator mod(Field divisor, int dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(firstValue)
-            .withParameter(Integer.toString(secondValue));
+            .withParameter(divisor)
+            .withParameter(Integer.toString(dividend));
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(Field firstValue, float secondValue) {
+    public static NumberEvaluator mod(Field divisor, float dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(firstValue)
-            .withParameter(Float.toString(secondValue));
+            .withParameter(divisor)
+            .withParameter(Float.toString(dividend));
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(Field firstValue, double secondValue) {
+    public static NumberEvaluator mod(Field divisor, double dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(firstValue)
-            .withParameter(Double.toString(secondValue));
+            .withParameter(divisor)
+            .withParameter(Double.toString(dividend));
     }
 
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(NumberEvaluator firstValue, Field secondValue) {
+    public static NumberEvaluator mod(NumberEvaluator divisor, Field dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(firstValue)
-            .withParameter(secondValue);
+            .withParameter(divisor)
+            .withParameter(dividend);
     }
 
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(NumberEvaluator firstValue, NumberEvaluator secondValue) {
+    public static NumberEvaluator mod(NumberEvaluator divisor, NumberEvaluator dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(firstValue)
-            .withParameter(secondValue);
+            .withParameter(divisor)
+            .withParameter(dividend);
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(NumberEvaluator firstValue, int secondValue) {
+    public static NumberEvaluator mod(NumberEvaluator divisor, int dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(firstValue)
-            .withParameter(Integer.toString(secondValue));
+            .withParameter(divisor)
+            .withParameter(Integer.toString(dividend));
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(NumberEvaluator firstValue, float secondValue) {
+    public static NumberEvaluator mod(NumberEvaluator divisor, float dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(firstValue)
-            .withParameter(Float.toString(secondValue));
+            .withParameter(divisor)
+            .withParameter(Float.toString(dividend));
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(NumberEvaluator firstValue, double secondValue) {
+    public static NumberEvaluator mod(NumberEvaluator divisor, double dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(firstValue)
-            .withParameter(Double.toString(secondValue));
+            .withParameter(divisor)
+            .withParameter(Double.toString(dividend));
     }
 
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(int firstValue, Field secondValue) {
+    public static NumberEvaluator mod(int divisor, Field dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(Integer.toString(firstValue))
-            .withParameter(secondValue);
+            .withParameter(Integer.toString(divisor))
+            .withParameter(dividend);
     }
 
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(int firstValue, NumberEvaluator secondValue) {
+    public static NumberEvaluator mod(int divisor, NumberEvaluator dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(Integer.toString(firstValue))
-            .withParameter(secondValue);
+            .withParameter(Integer.toString(divisor))
+            .withParameter(dividend);
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(int firstValue, int secondValue) {
+    public static NumberEvaluator mod(int divisor, int dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(Integer.toString(firstValue))
-            .withParameter(Integer.toString(secondValue));
+            .withParameter(Integer.toString(divisor))
+            .withParameter(Integer.toString(dividend));
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(int firstValue, float secondValue) {
+    public static NumberEvaluator mod(int divisor, float dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(Integer.toString(firstValue))
-            .withParameter(Float.toString(secondValue));
+            .withParameter(Integer.toString(divisor))
+            .withParameter(Float.toString(dividend));
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(int firstValue, double secondValue) {
+    public static NumberEvaluator mod(int divisor, double dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(Integer.toString(firstValue))
-            .withParameter(Double.toString(secondValue));
+            .withParameter(Integer.toString(divisor))
+            .withParameter(Double.toString(dividend));
     }
 
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(float firstValue, Field secondValue) {
+    public static NumberEvaluator mod(float divisor, Field dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(Float.toString(firstValue))
-            .withParameter(secondValue);
+            .withParameter(Float.toString(divisor))
+            .withParameter(dividend);
     }
 
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(float firstValue, NumberEvaluator secondValue) {
+    public static NumberEvaluator mod(float divisor, NumberEvaluator dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(Float.toString(firstValue))
-            .withParameter(secondValue);
+            .withParameter(Float.toString(divisor))
+            .withParameter(dividend);
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(float firstValue, int secondValue) {
+    public static NumberEvaluator mod(float divisor, int dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(Float.toString(firstValue))
-            .withParameter(Integer.toString(secondValue));
+            .withParameter(Float.toString(divisor))
+            .withParameter(Integer.toString(dividend));
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(float firstValue, float secondValue) {
+    public static NumberEvaluator mod(float divisor, float dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(Float.toString(firstValue))
-            .withParameter(Float.toString(secondValue));
+            .withParameter(Float.toString(divisor))
+            .withParameter(Float.toString(dividend));
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(float firstValue, double secondValue) {
+    public static NumberEvaluator mod(float divisor, double dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(Float.toString(firstValue))
-            .withParameter(Double.toString(secondValue));
+            .withParameter(Float.toString(divisor))
+            .withParameter(Double.toString(dividend));
     }
 
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(double firstValue, Field secondValue) {
+    public static NumberEvaluator mod(double divisor, Field dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(Double.toString(firstValue))
-            .withParameter(secondValue);
+            .withParameter(Double.toString(divisor))
+            .withParameter(dividend);
     }
 
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(double firstValue, NumberEvaluator secondValue) {
+    public static NumberEvaluator mod(double divisor, NumberEvaluator dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(Double.toString(firstValue))
-            .withParameter(secondValue);
+            .withParameter(Double.toString(divisor))
+            .withParameter(dividend);
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(double firstValue, int secondValue) {
+    public static NumberEvaluator mod(double divisor, int dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(Double.toString(firstValue))
-            .withParameter(Integer.toString(secondValue));
+            .withParameter(Double.toString(divisor))
+            .withParameter(Integer.toString(dividend));
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(double firstValue, float secondValue) {
+    public static NumberEvaluator mod(double divisor, float dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(Double.toString(firstValue))
-            .withParameter(Float.toString(secondValue));
+            .withParameter(Double.toString(divisor))
+            .withParameter(Float.toString(dividend));
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#mod">Stream Evaluator Reference: mod</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator mod(double firstValue, double secondValue) {
+    public static NumberEvaluator mod(double divisor, double dividend) {
         return (NumberEvaluator) new NumberEvaluator("mod")
-            .withParameter(Double.toString(firstValue))
-            .withParameter(Double.toString(secondValue));
+            .withParameter(Double.toString(divisor))
+            .withParameter(Double.toString(dividend));
     }
 }

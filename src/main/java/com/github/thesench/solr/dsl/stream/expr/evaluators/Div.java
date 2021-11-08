@@ -7,301 +7,301 @@ public class Div {
 
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(Field firstValue, Field secondValue) {
+    public static NumberEvaluator div(Field divisor, Field dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(firstValue)
-            .withParameter(secondValue);
+            .withParameter(divisor)
+            .withParameter(dividend);
     }
 
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(Field firstValue, NumberEvaluator secondValue) {
+    public static NumberEvaluator div(Field divisor, NumberEvaluator dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(firstValue)
-            .withParameter(secondValue);
+            .withParameter(divisor)
+            .withParameter(dividend);
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(Field firstValue, int secondValue) {
+    public static NumberEvaluator div(Field divisor, int dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(firstValue)
-            .withParameter(Integer.toString(secondValue));
+            .withParameter(divisor)
+            .withParameter(Integer.toString(dividend));
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(Field firstValue, float secondValue) {
+    public static NumberEvaluator div(Field divisor, float dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(firstValue)
-            .withParameter(Float.toString(secondValue));
+            .withParameter(divisor)
+            .withParameter(Float.toString(dividend));
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(Field firstValue, double secondValue) {
+    public static NumberEvaluator div(Field divisor, double dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(firstValue)
-            .withParameter(Double.toString(secondValue));
+            .withParameter(divisor)
+            .withParameter(Double.toString(dividend));
     }
 
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(NumberEvaluator firstValue, Field secondValue) {
+    public static NumberEvaluator div(NumberEvaluator divisor, Field dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(firstValue)
-            .withParameter(secondValue);
+            .withParameter(divisor)
+            .withParameter(dividend);
     }
 
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(NumberEvaluator firstValue, NumberEvaluator secondValue) {
+    public static NumberEvaluator div(NumberEvaluator divisor, NumberEvaluator dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(firstValue)
-            .withParameter(secondValue);
+            .withParameter(divisor)
+            .withParameter(dividend);
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(NumberEvaluator firstValue, int secondValue) {
+    public static NumberEvaluator div(NumberEvaluator divisor, int dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(firstValue)
-            .withParameter(Integer.toString(secondValue));
+            .withParameter(divisor)
+            .withParameter(Integer.toString(dividend));
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(NumberEvaluator firstValue, float secondValue) {
+    public static NumberEvaluator div(NumberEvaluator divisor, float dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(firstValue)
-            .withParameter(Float.toString(secondValue));
+            .withParameter(divisor)
+            .withParameter(Float.toString(dividend));
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(NumberEvaluator firstValue, double secondValue) {
+    public static NumberEvaluator div(NumberEvaluator divisor, double dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(firstValue)
-            .withParameter(Double.toString(secondValue));
+            .withParameter(divisor)
+            .withParameter(Double.toString(dividend));
     }
 
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(int firstValue, Field secondValue) {
+    public static NumberEvaluator div(int divisor, Field dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(Integer.toString(firstValue))
-            .withParameter(secondValue);
+            .withParameter(Integer.toString(divisor))
+            .withParameter(dividend);
     }
 
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(int firstValue, NumberEvaluator secondValue) {
+    public static NumberEvaluator div(int divisor, NumberEvaluator dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(Integer.toString(firstValue))
-            .withParameter(secondValue);
+            .withParameter(Integer.toString(divisor))
+            .withParameter(dividend);
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(int firstValue, int secondValue) {
+    public static NumberEvaluator div(int divisor, int dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(Integer.toString(firstValue))
-            .withParameter(Integer.toString(secondValue));
+            .withParameter(Integer.toString(divisor))
+            .withParameter(Integer.toString(dividend));
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(int firstValue, float secondValue) {
+    public static NumberEvaluator div(int divisor, float dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(Integer.toString(firstValue))
-            .withParameter(Float.toString(secondValue));
+            .withParameter(Integer.toString(divisor))
+            .withParameter(Float.toString(dividend));
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(int firstValue, double secondValue) {
+    public static NumberEvaluator div(int divisor, double dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(Integer.toString(firstValue))
-            .withParameter(Double.toString(secondValue));
+            .withParameter(Integer.toString(divisor))
+            .withParameter(Double.toString(dividend));
     }
 
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(float firstValue, Field secondValue) {
+    public static NumberEvaluator div(float divisor, Field dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(Float.toString(firstValue))
-            .withParameter(secondValue);
+            .withParameter(Float.toString(divisor))
+            .withParameter(dividend);
     }
 
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(float firstValue, NumberEvaluator secondValue) {
+    public static NumberEvaluator div(float divisor, NumberEvaluator dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(Float.toString(firstValue))
-            .withParameter(secondValue);
+            .withParameter(Float.toString(divisor))
+            .withParameter(dividend);
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(float firstValue, int secondValue) {
+    public static NumberEvaluator div(float divisor, int dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(Float.toString(firstValue))
-            .withParameter(Integer.toString(secondValue));
+            .withParameter(Float.toString(divisor))
+            .withParameter(Integer.toString(dividend));
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(float firstValue, float secondValue) {
+    public static NumberEvaluator div(float divisor, float dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(Float.toString(firstValue))
-            .withParameter(Float.toString(secondValue));
+            .withParameter(Float.toString(divisor))
+            .withParameter(Float.toString(dividend));
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(float firstValue, double secondValue) {
+    public static NumberEvaluator div(float divisor, double dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(Float.toString(firstValue))
-            .withParameter(Double.toString(secondValue));
+            .withParameter(Float.toString(divisor))
+            .withParameter(Double.toString(dividend));
     }
 
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(double firstValue, Field secondValue) {
+    public static NumberEvaluator div(double divisor, Field dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(Double.toString(firstValue))
-            .withParameter(secondValue);
+            .withParameter(Double.toString(divisor))
+            .withParameter(dividend);
     }
 
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(double firstValue, NumberEvaluator secondValue) {
+    public static NumberEvaluator div(double divisor, NumberEvaluator dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(Double.toString(firstValue))
-            .withParameter(secondValue);
+            .withParameter(Double.toString(divisor))
+            .withParameter(dividend);
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(double firstValue, int secondValue) {
+    public static NumberEvaluator div(double divisor, int dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(Double.toString(firstValue))
-            .withParameter(Integer.toString(secondValue));
+            .withParameter(Double.toString(divisor))
+            .withParameter(Integer.toString(dividend));
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(double firstValue, float secondValue) {
+    public static NumberEvaluator div(double divisor, float dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(Double.toString(firstValue))
-            .withParameter(Float.toString(secondValue));
+            .withParameter(Double.toString(divisor))
+            .withParameter(Float.toString(dividend));
     }
     
     /**
      * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#div">Stream Evaluator Reference: div</a>
-     * @param firstValue
-     * @param secondValue
+     * @param divisor
+     * @param dividend
      * @return
      */
-    public static NumberEvaluator div(double firstValue, double secondValue) {
+    public static NumberEvaluator div(double divisor, double dividend) {
         return (NumberEvaluator) new NumberEvaluator("div")
-            .withParameter(Double.toString(firstValue))
-            .withParameter(Double.toString(secondValue));
+            .withParameter(Double.toString(divisor))
+            .withParameter(Double.toString(dividend));
     }
 }
