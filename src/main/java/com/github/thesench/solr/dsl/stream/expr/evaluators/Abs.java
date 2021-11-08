@@ -59,4 +59,13 @@ public class Abs {
         return (NumberEvaluator) new NumberEvaluator("abs").withParameter(Float.toString(rawNumber));
     }
 
+    /**
+     * @see <a href="https://solr.apache.org/guide/8_10/stream-evaluator-reference.html#abs">Stream Evaluator Reference: abs</a>
+     * @param numberEvaluator
+     * @return
+     */
+    public static NumberEvaluator abs(NumberEvaluator numberEvaluator) {
+        return (NumberEvaluator) new NumberEvaluator("abs").withParameter(numberEvaluator);
+    }
+
 }

@@ -4,9 +4,6 @@ import org.apache.commons.lang.NotImplementedException;
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 
 public class StreamEvaluators {
-    public static StreamExpression acos() {
-        throw new NotImplementedException();
-    }
 
     public static StreamExpression analyze() {
         throw new NotImplementedException();
@@ -24,14 +21,6 @@ public class StreamEvaluators {
         throw new NotImplementedException();
     }
 
-    public static StreamExpression asin() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression atan() {
-        throw new NotImplementedException();
-    }
-
     public static StreamExpression betaDistribution() {
         throw new NotImplementedException();
     }
@@ -41,14 +30,6 @@ public class StreamEvaluators {
     }
 
     public static StreamExpression binomialDistribution() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression cbrt() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression ceil() {
         throw new NotImplementedException();
     }
 
@@ -81,10 +62,6 @@ public class StreamEvaluators {
     }
 
     public static StreamExpression corr() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression cos() {
         throw new NotImplementedException();
     }
 
@@ -152,15 +129,7 @@ public class StreamEvaluators {
         throw new NotImplementedException();
     }
 
-    public static StreamExpression factorial() {
-        throw new NotImplementedException();
-    }
-
     public static StreamExpression finddelay() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression floor() {
         throw new NotImplementedException();
     }
 
@@ -212,10 +181,6 @@ public class StreamEvaluators {
         throw new NotImplementedException();
     }
 
-    public static StreamExpression hsin() {
-        throw new NotImplementedException();
-    }
-
     public static StreamExpression indexOf() {
         throw new NotImplementedException();
     }
@@ -234,10 +199,6 @@ public class StreamEvaluators {
     }
 
     public static StreamExpression loess() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression log() {
         throw new NotImplementedException();
     }
 
@@ -273,10 +234,6 @@ public class StreamEvaluators {
         throw new NotImplementedException();
     }
 
-    public static StreamExpression mod() {
-        throw new NotImplementedException();
-    }
-
     public static StreamExpression monteCarlo() {
         throw new NotImplementedException();
     }
@@ -286,10 +243,6 @@ public class StreamEvaluators {
     }
 
     public static StreamExpression movingMedian() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression mult() {
         throw new NotImplementedException();
     }
 
@@ -318,10 +271,6 @@ public class StreamEvaluators {
     }
 
     public static StreamExpression polyFit() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression pow() {
         throw new NotImplementedException();
     }
 
@@ -409,23 +358,11 @@ public class StreamEvaluators {
         throw new NotImplementedException();
     }
 
-    public static StreamExpression sin() {
-        throw new NotImplementedException();
-    }
-
     public static StreamExpression spline() {
         throw new NotImplementedException();
     }
 
-    public static StreamExpression sqrt() {
-        throw new NotImplementedException();
-    }
-
     public static StreamExpression standardize() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression sub() {
         throw new NotImplementedException();
     }
 
