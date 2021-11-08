@@ -33,10 +33,6 @@ public class StreamEvaluators {
         throw new NotImplementedException();
     }
 
-    public static StreamExpression cbrt() {
-        throw new NotImplementedException();
-    }
-
     public static StreamExpression col() {
         throw new NotImplementedException();
     }
