@@ -4,9 +4,6 @@ import org.apache.commons.lang.NotImplementedException;
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 
 public class StreamEvaluators {
-    public static StreamExpression acos() {
-        throw new NotImplementedException();
-    }
 
     public static StreamExpression analyze() {
         throw new NotImplementedException();
@@ -21,14 +18,6 @@ public class StreamEvaluators {
     }
 
     public static StreamExpression array() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression asin() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression atan() {
         throw new NotImplementedException();
     }
 
@@ -81,10 +70,6 @@ public class StreamEvaluators {
     }
 
     public static StreamExpression corr() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression cos() {
         throw new NotImplementedException();
     }
 
@@ -209,10 +194,6 @@ public class StreamEvaluators {
     }
 
     public static StreamExpression hist() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression hsin() {
         throw new NotImplementedException();
     }
 
@@ -406,10 +387,6 @@ public class StreamEvaluators {
     }
 
     public static StreamExpression setValue() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression sin() {
         throw new NotImplementedException();
     }
 
