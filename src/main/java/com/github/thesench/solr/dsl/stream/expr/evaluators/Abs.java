@@ -10,8 +10,8 @@ public class Abs {
      * @param fieldName
      * @return
      */
-    public static NumericEvaluator abs(String fieldName) {
-        return (NumericEvaluator) new NumericEvaluator("abs").withParameter(fieldName);
+    public static NumberEvaluator abs(String fieldName) {
+        return (NumberEvaluator) new NumberEvaluator("abs").withParameter(fieldName);
     }
 
     /**
@@ -19,8 +19,8 @@ public class Abs {
      * @param field
      * @return
      */
-    public static NumericEvaluator abs(Field field) {
-        return (NumericEvaluator) new NumericEvaluator("abs").withParameter(field.toString());
+    public static NumberEvaluator abs(Field field) {
+        return (NumberEvaluator) new NumberEvaluator("abs").withParameter(field.toString());
     }
 
     /**
@@ -28,8 +28,8 @@ public class Abs {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator abs(int rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("abs").withParameter(Integer.toString(rawNumber));
+    public static NumberEvaluator abs(int rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("abs").withParameter(Integer.toString(rawNumber));
     }
 
     /**
@@ -37,8 +37,8 @@ public class Abs {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator abs(long rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("abs").withParameter(Long.toString(rawNumber));
+    public static NumberEvaluator abs(long rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("abs").withParameter(Long.toString(rawNumber));
     }
 
     /**
@@ -46,8 +46,8 @@ public class Abs {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator abs(double rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("abs").withParameter(Double.toString(rawNumber));
+    public static NumberEvaluator abs(double rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("abs").withParameter(Double.toString(rawNumber));
     }
 
     /**
@@ -55,8 +55,8 @@ public class Abs {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator abs(float rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("abs").withParameter(Float.toString(rawNumber));
+    public static NumberEvaluator abs(float rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("abs").withParameter(Float.toString(rawNumber));
     }
 
     /**
@@ -64,8 +64,8 @@ public class Abs {
      * @param numberEvaluator
      * @return
      */
-    public static NumericEvaluator abs(NumericEvaluator numberEvaluator) {
-        return (NumericEvaluator) new NumericEvaluator("abs").withParameter(numberEvaluator);
+    public static NumberEvaluator abs(NumberEvaluator numberEvaluator) {
+        return (NumberEvaluator) new NumberEvaluator("abs").withParameter(numberEvaluator);
     }
 
 }

@@ -10,8 +10,8 @@ public class Atan {
      * @param fieldName
      * @return
      */
-    public static NumericEvaluator atan(String fieldName) {
-        return (NumericEvaluator) new NumericEvaluator("atan").withParameter(fieldName);
+    public static NumberEvaluator atan(String fieldName) {
+        return (NumberEvaluator) new NumberEvaluator("atan").withParameter(fieldName);
     }
 
     /**
@@ -19,8 +19,8 @@ public class Atan {
      * @param field
      * @return
      */
-    public static NumericEvaluator atan(Field field) {
-        return (NumericEvaluator) new NumericEvaluator("atan").withParameter(field.toString());
+    public static NumberEvaluator atan(Field field) {
+        return (NumberEvaluator) new NumberEvaluator("atan").withParameter(field.toString());
     }
 
     /**
@@ -28,8 +28,8 @@ public class Atan {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator atan(int rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("atan").withParameter(Integer.toString(rawNumber));
+    public static NumberEvaluator atan(int rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("atan").withParameter(Integer.toString(rawNumber));
     }
 
     /**
@@ -37,8 +37,8 @@ public class Atan {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator atan(long rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("atan").withParameter(Long.toString(rawNumber));
+    public static NumberEvaluator atan(long rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("atan").withParameter(Long.toString(rawNumber));
     }
 
     /**
@@ -46,8 +46,8 @@ public class Atan {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator atan(double rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("atan").withParameter(Double.toString(rawNumber));
+    public static NumberEvaluator atan(double rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("atan").withParameter(Double.toString(rawNumber));
     }
 
     /**
@@ -55,8 +55,8 @@ public class Atan {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator atan(float rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("atan").withParameter(Float.toString(rawNumber));
+    public static NumberEvaluator atan(float rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("atan").withParameter(Float.toString(rawNumber));
     }
 
     /**
@@ -64,8 +64,8 @@ public class Atan {
      * @param numberEvaluator
      * @return
      */
-    public static NumericEvaluator atan(NumericEvaluator numberEvaluator) {
-        return (NumericEvaluator) new NumericEvaluator("atan").withParameter(numberEvaluator);
+    public static NumberEvaluator atan(NumberEvaluator numberEvaluator) {
+        return (NumberEvaluator) new NumberEvaluator("atan").withParameter(numberEvaluator);
     }
 
 }

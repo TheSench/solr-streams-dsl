@@ -10,8 +10,8 @@ public class Sinh {
      * @param fieldName
      * @return
      */
-    public static NumericEvaluator sinh(String fieldName) {
-        return (NumericEvaluator) new NumericEvaluator("sinh").withParameter(fieldName);
+    public static NumberEvaluator sinh(String fieldName) {
+        return (NumberEvaluator) new NumberEvaluator("sinh").withParameter(fieldName);
     }
 
     /**
@@ -19,8 +19,8 @@ public class Sinh {
      * @param field
      * @return
      */
-    public static NumericEvaluator sinh(Field field) {
-        return (NumericEvaluator) new NumericEvaluator("sinh").withParameter(field.toString());
+    public static NumberEvaluator sinh(Field field) {
+        return (NumberEvaluator) new NumberEvaluator("sinh").withParameter(field.toString());
     }
 
     /**
@@ -28,8 +28,8 @@ public class Sinh {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator sinh(int rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("sinh").withParameter(Integer.toString(rawNumber));
+    public static NumberEvaluator sinh(int rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("sinh").withParameter(Integer.toString(rawNumber));
     }
 
     /**
@@ -37,8 +37,8 @@ public class Sinh {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator sinh(long rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("sinh").withParameter(Long.toString(rawNumber));
+    public static NumberEvaluator sinh(long rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("sinh").withParameter(Long.toString(rawNumber));
     }
 
     /**
@@ -46,8 +46,8 @@ public class Sinh {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator sinh(double rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("sinh").withParameter(Double.toString(rawNumber));
+    public static NumberEvaluator sinh(double rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("sinh").withParameter(Double.toString(rawNumber));
     }
 
     /**
@@ -55,8 +55,8 @@ public class Sinh {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator sinh(float rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("sinh").withParameter(Float.toString(rawNumber));
+    public static NumberEvaluator sinh(float rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("sinh").withParameter(Float.toString(rawNumber));
     }
 
     /**
@@ -64,8 +64,8 @@ public class Sinh {
      * @param numberEvaluator
      * @return
      */
-    public static NumericEvaluator sinh(NumericEvaluator numberEvaluator) {
-        return (NumericEvaluator) new NumericEvaluator("sinh").withParameter(numberEvaluator);
+    public static NumberEvaluator sinh(NumberEvaluator numberEvaluator) {
+        return (NumberEvaluator) new NumberEvaluator("sinh").withParameter(numberEvaluator);
     }
 
 }

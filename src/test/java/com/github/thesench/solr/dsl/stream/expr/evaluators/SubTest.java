@@ -35,7 +35,7 @@ public class SubTest {
     @Test
     void sub_givenFieldAndNumberEvaluator_returnsSubExpression() {
         Field firstValue = new Field("someField");
-        NumericEvaluator secondValue = abs(-1);
+        NumberEvaluator secondValue = abs(-1);
 
         StreamExpression expression = sub(firstValue, secondValue);
 
@@ -74,7 +74,7 @@ public class SubTest {
     
     @Test
     void sub_givenNumberEvaluatorAndField_returnsSubExpression() {
-        NumericEvaluator firstValue = abs(-1);;
+        NumberEvaluator firstValue = abs(-1);;
         Field secondValue = new Field("someOtherField");
 
         StreamExpression expression = sub(firstValue, secondValue);
@@ -84,8 +84,8 @@ public class SubTest {
     
     @Test
     void sub_givenNumberEvaluatorAndNumberEvaluator_returnsSubExpression() {
-        NumericEvaluator firstValue = abs(-1);;
-        NumericEvaluator secondValue = abs(-1);;
+        NumberEvaluator firstValue = abs(-1);;
+        NumberEvaluator secondValue = abs(-1);;
 
         StreamExpression expression = sub(firstValue, secondValue);
 
@@ -94,7 +94,7 @@ public class SubTest {
     
     @Test
     void sub_givenNumberEvaluatorAndInt_returnsSubExpression() {
-        NumericEvaluator firstValue = abs(-1);;
+        NumberEvaluator firstValue = abs(-1);;
         int secondValue = 4;
 
         StreamExpression expression = sub(firstValue, secondValue);
@@ -104,7 +104,7 @@ public class SubTest {
     
     @Test
     void sub_givenNumberEvaluatorAndFloat_returnsSubExpression() {
-        NumericEvaluator firstValue = abs(-1);;
+        NumberEvaluator firstValue = abs(-1);;
         float secondValue = 3.4f;
 
         StreamExpression expression = sub(firstValue, secondValue);
@@ -114,7 +114,7 @@ public class SubTest {
     
     @Test
     void sub_givenNumberEvaluatorAndDouble_returnsSubExpression() {
-        NumericEvaluator firstValue = abs(-1);;
+        NumberEvaluator firstValue = abs(-1);;
         double secondValue = 1.2d;
 
         StreamExpression expression = sub(firstValue, secondValue);
@@ -135,7 +135,7 @@ public class SubTest {
     @Test
     void sub_givenintAndNumberEvaluator_returnsSubExpression() {
         int firstValue = 4;
-        NumericEvaluator secondValue = abs(-1);;
+        NumberEvaluator secondValue = abs(-1);;
 
         StreamExpression expression = sub(firstValue, secondValue);
 
@@ -185,7 +185,7 @@ public class SubTest {
     @Test
     void sub_givenfloatAndNumberEvaluator_returnsSubExpression() {
         float firstValue = 3.4f;
-        NumericEvaluator secondValue = abs(-1);;
+        NumberEvaluator secondValue = abs(-1);;
 
         StreamExpression expression = sub(firstValue, secondValue);
 
@@ -235,7 +235,7 @@ public class SubTest {
     @Test
     void sub_givendoubleAndNumberEvaluator_returnsSubExpression() {
         double firstValue = 1.2d;
-        NumericEvaluator secondValue = abs(-1);;
+        NumberEvaluator secondValue = abs(-1);;
 
         StreamExpression expression = sub(firstValue, secondValue);
 

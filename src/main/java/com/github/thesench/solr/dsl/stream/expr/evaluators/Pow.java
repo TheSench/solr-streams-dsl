@@ -1,7 +1,7 @@
 package com.github.thesench.solr.dsl.stream.expr.evaluators;
 
 import com.github.thesench.solr.dsl.stream.expr.params.Field;
-import com.github.thesench.solr.dsl.stream.expr.params.FieldOrNumericEvaluator;
+import com.github.thesench.solr.dsl.stream.expr.params.FieldOrNumberEvaluator;
 
 public class Pow {
     private Pow() {}
@@ -12,8 +12,8 @@ public class Pow {
      * @param exponent
      * @return
      */
-    public static NumericEvaluator pow(FieldOrNumericEvaluator base, FieldOrNumericEvaluator exponent) {
-        return (NumericEvaluator) new NumericEvaluator("pow")
+    public static NumberEvaluator pow(FieldOrNumberEvaluator base, FieldOrNumberEvaluator exponent) {
+        return (NumberEvaluator) new NumberEvaluator("pow")
             .withParameter(base)
             .withParameter(exponent);
     }
@@ -24,8 +24,8 @@ public class Pow {
      * @param exponent
      * @return
      */
-    public static NumericEvaluator pow(FieldOrNumericEvaluator base, int exponent) {
-        return (NumericEvaluator) new NumericEvaluator("pow")
+    public static NumberEvaluator pow(FieldOrNumberEvaluator base, int exponent) {
+        return (NumberEvaluator) new NumberEvaluator("pow")
             .withParameter(base)
             .withParameter(Integer.toString(exponent));
     }
@@ -36,8 +36,8 @@ public class Pow {
      * @param exponent
      * @return
      */
-    public static NumericEvaluator pow(FieldOrNumericEvaluator base, float exponent) {
-        return (NumericEvaluator) new NumericEvaluator("pow")
+    public static NumberEvaluator pow(FieldOrNumberEvaluator base, float exponent) {
+        return (NumberEvaluator) new NumberEvaluator("pow")
             .withParameter(base)
             .withParameter(Float.toString(exponent));
     }
@@ -48,8 +48,8 @@ public class Pow {
      * @param exponent
      * @return
      */
-    public static NumericEvaluator pow(FieldOrNumericEvaluator base, double exponent) {
-        return (NumericEvaluator) new NumericEvaluator("pow")
+    public static NumberEvaluator pow(FieldOrNumberEvaluator base, double exponent) {
+        return (NumberEvaluator) new NumberEvaluator("pow")
             .withParameter(base)
             .withParameter(Double.toString(exponent));
     }
@@ -60,8 +60,8 @@ public class Pow {
      * @param exponent
      * @return
      */
-    public static NumericEvaluator pow(int base, FieldOrNumericEvaluator exponent) {
-        return (NumericEvaluator) new NumericEvaluator("pow")
+    public static NumberEvaluator pow(int base, FieldOrNumberEvaluator exponent) {
+        return (NumberEvaluator) new NumberEvaluator("pow")
             .withParameter(Integer.toString(base))
             .withParameter(exponent);
     }
@@ -72,8 +72,8 @@ public class Pow {
      * @param exponent
      * @return
      */
-    public static NumericEvaluator pow(int base, int exponent) {
-        return (NumericEvaluator) new NumericEvaluator("pow")
+    public static NumberEvaluator pow(int base, int exponent) {
+        return (NumberEvaluator) new NumberEvaluator("pow")
             .withParameter(Integer.toString(base))
             .withParameter(Integer.toString(exponent));
     }
@@ -84,8 +84,8 @@ public class Pow {
      * @param exponent
      * @return
      */
-    public static NumericEvaluator pow(int base, float exponent) {
-        return (NumericEvaluator) new NumericEvaluator("pow")
+    public static NumberEvaluator pow(int base, float exponent) {
+        return (NumberEvaluator) new NumberEvaluator("pow")
             .withParameter(Integer.toString(base))
             .withParameter(Float.toString(exponent));
     }
@@ -96,8 +96,8 @@ public class Pow {
      * @param exponent
      * @return
      */
-    public static NumericEvaluator pow(int base, double exponent) {
-        return (NumericEvaluator) new NumericEvaluator("pow")
+    public static NumberEvaluator pow(int base, double exponent) {
+        return (NumberEvaluator) new NumberEvaluator("pow")
             .withParameter(Integer.toString(base))
             .withParameter(Double.toString(exponent));
     }
@@ -108,8 +108,8 @@ public class Pow {
      * @param exponent
      * @return
      */
-    public static NumericEvaluator pow(float base, FieldOrNumericEvaluator exponent) {
-        return (NumericEvaluator) new NumericEvaluator("pow")
+    public static NumberEvaluator pow(float base, FieldOrNumberEvaluator exponent) {
+        return (NumberEvaluator) new NumberEvaluator("pow")
             .withParameter(Float.toString(base))
             .withParameter(exponent);
     }
@@ -120,8 +120,8 @@ public class Pow {
      * @param exponent
      * @return
      */
-    public static NumericEvaluator pow(float base, int exponent) {
-        return (NumericEvaluator) new NumericEvaluator("pow")
+    public static NumberEvaluator pow(float base, int exponent) {
+        return (NumberEvaluator) new NumberEvaluator("pow")
             .withParameter(Float.toString(base))
             .withParameter(Integer.toString(exponent));
     }
@@ -132,8 +132,8 @@ public class Pow {
      * @param exponent
      * @return
      */
-    public static NumericEvaluator pow(float base, float exponent) {
-        return (NumericEvaluator) new NumericEvaluator("pow")
+    public static NumberEvaluator pow(float base, float exponent) {
+        return (NumberEvaluator) new NumberEvaluator("pow")
             .withParameter(Float.toString(base))
             .withParameter(Float.toString(exponent));
     }
@@ -144,8 +144,8 @@ public class Pow {
      * @param exponent
      * @return
      */
-    public static NumericEvaluator pow(float base, double exponent) {
-        return (NumericEvaluator) new NumericEvaluator("pow")
+    public static NumberEvaluator pow(float base, double exponent) {
+        return (NumberEvaluator) new NumberEvaluator("pow")
             .withParameter(Float.toString(base))
             .withParameter(Double.toString(exponent));
     }
@@ -156,8 +156,8 @@ public class Pow {
      * @param exponent
      * @return
      */
-    public static NumericEvaluator pow(double base, FieldOrNumericEvaluator exponent) {
-        return (NumericEvaluator) new NumericEvaluator("pow")
+    public static NumberEvaluator pow(double base, FieldOrNumberEvaluator exponent) {
+        return (NumberEvaluator) new NumberEvaluator("pow")
             .withParameter(Double.toString(base))
             .withParameter(exponent);
     }
@@ -168,8 +168,8 @@ public class Pow {
      * @param exponent
      * @return
      */
-    public static NumericEvaluator pow(double base, int exponent) {
-        return (NumericEvaluator) new NumericEvaluator("pow")
+    public static NumberEvaluator pow(double base, int exponent) {
+        return (NumberEvaluator) new NumberEvaluator("pow")
             .withParameter(Double.toString(base))
             .withParameter(Integer.toString(exponent));
     }
@@ -180,8 +180,8 @@ public class Pow {
      * @param exponent
      * @return
      */
-    public static NumericEvaluator pow(double base, float exponent) {
-        return (NumericEvaluator) new NumericEvaluator("pow")
+    public static NumberEvaluator pow(double base, float exponent) {
+        return (NumberEvaluator) new NumberEvaluator("pow")
             .withParameter(Double.toString(base))
             .withParameter(Float.toString(exponent));
     }
@@ -192,8 +192,8 @@ public class Pow {
      * @param exponent
      * @return
      */
-    public static NumericEvaluator pow(double base, double exponent) {
-        return (NumericEvaluator) new NumericEvaluator("pow")
+    public static NumberEvaluator pow(double base, double exponent) {
+        return (NumberEvaluator) new NumberEvaluator("pow")
             .withParameter(Double.toString(base))
             .withParameter(Double.toString(exponent));
     }

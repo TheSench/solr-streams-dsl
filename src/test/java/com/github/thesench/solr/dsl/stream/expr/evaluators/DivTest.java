@@ -24,7 +24,7 @@ public class DivTest {
     @Test
     void div_givenFieldAndNumberEvaluator_returnsDivExpression() {
         Field dividend = new Field("someField");
-        NumericEvaluator divisor = abs(-1);
+        NumberEvaluator divisor = abs(-1);
 
         StreamExpression expression = div(dividend, divisor);
 
@@ -63,7 +63,7 @@ public class DivTest {
     
     @Test
     void div_givenNumberEvaluatorAndField_returnsDivExpression() {
-        NumericEvaluator dividend = abs(-1);
+        NumberEvaluator dividend = abs(-1);
         Field divisor = new Field("someOtherField");
 
         StreamExpression expression = div(dividend, divisor);
@@ -73,8 +73,8 @@ public class DivTest {
     
     @Test
     void div_givenNumberEvaluatorAndNumberEvaluator_returnsDivExpression() {
-        NumericEvaluator dividend = abs(-1);
-        NumericEvaluator divisor = abs(-1);
+        NumberEvaluator dividend = abs(-1);
+        NumberEvaluator divisor = abs(-1);
 
         StreamExpression expression = div(dividend, divisor);
 
@@ -83,7 +83,7 @@ public class DivTest {
     
     @Test
     void div_givenNumberEvaluatorAndInt_returnsDivExpression() {
-        NumericEvaluator dividend = abs(-1);
+        NumberEvaluator dividend = abs(-1);
         int divisor = 4;
 
         StreamExpression expression = div(dividend, divisor);
@@ -93,7 +93,7 @@ public class DivTest {
     
     @Test
     void div_givenNumberEvaluatorAndFloat_returnsDivExpression() {
-        NumericEvaluator dividend = abs(-1);
+        NumberEvaluator dividend = abs(-1);
         float divisor = 3.4f;
 
         StreamExpression expression = div(dividend, divisor);
@@ -103,7 +103,7 @@ public class DivTest {
     
     @Test
     void div_givenNumberEvaluatorAndDouble_returnsDivExpression() {
-        NumericEvaluator dividend = abs(-1);
+        NumberEvaluator dividend = abs(-1);
         double divisor = 1.2d;
 
         StreamExpression expression = div(dividend, divisor);
@@ -124,7 +124,7 @@ public class DivTest {
     @Test
     void div_givenintAndNumberEvaluator_returnsDivExpression() {
         int dividend = 4;
-        NumericEvaluator divisor = abs(-1);
+        NumberEvaluator divisor = abs(-1);
 
         StreamExpression expression = div(dividend, divisor);
 
@@ -174,7 +174,7 @@ public class DivTest {
     @Test
     void div_givenfloatAndNumberEvaluator_returnsDivExpression() {
         float dividend = 3.4f;
-        NumericEvaluator divisor = abs(-1);
+        NumberEvaluator divisor = abs(-1);
 
         StreamExpression expression = div(dividend, divisor);
 
@@ -224,7 +224,7 @@ public class DivTest {
     @Test
     void div_givendoubleAndNumberEvaluator_returnsDivExpression() {
         double dividend = 1.2d;
-        NumericEvaluator divisor = abs(-1);
+        NumberEvaluator divisor = abs(-1);
 
         StreamExpression expression = div(dividend, divisor);
 

@@ -1,6 +1,6 @@
 package com.github.thesench.solr.dsl.stream.expr.evaluators;
 
-import com.github.thesench.solr.dsl.stream.expr.params.FieldOrNumericEvaluator;
+import com.github.thesench.solr.dsl.stream.expr.params.FieldOrNumberEvaluator;
 
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 
@@ -14,16 +14,16 @@ public class Add {
      * @param otherValues
      * @return
      */
-    public static NumericEvaluator add(FieldOrNumericEvaluator firstValue, FieldOrNumericEvaluator secondValue, FieldOrNumericEvaluator... otherValues) {
-        StreamExpression evaluatorExpression = new NumericEvaluator("add")
+    public static NumberEvaluator add(FieldOrNumberEvaluator firstValue, FieldOrNumberEvaluator secondValue, FieldOrNumberEvaluator... otherValues) {
+        StreamExpression evaluatorExpression = new NumberEvaluator("add")
             .withParameter(firstValue.toString())
             .withParameter(secondValue.toString());
 
-        for (FieldOrNumericEvaluator field : otherValues) {
+        for (FieldOrNumberEvaluator field : otherValues) {
             evaluatorExpression.addParameter(field.toString());
         }
 
-        return (NumericEvaluator) evaluatorExpression;
+        return (NumberEvaluator) evaluatorExpression;
     }
 
     /**
@@ -32,8 +32,8 @@ public class Add {
      * @param rightValue
      * @return
      */
-    public static NumericEvaluator add(FieldOrNumericEvaluator leftValue, int rightValue) {
-        return (NumericEvaluator) new NumericEvaluator("add")
+    public static NumberEvaluator add(FieldOrNumberEvaluator leftValue, int rightValue) {
+        return (NumberEvaluator) new NumberEvaluator("add")
             .withParameter(leftValue)
             .withParameter(Integer.toString(rightValue));
     }
@@ -44,8 +44,8 @@ public class Add {
      * @param rightValue
      * @return
      */
-    public static NumericEvaluator add(FieldOrNumericEvaluator leftValue, double rightValue) {
-        return (NumericEvaluator) new NumericEvaluator("add")
+    public static NumberEvaluator add(FieldOrNumberEvaluator leftValue, double rightValue) {
+        return (NumberEvaluator) new NumberEvaluator("add")
             .withParameter(leftValue)
             .withParameter(Double.toString(rightValue));
     }
@@ -56,8 +56,8 @@ public class Add {
      * @param rightValue
      * @return
      */
-    public static NumericEvaluator add(FieldOrNumericEvaluator leftValue, float rightValue) {
-        return (NumericEvaluator) new NumericEvaluator("add")
+    public static NumberEvaluator add(FieldOrNumberEvaluator leftValue, float rightValue) {
+        return (NumberEvaluator) new NumberEvaluator("add")
             .withParameter(leftValue)
             .withParameter(Float.toString(rightValue));
     }
@@ -68,8 +68,8 @@ public class Add {
      * @param rightValue
      * @return
      */
-    public static NumericEvaluator add(FieldOrNumericEvaluator leftValue, FieldOrNumericEvaluator rightValue) {
-        return (NumericEvaluator) new NumericEvaluator("add")
+    public static NumberEvaluator add(FieldOrNumberEvaluator leftValue, FieldOrNumberEvaluator rightValue) {
+        return (NumberEvaluator) new NumberEvaluator("add")
             .withParameter(leftValue)
             .withParameter(rightValue);
     }
@@ -80,8 +80,8 @@ public class Add {
      * @param rightValue
      * @return
      */
-    public static NumericEvaluator add(int leftValue, int rightValue) {
-        return (NumericEvaluator) new NumericEvaluator("add")
+    public static NumberEvaluator add(int leftValue, int rightValue) {
+        return (NumberEvaluator) new NumberEvaluator("add")
             .withParameter(Integer.toString(leftValue))
             .withParameter(Integer.toString(rightValue));
     }
@@ -92,8 +92,8 @@ public class Add {
      * @param rightValue
      * @return
      */
-    public static NumericEvaluator add(int leftValue, double rightValue) {
-        return (NumericEvaluator) new NumericEvaluator("add")
+    public static NumberEvaluator add(int leftValue, double rightValue) {
+        return (NumberEvaluator) new NumberEvaluator("add")
         .withParameter(Integer.toString(leftValue))
             .withParameter(Double.toString(rightValue));
     }
@@ -104,8 +104,8 @@ public class Add {
      * @param rightValue
      * @return
      */
-    public static NumericEvaluator add(int leftValue, float rightValue) {
-        return (NumericEvaluator) new NumericEvaluator("add")
+    public static NumberEvaluator add(int leftValue, float rightValue) {
+        return (NumberEvaluator) new NumberEvaluator("add")
             .withParameter(Integer.toString(leftValue))
             .withParameter(Float.toString(rightValue));
     }
@@ -116,8 +116,8 @@ public class Add {
      * @param rightValue
      * @return
      */
-    public static NumericEvaluator add(int leftValue, FieldOrNumericEvaluator rightValue) {
-        return (NumericEvaluator) new NumericEvaluator("add")
+    public static NumberEvaluator add(int leftValue, FieldOrNumberEvaluator rightValue) {
+        return (NumberEvaluator) new NumberEvaluator("add")
             .withParameter(Integer.toString(leftValue))
             .withParameter(rightValue);
     }
@@ -128,8 +128,8 @@ public class Add {
      * @param rightValue
      * @return
      */
-    public static NumericEvaluator add(double leftValue, int rightValue) {
-        return (NumericEvaluator) new NumericEvaluator("add")
+    public static NumberEvaluator add(double leftValue, int rightValue) {
+        return (NumberEvaluator) new NumberEvaluator("add")
             .withParameter(Double.toString(leftValue))
             .withParameter(Integer.toString(rightValue));
     }
@@ -140,8 +140,8 @@ public class Add {
      * @param rightValue
      * @return
      */
-    public static NumericEvaluator add(double leftValue, double rightValue) {
-        return (NumericEvaluator) new NumericEvaluator("add")
+    public static NumberEvaluator add(double leftValue, double rightValue) {
+        return (NumberEvaluator) new NumberEvaluator("add")
         .withParameter(Double.toString(leftValue))
             .withParameter(Double.toString(rightValue));
     }
@@ -152,8 +152,8 @@ public class Add {
      * @param rightValue
      * @return
      */
-    public static NumericEvaluator add(double leftValue, float rightValue) {
-        return (NumericEvaluator) new NumericEvaluator("add")
+    public static NumberEvaluator add(double leftValue, float rightValue) {
+        return (NumberEvaluator) new NumberEvaluator("add")
             .withParameter(Double.toString(leftValue))
             .withParameter(Float.toString(rightValue));
     }
@@ -164,8 +164,8 @@ public class Add {
      * @param rightValue
      * @return
      */
-    public static NumericEvaluator add(double leftValue, FieldOrNumericEvaluator rightValue) {
-        return (NumericEvaluator) new NumericEvaluator("add")
+    public static NumberEvaluator add(double leftValue, FieldOrNumberEvaluator rightValue) {
+        return (NumberEvaluator) new NumberEvaluator("add")
             .withParameter(Double.toString(leftValue))
             .withParameter(rightValue);
     }
@@ -176,8 +176,8 @@ public class Add {
      * @param rightValue
      * @return
      */
-    public static NumericEvaluator add(float leftValue, int rightValue) {
-        return (NumericEvaluator) new NumericEvaluator("add")
+    public static NumberEvaluator add(float leftValue, int rightValue) {
+        return (NumberEvaluator) new NumberEvaluator("add")
             .withParameter(Float.toString(leftValue))
             .withParameter(Integer.toString(rightValue));
     }
@@ -188,8 +188,8 @@ public class Add {
      * @param rightValue
      * @return
      */
-    public static NumericEvaluator add(float leftValue, double rightValue) {
-        return (NumericEvaluator) new NumericEvaluator("add")
+    public static NumberEvaluator add(float leftValue, double rightValue) {
+        return (NumberEvaluator) new NumberEvaluator("add")
         .withParameter(Float.toString(leftValue))
             .withParameter(Double.toString(rightValue));
     }
@@ -200,8 +200,8 @@ public class Add {
      * @param rightValue
      * @return
      */
-    public static NumericEvaluator add(float leftValue, float rightValue) {
-        return (NumericEvaluator) new NumericEvaluator("add")
+    public static NumberEvaluator add(float leftValue, float rightValue) {
+        return (NumberEvaluator) new NumberEvaluator("add")
             .withParameter(Float.toString(leftValue))
             .withParameter(Float.toString(rightValue));
     }
@@ -212,8 +212,8 @@ public class Add {
      * @param rightValue
      * @return
      */
-    public static NumericEvaluator add(float leftValue, FieldOrNumericEvaluator rightValue) {
-        return (NumericEvaluator) new NumericEvaluator("add")
+    public static NumberEvaluator add(float leftValue, FieldOrNumberEvaluator rightValue) {
+        return (NumberEvaluator) new NumberEvaluator("add")
             .withParameter(Float.toString(leftValue))
             .withParameter(rightValue);
     }

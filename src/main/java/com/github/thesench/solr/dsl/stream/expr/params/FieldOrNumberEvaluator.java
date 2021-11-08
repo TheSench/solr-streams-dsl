@@ -2,6 +2,6 @@ package com.github.thesench.solr.dsl.stream.expr.params;
 
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpressionParameter;
 
-public interface FieldOrNumericEvaluator extends StreamExpressionParameter {
+public interface FieldOrNumberEvaluator extends StreamExpressionParameter {
     
 }

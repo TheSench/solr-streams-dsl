@@ -10,8 +10,8 @@ public class Cos {
      * @param fieldName
      * @return
      */
-    public static NumericEvaluator cos(String fieldName) {
-        return (NumericEvaluator) new NumericEvaluator("cos").withParameter(fieldName);
+    public static NumberEvaluator cos(String fieldName) {
+        return (NumberEvaluator) new NumberEvaluator("cos").withParameter(fieldName);
     }
 
     /**
@@ -19,8 +19,8 @@ public class Cos {
      * @param field
      * @return
      */
-    public static NumericEvaluator cos(Field field) {
-        return (NumericEvaluator) new NumericEvaluator("cos").withParameter(field.toString());
+    public static NumberEvaluator cos(Field field) {
+        return (NumberEvaluator) new NumberEvaluator("cos").withParameter(field.toString());
     }
 
     /**
@@ -28,8 +28,8 @@ public class Cos {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator cos(int rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("cos").withParameter(Integer.toString(rawNumber));
+    public static NumberEvaluator cos(int rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("cos").withParameter(Integer.toString(rawNumber));
     }
 
     /**
@@ -37,8 +37,8 @@ public class Cos {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator cos(long rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("cos").withParameter(Long.toString(rawNumber));
+    public static NumberEvaluator cos(long rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("cos").withParameter(Long.toString(rawNumber));
     }
 
     /**
@@ -46,8 +46,8 @@ public class Cos {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator cos(double rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("cos").withParameter(Double.toString(rawNumber));
+    public static NumberEvaluator cos(double rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("cos").withParameter(Double.toString(rawNumber));
     }
 
     /**
@@ -55,8 +55,8 @@ public class Cos {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator cos(float rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("cos").withParameter(Float.toString(rawNumber));
+    public static NumberEvaluator cos(float rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("cos").withParameter(Float.toString(rawNumber));
     }
 
     /**
@@ -64,8 +64,8 @@ public class Cos {
      * @param numberEvaluator
      * @return
      */
-    public static NumericEvaluator cos(NumericEvaluator numberEvaluator) {
-        return (NumericEvaluator) new NumericEvaluator("cos").withParameter(numberEvaluator);
+    public static NumberEvaluator cos(NumberEvaluator numberEvaluator) {
+        return (NumberEvaluator) new NumberEvaluator("cos").withParameter(numberEvaluator);
     }
 
 }

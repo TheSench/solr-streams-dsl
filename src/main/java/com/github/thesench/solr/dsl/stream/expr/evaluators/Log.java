@@ -10,8 +10,8 @@ public class Log {
      * @param fieldName
      * @return
      */
-    public static NumericEvaluator log(String fieldName) {
-        return (NumericEvaluator) new NumericEvaluator("log").withParameter(fieldName);
+    public static NumberEvaluator log(String fieldName) {
+        return (NumberEvaluator) new NumberEvaluator("log").withParameter(fieldName);
     }
 
     /**
@@ -19,8 +19,8 @@ public class Log {
      * @param field
      * @return
      */
-    public static NumericEvaluator log(Field field) {
-        return (NumericEvaluator) new NumericEvaluator("log").withParameter(field.toString());
+    public static NumberEvaluator log(Field field) {
+        return (NumberEvaluator) new NumberEvaluator("log").withParameter(field.toString());
     }
 
     /**
@@ -28,8 +28,8 @@ public class Log {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator log(int rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("log").withParameter(Integer.toString(rawNumber));
+    public static NumberEvaluator log(int rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("log").withParameter(Integer.toString(rawNumber));
     }
 
     /**
@@ -37,8 +37,8 @@ public class Log {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator log(long rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("log").withParameter(Long.toString(rawNumber));
+    public static NumberEvaluator log(long rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("log").withParameter(Long.toString(rawNumber));
     }
 
     /**
@@ -46,8 +46,8 @@ public class Log {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator log(double rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("log").withParameter(Double.toString(rawNumber));
+    public static NumberEvaluator log(double rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("log").withParameter(Double.toString(rawNumber));
     }
 
     /**
@@ -55,8 +55,8 @@ public class Log {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator log(float rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("log").withParameter(Float.toString(rawNumber));
+    public static NumberEvaluator log(float rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("log").withParameter(Float.toString(rawNumber));
     }
 
     /**
@@ -64,8 +64,8 @@ public class Log {
      * @param numberEvaluator
      * @return
      */
-    public static NumericEvaluator log(NumericEvaluator numberEvaluator) {
-        return (NumericEvaluator) new NumericEvaluator("log").withParameter(numberEvaluator);
+    public static NumberEvaluator log(NumberEvaluator numberEvaluator) {
+        return (NumberEvaluator) new NumberEvaluator("log").withParameter(numberEvaluator);
     }
 
 }

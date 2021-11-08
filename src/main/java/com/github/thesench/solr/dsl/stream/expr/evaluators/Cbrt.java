@@ -10,8 +10,8 @@ public class Cbrt {
      * @param fieldName
      * @return
      */
-    public static NumericEvaluator cbrt(String fieldName) {
-        return (NumericEvaluator) new NumericEvaluator("cbrt").withParameter(fieldName);
+    public static NumberEvaluator cbrt(String fieldName) {
+        return (NumberEvaluator) new NumberEvaluator("cbrt").withParameter(fieldName);
     }
 
     /**
@@ -19,8 +19,8 @@ public class Cbrt {
      * @param field
      * @return
      */
-    public static NumericEvaluator cbrt(Field field) {
-        return (NumericEvaluator) new NumericEvaluator("cbrt").withParameter(field.toString());
+    public static NumberEvaluator cbrt(Field field) {
+        return (NumberEvaluator) new NumberEvaluator("cbrt").withParameter(field.toString());
     }
 
     /**
@@ -28,8 +28,8 @@ public class Cbrt {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator cbrt(int rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("cbrt").withParameter(Integer.toString(rawNumber));
+    public static NumberEvaluator cbrt(int rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("cbrt").withParameter(Integer.toString(rawNumber));
     }
 
     /**
@@ -37,8 +37,8 @@ public class Cbrt {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator cbrt(long rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("cbrt").withParameter(Long.toString(rawNumber));
+    public static NumberEvaluator cbrt(long rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("cbrt").withParameter(Long.toString(rawNumber));
     }
 
     /**
@@ -46,8 +46,8 @@ public class Cbrt {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator cbrt(double rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("cbrt").withParameter(Double.toString(rawNumber));
+    public static NumberEvaluator cbrt(double rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("cbrt").withParameter(Double.toString(rawNumber));
     }
 
     /**
@@ -55,8 +55,8 @@ public class Cbrt {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator cbrt(float rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("cbrt").withParameter(Float.toString(rawNumber));
+    public static NumberEvaluator cbrt(float rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("cbrt").withParameter(Float.toString(rawNumber));
     }
 
     /**
@@ -64,8 +64,8 @@ public class Cbrt {
      * @param numberEvaluator
      * @return
      */
-    public static NumericEvaluator cbrt(NumericEvaluator numberEvaluator) {
-        return (NumericEvaluator) new NumericEvaluator("cbrt").withParameter(numberEvaluator);
+    public static NumberEvaluator cbrt(NumberEvaluator numberEvaluator) {
+        return (NumberEvaluator) new NumberEvaluator("cbrt").withParameter(numberEvaluator);
     }
 
 }

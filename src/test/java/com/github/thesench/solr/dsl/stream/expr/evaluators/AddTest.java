@@ -35,7 +35,7 @@ public class AddTest {
     @Test
     void add_givenFieldAndNumberEvaluator_returnsAddExpression() {
         Field firstValue = new Field("someField");
-        NumericEvaluator secondValue = abs(-1);
+        NumberEvaluator secondValue = abs(-1);
 
         StreamExpression expression = add(firstValue, secondValue);
 
@@ -74,7 +74,7 @@ public class AddTest {
     
     @Test
     void add_givenNumberEvaluatorAndField_returnsAddExpression() {
-        NumericEvaluator firstValue = abs(-1);;
+        NumberEvaluator firstValue = abs(-1);;
         Field secondValue = new Field("someOtherField");
 
         StreamExpression expression = add(firstValue, secondValue);
@@ -84,8 +84,8 @@ public class AddTest {
     
     @Test
     void add_givenNumberEvaluatorAndNumberEvaluator_returnsAddExpression() {
-        NumericEvaluator firstValue = abs(-1);;
-        NumericEvaluator secondValue = abs(-1);;
+        NumberEvaluator firstValue = abs(-1);;
+        NumberEvaluator secondValue = abs(-1);;
 
         StreamExpression expression = add(firstValue, secondValue);
 
@@ -94,7 +94,7 @@ public class AddTest {
     
     @Test
     void add_givenNumberEvaluatorAndInt_returnsAddExpression() {
-        NumericEvaluator firstValue = abs(-1);;
+        NumberEvaluator firstValue = abs(-1);;
         int secondValue = 4;
 
         StreamExpression expression = add(firstValue, secondValue);
@@ -104,7 +104,7 @@ public class AddTest {
     
     @Test
     void add_givenNumberEvaluatorAndFloat_returnsAddExpression() {
-        NumericEvaluator firstValue = abs(-1);;
+        NumberEvaluator firstValue = abs(-1);;
         float secondValue = 3.4f;
 
         StreamExpression expression = add(firstValue, secondValue);
@@ -114,7 +114,7 @@ public class AddTest {
     
     @Test
     void add_givenNumberEvaluatorAndDouble_returnsAddExpression() {
-        NumericEvaluator firstValue = abs(-1);;
+        NumberEvaluator firstValue = abs(-1);;
         double secondValue = 1.2d;
 
         StreamExpression expression = add(firstValue, secondValue);
@@ -135,7 +135,7 @@ public class AddTest {
     @Test
     void add_givenintAndNumberEvaluator_returnsAddExpression() {
         int firstValue = 4;
-        NumericEvaluator secondValue = abs(-1);;
+        NumberEvaluator secondValue = abs(-1);;
 
         StreamExpression expression = add(firstValue, secondValue);
 
@@ -185,7 +185,7 @@ public class AddTest {
     @Test
     void add_givenfloatAndNumberEvaluator_returnsAddExpression() {
         float firstValue = 3.4f;
-        NumericEvaluator secondValue = abs(-1);;
+        NumberEvaluator secondValue = abs(-1);;
 
         StreamExpression expression = add(firstValue, secondValue);
 
@@ -235,7 +235,7 @@ public class AddTest {
     @Test
     void add_givendoubleAndNumberEvaluator_returnsAddExpression() {
         double firstValue = 1.2d;
-        NumericEvaluator secondValue = abs(-1);;
+        NumberEvaluator secondValue = abs(-1);;
 
         StreamExpression expression = add(firstValue, secondValue);
 

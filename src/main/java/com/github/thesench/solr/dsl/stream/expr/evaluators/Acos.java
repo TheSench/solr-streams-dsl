@@ -10,8 +10,8 @@ public class Acos {
      * @param fieldName
      * @return
      */
-    public static NumericEvaluator acos(String fieldName) {
-        return (NumericEvaluator) new NumericEvaluator("acos").withParameter(fieldName);
+    public static NumberEvaluator acos(String fieldName) {
+        return (NumberEvaluator) new NumberEvaluator("acos").withParameter(fieldName);
     }
 
     /**
@@ -19,8 +19,8 @@ public class Acos {
      * @param field
      * @return
      */
-    public static NumericEvaluator acos(Field field) {
-        return (NumericEvaluator) new NumericEvaluator("acos").withParameter(field.toString());
+    public static NumberEvaluator acos(Field field) {
+        return (NumberEvaluator) new NumberEvaluator("acos").withParameter(field.toString());
     }
 
     /**
@@ -28,8 +28,8 @@ public class Acos {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator acos(int rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("acos").withParameter(Integer.toString(rawNumber));
+    public static NumberEvaluator acos(int rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("acos").withParameter(Integer.toString(rawNumber));
     }
 
     /**
@@ -37,8 +37,8 @@ public class Acos {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator acos(long rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("acos").withParameter(Long.toString(rawNumber));
+    public static NumberEvaluator acos(long rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("acos").withParameter(Long.toString(rawNumber));
     }
 
     /**
@@ -46,8 +46,8 @@ public class Acos {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator acos(double rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("acos").withParameter(Double.toString(rawNumber));
+    public static NumberEvaluator acos(double rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("acos").withParameter(Double.toString(rawNumber));
     }
 
     /**
@@ -55,8 +55,8 @@ public class Acos {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator acos(float rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("acos").withParameter(Float.toString(rawNumber));
+    public static NumberEvaluator acos(float rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("acos").withParameter(Float.toString(rawNumber));
     }
 
     /**
@@ -64,8 +64,8 @@ public class Acos {
      * @param numberEvaluator
      * @return
      */
-    public static NumericEvaluator acos(NumericEvaluator numberEvaluator) {
-        return (NumericEvaluator) new NumericEvaluator("acos").withParameter(numberEvaluator);
+    public static NumberEvaluator acos(NumberEvaluator numberEvaluator) {
+        return (NumberEvaluator) new NumberEvaluator("acos").withParameter(numberEvaluator);
     }
 
 }

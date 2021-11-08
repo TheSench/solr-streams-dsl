@@ -24,7 +24,7 @@ public class ModTest {
     @Test
     void mod_givenFieldAndNumberEvaluator_returnsDivExpression() {
         Field dividend = new Field("someField");
-        NumericEvaluator divisor = abs(-1);
+        NumberEvaluator divisor = abs(-1);
 
         StreamExpression expression = mod(dividend, divisor);
 
@@ -63,7 +63,7 @@ public class ModTest {
     
     @Test
     void mod_givenNumberEvaluatorAndField_returnsDivExpression() {
-        NumericEvaluator dividend = abs(-1);;
+        NumberEvaluator dividend = abs(-1);;
         Field divisor = new Field("someOtherField");
 
         StreamExpression expression = mod(dividend, divisor);
@@ -73,8 +73,8 @@ public class ModTest {
     
     @Test
     void mod_givenNumberEvaluatorAndNumberEvaluator_returnsDivExpression() {
-        NumericEvaluator dividend = abs(-1);;
-        NumericEvaluator divisor = abs(-1);;
+        NumberEvaluator dividend = abs(-1);;
+        NumberEvaluator divisor = abs(-1);;
 
         StreamExpression expression = mod(dividend, divisor);
 
@@ -83,7 +83,7 @@ public class ModTest {
     
     @Test
     void mod_givenNumberEvaluatorAndInt_returnsDivExpression() {
-        NumericEvaluator dividend = abs(-1);;
+        NumberEvaluator dividend = abs(-1);;
         int divisor = 4;
 
         StreamExpression expression = mod(dividend, divisor);
@@ -93,7 +93,7 @@ public class ModTest {
     
     @Test
     void mod_givenNumberEvaluatorAndFloat_returnsDivExpression() {
-        NumericEvaluator dividend = abs(-1);;
+        NumberEvaluator dividend = abs(-1);;
         float divisor = 3.4f;
 
         StreamExpression expression = mod(dividend, divisor);
@@ -103,7 +103,7 @@ public class ModTest {
     
     @Test
     void mod_givenNumberEvaluatorAndDouble_returnsDivExpression() {
-        NumericEvaluator dividend = abs(-1);;
+        NumberEvaluator dividend = abs(-1);;
         double divisor = 1.2d;
 
         StreamExpression expression = mod(dividend, divisor);
@@ -124,7 +124,7 @@ public class ModTest {
     @Test
     void mod_givenintAndNumberEvaluator_returnsDivExpression() {
         int dividend = 4;
-        NumericEvaluator divisor = abs(-1);;
+        NumberEvaluator divisor = abs(-1);;
 
         StreamExpression expression = mod(dividend, divisor);
 
@@ -174,7 +174,7 @@ public class ModTest {
     @Test
     void mod_givenfloatAndNumberEvaluator_returnsDivExpression() {
         float dividend = 3.4f;
-        NumericEvaluator divisor = abs(-1);;
+        NumberEvaluator divisor = abs(-1);;
 
         StreamExpression expression = mod(dividend, divisor);
 
@@ -224,7 +224,7 @@ public class ModTest {
     @Test
     void mod_givendoubleAndNumberEvaluator_returnsDivExpression() {
         double dividend = 1.2d;
-        NumericEvaluator divisor = abs(-1);;
+        NumberEvaluator divisor = abs(-1);;
 
         StreamExpression expression = mod(dividend, divisor);
 

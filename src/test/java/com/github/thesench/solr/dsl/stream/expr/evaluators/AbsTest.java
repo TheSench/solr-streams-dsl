@@ -26,7 +26,7 @@ public class AbsTest {
     }
 
     @Test
-    void abs_givenNumericEvaluator_createsAbsEvaluator() {
+    void abs_givenNumberEvaluator_createsAbsEvaluator() {
         Field someField = new Field("someField");
         StreamExpression expression = abs(add(someField, 1));
 

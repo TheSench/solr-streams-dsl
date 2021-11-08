@@ -10,8 +10,8 @@ public class Asin {
      * @param fieldName
      * @return
      */
-    public static NumericEvaluator asin(String fieldName) {
-        return (NumericEvaluator) new NumericEvaluator("asin").withParameter(fieldName);
+    public static NumberEvaluator asin(String fieldName) {
+        return (NumberEvaluator) new NumberEvaluator("asin").withParameter(fieldName);
     }
 
     /**
@@ -19,8 +19,8 @@ public class Asin {
      * @param field
      * @return
      */
-    public static NumericEvaluator asin(Field field) {
-        return (NumericEvaluator) new NumericEvaluator("asin").withParameter(field.toString());
+    public static NumberEvaluator asin(Field field) {
+        return (NumberEvaluator) new NumberEvaluator("asin").withParameter(field.toString());
     }
 
     /**
@@ -28,8 +28,8 @@ public class Asin {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator asin(int rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("asin").withParameter(Integer.toString(rawNumber));
+    public static NumberEvaluator asin(int rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("asin").withParameter(Integer.toString(rawNumber));
     }
 
     /**
@@ -37,8 +37,8 @@ public class Asin {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator asin(long rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("asin").withParameter(Long.toString(rawNumber));
+    public static NumberEvaluator asin(long rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("asin").withParameter(Long.toString(rawNumber));
     }
 
     /**
@@ -46,8 +46,8 @@ public class Asin {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator asin(double rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("asin").withParameter(Double.toString(rawNumber));
+    public static NumberEvaluator asin(double rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("asin").withParameter(Double.toString(rawNumber));
     }
 
     /**
@@ -55,8 +55,8 @@ public class Asin {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator asin(float rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("asin").withParameter(Float.toString(rawNumber));
+    public static NumberEvaluator asin(float rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("asin").withParameter(Float.toString(rawNumber));
     }
 
     /**
@@ -64,8 +64,8 @@ public class Asin {
      * @param numberEvaluator
      * @return
      */
-    public static NumericEvaluator asin(NumericEvaluator numberEvaluator) {
-        return (NumericEvaluator) new NumericEvaluator("asin").withParameter(numberEvaluator);
+    public static NumberEvaluator asin(NumberEvaluator numberEvaluator) {
+        return (NumberEvaluator) new NumberEvaluator("asin").withParameter(numberEvaluator);
     }
 
 }

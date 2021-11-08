@@ -10,8 +10,8 @@ public class Sqrt {
      * @param fieldName
      * @return
      */
-    public static NumericEvaluator sqrt(String fieldName) {
-        return (NumericEvaluator) new NumericEvaluator("sqrt").withParameter(fieldName);
+    public static NumberEvaluator sqrt(String fieldName) {
+        return (NumberEvaluator) new NumberEvaluator("sqrt").withParameter(fieldName);
     }
 
     /**
@@ -19,8 +19,8 @@ public class Sqrt {
      * @param field
      * @return
      */
-    public static NumericEvaluator sqrt(Field field) {
-        return (NumericEvaluator) new NumericEvaluator("sqrt").withParameter(field.toString());
+    public static NumberEvaluator sqrt(Field field) {
+        return (NumberEvaluator) new NumberEvaluator("sqrt").withParameter(field.toString());
     }
 
     /**
@@ -28,8 +28,8 @@ public class Sqrt {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator sqrt(int rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("sqrt").withParameter(Integer.toString(rawNumber));
+    public static NumberEvaluator sqrt(int rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("sqrt").withParameter(Integer.toString(rawNumber));
     }
 
     /**
@@ -37,8 +37,8 @@ public class Sqrt {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator sqrt(long rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("sqrt").withParameter(Long.toString(rawNumber));
+    public static NumberEvaluator sqrt(long rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("sqrt").withParameter(Long.toString(rawNumber));
     }
 
     /**
@@ -46,8 +46,8 @@ public class Sqrt {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator sqrt(double rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("sqrt").withParameter(Double.toString(rawNumber));
+    public static NumberEvaluator sqrt(double rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("sqrt").withParameter(Double.toString(rawNumber));
     }
 
     /**
@@ -55,8 +55,8 @@ public class Sqrt {
      * @param rawNumber
      * @return
      */
-    public static NumericEvaluator sqrt(float rawNumber) {
-        return (NumericEvaluator) new NumericEvaluator("sqrt").withParameter(Float.toString(rawNumber));
+    public static NumberEvaluator sqrt(float rawNumber) {
+        return (NumberEvaluator) new NumberEvaluator("sqrt").withParameter(Float.toString(rawNumber));
     }
 
     /**
@@ -64,8 +64,8 @@ public class Sqrt {
      * @param numberEvaluator
      * @return
      */
-    public static NumericEvaluator sqrt(NumericEvaluator numberEvaluator) {
-        return (NumericEvaluator) new NumericEvaluator("sqrt").withParameter(numberEvaluator);
+    public static NumberEvaluator sqrt(NumberEvaluator numberEvaluator) {
+        return (NumberEvaluator) new NumberEvaluator("sqrt").withParameter(numberEvaluator);
     }
 
 }
