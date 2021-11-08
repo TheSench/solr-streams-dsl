@@ -246,10 +246,6 @@ public class StreamEvaluators {
         throw new NotImplementedException();
     }
 
-    public static StreamExpression mult() {
-        throw new NotImplementedException();
-    }
-
     public static StreamExpression normalDistribution() {
         throw new NotImplementedException();
     }
@@ -367,10 +363,6 @@ public class StreamEvaluators {
     }
 
     public static StreamExpression standardize() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression sub() {
         throw new NotImplementedException();
     }
 
