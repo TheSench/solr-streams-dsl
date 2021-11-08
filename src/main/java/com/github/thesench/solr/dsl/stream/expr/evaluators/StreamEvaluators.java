@@ -37,10 +37,6 @@ public class StreamEvaluators {
         throw new NotImplementedException();
     }
 
-    public static StreamExpression ceil() {
-        throw new NotImplementedException();
-    }
-
     public static StreamExpression col() {
         throw new NotImplementedException();
     }
@@ -145,10 +141,6 @@ public class StreamEvaluators {
         throw new NotImplementedException();
     }
 
-    public static StreamExpression floor() {
-        throw new NotImplementedException();
-    }
-
     public static StreamExpression freqTable() {
         throw new NotImplementedException();
     }
@@ -218,10 +210,6 @@ public class StreamEvaluators {
         throw new NotImplementedException();
     }
 
-    public static StreamExpression log() {
-        throw new NotImplementedException();
-    }
-
     public static StreamExpression logNormalDistribution() {
         throw new NotImplementedException();
     }
@@ -251,10 +239,6 @@ public class StreamEvaluators {
     }
 
     public static StreamExpression minMaxScale() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression mod() {
         throw new NotImplementedException();
     }
 
@@ -299,10 +283,6 @@ public class StreamEvaluators {
     }
 
     public static StreamExpression polyFit() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression pow() {
         throw new NotImplementedException();
     }
 
@@ -391,10 +371,6 @@ public class StreamEvaluators {
     }
 
     public static StreamExpression spline() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression sqrt() {
         throw new NotImplementedException();
     }
 
