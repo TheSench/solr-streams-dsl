@@ -24,7 +24,7 @@ public class PowTest {
     @Test
     void pow_givenFieldAndNumberEvaluator_returnsPowExpression() {
         Field base = new Field("someField");
-        NumberEvaluator exponent = abs(-1);
+        NumericEvaluator exponent = abs(-1);
 
         StreamExpression expression = pow(base, exponent);
 
@@ -63,7 +63,7 @@ public class PowTest {
     
     @Test
     void pow_givenNumberEvaluatorAndField_returnsPowExpression() {
-        NumberEvaluator base = abs(-1);;
+        NumericEvaluator base = abs(-1);;
         Field exponent = new Field("someOtherField");
 
         StreamExpression expression = pow(base, exponent);
@@ -73,8 +73,8 @@ public class PowTest {
     
     @Test
     void pow_givenNumberEvaluatorAndNumberEvaluator_returnsPowExpression() {
-        NumberEvaluator base = abs(-1);;
-        NumberEvaluator exponent = abs(-1);;
+        NumericEvaluator base = abs(-1);;
+        NumericEvaluator exponent = abs(-1);;
 
         StreamExpression expression = pow(base, exponent);
 
@@ -83,7 +83,7 @@ public class PowTest {
     
     @Test
     void pow_givenNumberEvaluatorAndInt_returnsPowExpression() {
-        NumberEvaluator base = abs(-1);;
+        NumericEvaluator base = abs(-1);;
         int exponent = 4;
 
         StreamExpression expression = pow(base, exponent);
@@ -93,7 +93,7 @@ public class PowTest {
     
     @Test
     void pow_givenNumberEvaluatorAndFloat_returnsPowExpression() {
-        NumberEvaluator base = abs(-1);;
+        NumericEvaluator base = abs(-1);;
         float exponent = 3.4f;
 
         StreamExpression expression = pow(base, exponent);
@@ -103,7 +103,7 @@ public class PowTest {
     
     @Test
     void pow_givenNumberEvaluatorAndDouble_returnsPowExpression() {
-        NumberEvaluator base = abs(-1);;
+        NumericEvaluator base = abs(-1);;
         double exponent = 1.2d;
 
         StreamExpression expression = pow(base, exponent);
@@ -124,7 +124,7 @@ public class PowTest {
     @Test
     void pow_givenintAndNumberEvaluator_returnsPowExpression() {
         int base = 4;
-        NumberEvaluator exponent = abs(-1);;
+        NumericEvaluator exponent = abs(-1);;
 
         StreamExpression expression = pow(base, exponent);
 
@@ -174,7 +174,7 @@ public class PowTest {
     @Test
     void pow_givenfloatAndNumberEvaluator_returnsPowExpression() {
         float base = 3.4f;
-        NumberEvaluator exponent = abs(-1);;
+        NumericEvaluator exponent = abs(-1);;
 
         StreamExpression expression = pow(base, exponent);
 
@@ -224,7 +224,7 @@ public class PowTest {
     @Test
     void pow_givendoubleAndNumberEvaluator_returnsPowExpression() {
         double base = 1.2d;
-        NumberEvaluator exponent = abs(-1);;
+        NumericEvaluator exponent = abs(-1);;
 
         StreamExpression expression = pow(base, exponent);
 

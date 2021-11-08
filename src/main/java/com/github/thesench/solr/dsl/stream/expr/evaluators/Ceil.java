@@ -10,8 +10,8 @@ public class Ceil {
      * @param fieldName
      * @return
      */
-    public static NumberEvaluator ceil(String fieldName) {
-        return (NumberEvaluator) new NumberEvaluator("ceil").withParameter(fieldName);
+    public static NumericEvaluator ceil(String fieldName) {
+        return (NumericEvaluator) new NumericEvaluator("ceil").withParameter(fieldName);
     }
 
     /**
@@ -19,8 +19,8 @@ public class Ceil {
      * @param field
      * @return
      */
-    public static NumberEvaluator ceil(Field field) {
-        return (NumberEvaluator) new NumberEvaluator("ceil").withParameter(field.toString());
+    public static NumericEvaluator ceil(Field field) {
+        return (NumericEvaluator) new NumericEvaluator("ceil").withParameter(field.toString());
     }
 
     /**
@@ -28,8 +28,8 @@ public class Ceil {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator ceil(int rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("ceil").withParameter(Integer.toString(rawNumber));
+    public static NumericEvaluator ceil(int rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("ceil").withParameter(Integer.toString(rawNumber));
     }
 
     /**
@@ -37,8 +37,8 @@ public class Ceil {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator ceil(long rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("ceil").withParameter(Long.toString(rawNumber));
+    public static NumericEvaluator ceil(long rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("ceil").withParameter(Long.toString(rawNumber));
     }
 
     /**
@@ -46,8 +46,8 @@ public class Ceil {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator ceil(double rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("ceil").withParameter(Double.toString(rawNumber));
+    public static NumericEvaluator ceil(double rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("ceil").withParameter(Double.toString(rawNumber));
     }
 
     /**
@@ -55,8 +55,8 @@ public class Ceil {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator ceil(float rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("ceil").withParameter(Float.toString(rawNumber));
+    public static NumericEvaluator ceil(float rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("ceil").withParameter(Float.toString(rawNumber));
     }
 
     /**
@@ -64,8 +64,8 @@ public class Ceil {
      * @param numberEvaluator
      * @return
      */
-    public static NumberEvaluator ceil(NumberEvaluator numberEvaluator) {
-        return (NumberEvaluator) new NumberEvaluator("ceil").withParameter(numberEvaluator);
+    public static NumericEvaluator ceil(NumericEvaluator numberEvaluator) {
+        return (NumericEvaluator) new NumericEvaluator("ceil").withParameter(numberEvaluator);
     }
 
 }

@@ -10,8 +10,8 @@ public class Floor {
      * @param fieldName
      * @return
      */
-    public static NumberEvaluator floor(String fieldName) {
-        return (NumberEvaluator) new NumberEvaluator("floor").withParameter(fieldName);
+    public static NumericEvaluator floor(String fieldName) {
+        return (NumericEvaluator) new NumericEvaluator("floor").withParameter(fieldName);
     }
 
     /**
@@ -19,8 +19,8 @@ public class Floor {
      * @param field
      * @return
      */
-    public static NumberEvaluator floor(Field field) {
-        return (NumberEvaluator) new NumberEvaluator("floor").withParameter(field.toString());
+    public static NumericEvaluator floor(Field field) {
+        return (NumericEvaluator) new NumericEvaluator("floor").withParameter(field.toString());
     }
 
     /**
@@ -28,8 +28,8 @@ public class Floor {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator floor(int rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("floor").withParameter(Integer.toString(rawNumber));
+    public static NumericEvaluator floor(int rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("floor").withParameter(Integer.toString(rawNumber));
     }
 
     /**
@@ -37,8 +37,8 @@ public class Floor {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator floor(long rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("floor").withParameter(Long.toString(rawNumber));
+    public static NumericEvaluator floor(long rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("floor").withParameter(Long.toString(rawNumber));
     }
 
     /**
@@ -46,8 +46,8 @@ public class Floor {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator floor(double rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("floor").withParameter(Double.toString(rawNumber));
+    public static NumericEvaluator floor(double rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("floor").withParameter(Double.toString(rawNumber));
     }
 
     /**
@@ -55,8 +55,8 @@ public class Floor {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator floor(float rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("floor").withParameter(Float.toString(rawNumber));
+    public static NumericEvaluator floor(float rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("floor").withParameter(Float.toString(rawNumber));
     }
 
     /**
@@ -64,8 +64,8 @@ public class Floor {
      * @param numberEvaluator
      * @return
      */
-    public static NumberEvaluator floor(NumberEvaluator numberEvaluator) {
-        return (NumberEvaluator) new NumberEvaluator("floor").withParameter(numberEvaluator);
+    public static NumericEvaluator floor(NumericEvaluator numberEvaluator) {
+        return (NumericEvaluator) new NumericEvaluator("floor").withParameter(numberEvaluator);
     }
 
 }

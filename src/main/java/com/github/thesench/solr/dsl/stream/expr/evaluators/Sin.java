@@ -10,8 +10,8 @@ public class Sin {
      * @param fieldName
      * @return
      */
-    public static NumberEvaluator sin(String fieldName) {
-        return (NumberEvaluator) new NumberEvaluator("sin").withParameter(fieldName);
+    public static NumericEvaluator sin(String fieldName) {
+        return (NumericEvaluator) new NumericEvaluator("sin").withParameter(fieldName);
     }
 
     /**
@@ -19,8 +19,8 @@ public class Sin {
      * @param field
      * @return
      */
-    public static NumberEvaluator sin(Field field) {
-        return (NumberEvaluator) new NumberEvaluator("sin").withParameter(field.toString());
+    public static NumericEvaluator sin(Field field) {
+        return (NumericEvaluator) new NumericEvaluator("sin").withParameter(field.toString());
     }
 
     /**
@@ -28,8 +28,8 @@ public class Sin {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator sin(int rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("sin").withParameter(Integer.toString(rawNumber));
+    public static NumericEvaluator sin(int rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("sin").withParameter(Integer.toString(rawNumber));
     }
 
     /**
@@ -37,8 +37,8 @@ public class Sin {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator sin(long rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("sin").withParameter(Long.toString(rawNumber));
+    public static NumericEvaluator sin(long rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("sin").withParameter(Long.toString(rawNumber));
     }
 
     /**
@@ -46,8 +46,8 @@ public class Sin {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator sin(double rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("sin").withParameter(Double.toString(rawNumber));
+    public static NumericEvaluator sin(double rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("sin").withParameter(Double.toString(rawNumber));
     }
 
     /**
@@ -55,8 +55,8 @@ public class Sin {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator sin(float rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("sin").withParameter(Float.toString(rawNumber));
+    public static NumericEvaluator sin(float rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("sin").withParameter(Float.toString(rawNumber));
     }
 
     /**
@@ -64,8 +64,8 @@ public class Sin {
      * @param numberEvaluator
      * @return
      */
-    public static NumberEvaluator sin(NumberEvaluator numberEvaluator) {
-        return (NumberEvaluator) new NumberEvaluator("sin").withParameter(numberEvaluator);
+    public static NumericEvaluator sin(NumericEvaluator numberEvaluator) {
+        return (NumericEvaluator) new NumericEvaluator("sin").withParameter(numberEvaluator);
     }
 
 }

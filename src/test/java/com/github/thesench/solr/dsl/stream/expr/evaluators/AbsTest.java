@@ -1,7 +1,10 @@
 package com.github.thesench.solr.dsl.stream.expr.evaluators;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static com.github.thesench.solr.dsl.stream.expr.evaluators.Abs.abs;
+import static com.github.thesench.solr.dsl.stream.expr.evaluators.Add.add;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import com.github.thesench.solr.dsl.stream.expr.params.Field;
 
 import org.apache.solr.client.solrj.io.stream.expr.StreamExpression;
 import org.junit.jupiter.api.Test;
@@ -12,6 +15,22 @@ public class AbsTest {
         StreamExpression expression = abs("someField");
 
         assertEquals("abs(someField)", expression.toString());
+    }
+
+    @Test
+    void abs_givenField_createsAbsEvaluator() {
+        Field someField = new Field("someField");
+        StreamExpression expression = abs(someField);
+
+        assertEquals("abs(someField)", expression.toString());
+    }
+
+    @Test
+    void abs_givenNumericEvaluator_createsAbsEvaluator() {
+        Field someField = new Field("someField");
+        StreamExpression expression = abs(add(someField, 1));
+
+        assertEquals("abs(add(someField,1))", expression.toString());
     }
 
     @Test

@@ -10,8 +10,8 @@ public class Factorial {
      * @param fieldName
      * @return
      */
-    public static NumberEvaluator factorial(String fieldName) {
-        return (NumberEvaluator) new NumberEvaluator("factorial").withParameter(fieldName);
+    public static NumericEvaluator factorial(String fieldName) {
+        return (NumericEvaluator) new NumericEvaluator("factorial").withParameter(fieldName);
     }
 
     /**
@@ -19,8 +19,8 @@ public class Factorial {
      * @param field
      * @return
      */
-    public static NumberEvaluator factorial(Field field) {
-        return (NumberEvaluator) new NumberEvaluator("factorial").withParameter(field.toString());
+    public static NumericEvaluator factorial(Field field) {
+        return (NumericEvaluator) new NumericEvaluator("factorial").withParameter(field.toString());
     }
 
     /**
@@ -28,8 +28,8 @@ public class Factorial {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator factorial(int rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("factorial").withParameter(Integer.toString(rawNumber));
+    public static NumericEvaluator factorial(int rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("factorial").withParameter(Integer.toString(rawNumber));
     }
 
     /**
@@ -37,8 +37,8 @@ public class Factorial {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator factorial(long rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("factorial").withParameter(Long.toString(rawNumber));
+    public static NumericEvaluator factorial(long rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("factorial").withParameter(Long.toString(rawNumber));
     }
 
     /**
@@ -46,8 +46,8 @@ public class Factorial {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator factorial(double rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("factorial").withParameter(Double.toString(rawNumber));
+    public static NumericEvaluator factorial(double rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("factorial").withParameter(Double.toString(rawNumber));
     }
 
     /**
@@ -55,8 +55,8 @@ public class Factorial {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator factorial(float rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("factorial").withParameter(Float.toString(rawNumber));
+    public static NumericEvaluator factorial(float rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("factorial").withParameter(Float.toString(rawNumber));
     }
 
     /**
@@ -64,8 +64,8 @@ public class Factorial {
      * @param numberEvaluator
      * @return
      */
-    public static NumberEvaluator factorial(NumberEvaluator numberEvaluator) {
-        return (NumberEvaluator) new NumberEvaluator("factorial").withParameter(numberEvaluator);
+    public static NumericEvaluator factorial(NumericEvaluator numberEvaluator) {
+        return (NumericEvaluator) new NumericEvaluator("factorial").withParameter(numberEvaluator);
     }
 
 }

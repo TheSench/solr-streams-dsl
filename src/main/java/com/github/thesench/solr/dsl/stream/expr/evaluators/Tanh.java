@@ -10,8 +10,8 @@ public class Tanh {
      * @param fieldName
      * @return
      */
-    public static NumberEvaluator tanh(String fieldName) {
-        return (NumberEvaluator) new NumberEvaluator("tanh").withParameter(fieldName);
+    public static NumericEvaluator tanh(String fieldName) {
+        return (NumericEvaluator) new NumericEvaluator("tanh").withParameter(fieldName);
     }
 
     /**
@@ -19,8 +19,8 @@ public class Tanh {
      * @param field
      * @return
      */
-    public static NumberEvaluator tanh(Field field) {
-        return (NumberEvaluator) new NumberEvaluator("tanh").withParameter(field.toString());
+    public static NumericEvaluator tanh(Field field) {
+        return (NumericEvaluator) new NumericEvaluator("tanh").withParameter(field.toString());
     }
 
     /**
@@ -28,8 +28,8 @@ public class Tanh {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator tanh(int rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("tanh").withParameter(Integer.toString(rawNumber));
+    public static NumericEvaluator tanh(int rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("tanh").withParameter(Integer.toString(rawNumber));
     }
 
     /**
@@ -37,8 +37,8 @@ public class Tanh {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator tanh(long rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("tanh").withParameter(Long.toString(rawNumber));
+    public static NumericEvaluator tanh(long rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("tanh").withParameter(Long.toString(rawNumber));
     }
 
     /**
@@ -46,8 +46,8 @@ public class Tanh {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator tanh(double rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("tanh").withParameter(Double.toString(rawNumber));
+    public static NumericEvaluator tanh(double rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("tanh").withParameter(Double.toString(rawNumber));
     }
 
     /**
@@ -55,8 +55,8 @@ public class Tanh {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator tanh(float rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("tanh").withParameter(Float.toString(rawNumber));
+    public static NumericEvaluator tanh(float rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("tanh").withParameter(Float.toString(rawNumber));
     }
 
     /**
@@ -64,8 +64,8 @@ public class Tanh {
      * @param numberEvaluator
      * @return
      */
-    public static NumberEvaluator tanh(NumberEvaluator numberEvaluator) {
-        return (NumberEvaluator) new NumberEvaluator("tanh").withParameter(numberEvaluator);
+    public static NumericEvaluator tanh(NumericEvaluator numberEvaluator) {
+        return (NumericEvaluator) new NumericEvaluator("tanh").withParameter(numberEvaluator);
     }
 
 }

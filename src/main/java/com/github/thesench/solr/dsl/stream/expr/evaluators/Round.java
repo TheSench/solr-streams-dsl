@@ -10,8 +10,8 @@ public class Round {
      * @param fieldName
      * @return
      */
-    public static NumberEvaluator round(String fieldName) {
-        return (NumberEvaluator) new NumberEvaluator("round").withParameter(fieldName);
+    public static NumericEvaluator round(String fieldName) {
+        return (NumericEvaluator) new NumericEvaluator("round").withParameter(fieldName);
     }
 
     /**
@@ -19,8 +19,8 @@ public class Round {
      * @param field
      * @return
      */
-    public static NumberEvaluator round(Field field) {
-        return (NumberEvaluator) new NumberEvaluator("round").withParameter(field.toString());
+    public static NumericEvaluator round(Field field) {
+        return (NumericEvaluator) new NumericEvaluator("round").withParameter(field.toString());
     }
 
     /**
@@ -28,8 +28,8 @@ public class Round {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator round(int rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("round").withParameter(Integer.toString(rawNumber));
+    public static NumericEvaluator round(int rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("round").withParameter(Integer.toString(rawNumber));
     }
 
     /**
@@ -37,8 +37,8 @@ public class Round {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator round(long rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("round").withParameter(Long.toString(rawNumber));
+    public static NumericEvaluator round(long rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("round").withParameter(Long.toString(rawNumber));
     }
 
     /**
@@ -46,8 +46,8 @@ public class Round {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator round(double rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("round").withParameter(Double.toString(rawNumber));
+    public static NumericEvaluator round(double rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("round").withParameter(Double.toString(rawNumber));
     }
 
     /**
@@ -55,8 +55,8 @@ public class Round {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator round(float rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("round").withParameter(Float.toString(rawNumber));
+    public static NumericEvaluator round(float rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("round").withParameter(Float.toString(rawNumber));
     }
 
     /**
@@ -64,8 +64,8 @@ public class Round {
      * @param numberEvaluator
      * @return
      */
-    public static NumberEvaluator round(NumberEvaluator numberEvaluator) {
-        return (NumberEvaluator) new NumberEvaluator("round").withParameter(numberEvaluator);
+    public static NumericEvaluator round(NumericEvaluator numberEvaluator) {
+        return (NumericEvaluator) new NumericEvaluator("round").withParameter(numberEvaluator);
     }
 
 }

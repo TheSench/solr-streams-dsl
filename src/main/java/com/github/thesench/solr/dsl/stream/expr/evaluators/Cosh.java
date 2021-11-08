@@ -10,8 +10,8 @@ public class Cosh {
      * @param fieldName
      * @return
      */
-    public static NumberEvaluator cosh(String fieldName) {
-        return (NumberEvaluator) new NumberEvaluator("cosh").withParameter(fieldName);
+    public static NumericEvaluator cosh(String fieldName) {
+        return (NumericEvaluator) new NumericEvaluator("cosh").withParameter(fieldName);
     }
 
     /**
@@ -19,8 +19,8 @@ public class Cosh {
      * @param field
      * @return
      */
-    public static NumberEvaluator cosh(Field field) {
-        return (NumberEvaluator) new NumberEvaluator("cosh").withParameter(field.toString());
+    public static NumericEvaluator cosh(Field field) {
+        return (NumericEvaluator) new NumericEvaluator("cosh").withParameter(field.toString());
     }
 
     /**
@@ -28,8 +28,8 @@ public class Cosh {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator cosh(int rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("cosh").withParameter(Integer.toString(rawNumber));
+    public static NumericEvaluator cosh(int rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("cosh").withParameter(Integer.toString(rawNumber));
     }
 
     /**
@@ -37,8 +37,8 @@ public class Cosh {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator cosh(long rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("cosh").withParameter(Long.toString(rawNumber));
+    public static NumericEvaluator cosh(long rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("cosh").withParameter(Long.toString(rawNumber));
     }
 
     /**
@@ -46,8 +46,8 @@ public class Cosh {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator cosh(double rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("cosh").withParameter(Double.toString(rawNumber));
+    public static NumericEvaluator cosh(double rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("cosh").withParameter(Double.toString(rawNumber));
     }
 
     /**
@@ -55,8 +55,8 @@ public class Cosh {
      * @param rawNumber
      * @return
      */
-    public static NumberEvaluator cosh(float rawNumber) {
-        return (NumberEvaluator) new NumberEvaluator("cosh").withParameter(Float.toString(rawNumber));
+    public static NumericEvaluator cosh(float rawNumber) {
+        return (NumericEvaluator) new NumericEvaluator("cosh").withParameter(Float.toString(rawNumber));
     }
 
     /**
@@ -64,8 +64,8 @@ public class Cosh {
      * @param numberEvaluator
      * @return
      */
-    public static NumberEvaluator cosh(NumberEvaluator numberEvaluator) {
-        return (NumberEvaluator) new NumberEvaluator("cosh").withParameter(numberEvaluator);
+    public static NumericEvaluator cosh(NumericEvaluator numberEvaluator) {
+        return (NumericEvaluator) new NumericEvaluator("cosh").withParameter(numberEvaluator);
     }
 
 }
