@@ -9,10 +9,6 @@ public class StreamEvaluators {
         throw new NotImplementedException();
     }
 
-    public static StreamExpression and() {
-        throw new NotImplementedException();
-    }
-
     public static StreamExpression anova() {
         throw new NotImplementedException();
     }
@@ -118,10 +114,6 @@ public class StreamEvaluators {
     }
 
     public static StreamExpression enumeratedDistribution() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression eor() {
         throw new NotImplementedException();
     }
 
@@ -254,15 +246,7 @@ public class StreamEvaluators {
         throw new NotImplementedException();
     }
 
-    public static StreamExpression not() {
-        throw new NotImplementedException();
-    }
-
     public static StreamExpression olsRegress() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression or() {
         throw new NotImplementedException();
     }
 
