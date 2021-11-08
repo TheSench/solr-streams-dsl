@@ -129,10 +129,6 @@ public class StreamEvaluators {
         throw new NotImplementedException();
     }
 
-    public static StreamExpression factorial() {
-        throw new NotImplementedException();
-    }
-
     public static StreamExpression finddelay() {
         throw new NotImplementedException();
     }
