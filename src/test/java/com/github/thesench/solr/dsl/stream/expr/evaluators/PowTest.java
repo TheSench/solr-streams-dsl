@@ -112,7 +112,7 @@ public class PowTest {
     }
     
     @Test
-    void pow_givenintAndField_returnsPowExpression() {
+    void pow_givenIntAndField_returnsPowExpression() {
         int base = 4;
         Field exponent = new Field("someOtherField");
 
@@ -122,7 +122,7 @@ public class PowTest {
     }
     
     @Test
-    void pow_givenintAndNumberEvaluator_returnsPowExpression() {
+    void pow_givenIntAndNumberEvaluator_returnsPowExpression() {
         int base = 4;
         NumberEvaluator exponent = abs(-1);;
 
@@ -132,7 +132,7 @@ public class PowTest {
     }
     
     @Test
-    void pow_givenintAndInt_returnsPowExpression() {
+    void pow_givenIntAndInt_returnsPowExpression() {
         int base = 4;
         int exponent = 4;
 
@@ -142,7 +142,7 @@ public class PowTest {
     }
     
     @Test
-    void pow_givenintAndFloat_returnsPowExpression() {
+    void pow_givenIntAndFloat_returnsPowExpression() {
         int base = 4;
         float exponent = 3.4f;
 
@@ -152,7 +152,7 @@ public class PowTest {
     }
     
     @Test
-    void pow_givenintAndDouble_returnsPowExpression() {
+    void pow_givenIntAndDouble_returnsPowExpression() {
         int base = 4;
         double exponent = 1.2d;
 
@@ -162,7 +162,7 @@ public class PowTest {
     }
     
     @Test
-    void pow_givenfloatAndField_returnsPowExpression() {
+    void pow_givenFloatAndField_returnsPowExpression() {
         float base = 3.4f;
         Field exponent = new Field("someOtherField");
 
@@ -172,7 +172,7 @@ public class PowTest {
     }
     
     @Test
-    void pow_givenfloatAndNumberEvaluator_returnsPowExpression() {
+    void pow_givenFloatAndNumberEvaluator_returnsPowExpression() {
         float base = 3.4f;
         NumberEvaluator exponent = abs(-1);;
 
@@ -182,7 +182,7 @@ public class PowTest {
     }
     
     @Test
-    void pow_givenfloatAndInt_returnsPowExpression() {
+    void pow_givenFloatAndInt_returnsPowExpression() {
         float base = 3.4f;
         int exponent = 4;
 
@@ -192,7 +192,7 @@ public class PowTest {
     }
     
     @Test
-    void pow_givenfloatAndFloat_returnsPowExpression() {
+    void pow_givenFloatAndFloat_returnsPowExpression() {
         float base = 3.4f;
         float exponent = 3.4f;
 
@@ -202,7 +202,7 @@ public class PowTest {
     }
     
     @Test
-    void pow_givenfloatAndDouble_returnsPowExpression() {
+    void pow_givenFloatAndDouble_returnsPowExpression() {
         float base = 3.4f;
         double exponent = 1.2d;
 
@@ -212,7 +212,7 @@ public class PowTest {
     }
     
     @Test
-    void pow_givendoubleAndField_returnsPowExpression() {
+    void pow_givenDoubleAndField_returnsPowExpression() {
         double base = 1.2d;
         Field exponent = new Field("someOtherField");
 
@@ -222,7 +222,7 @@ public class PowTest {
     }
     
     @Test
-    void pow_givendoubleAndNumberEvaluator_returnsPowExpression() {
+    void pow_givenDoubleAndNumberEvaluator_returnsPowExpression() {
         double base = 1.2d;
         NumberEvaluator exponent = abs(-1);;
 
@@ -232,7 +232,7 @@ public class PowTest {
     }
     
     @Test
-    void pow_givendoubleAndInt_returnsPowExpression() {
+    void pow_givenDoubleAndInt_returnsPowExpression() {
         double base = 1.2d;
         int exponent = 4;
 
@@ -242,7 +242,7 @@ public class PowTest {
     }
     
     @Test
-    void pow_givendoubleAndFloat_returnsPowExpression() {
+    void pow_givenDoubleAndFloat_returnsPowExpression() {
         double base = 1.2d;
         float exponent = 3.4f;
 
@@ -252,7 +252,7 @@ public class PowTest {
     }
     
     @Test
-    void pow_givendoubleAndDouble_returnsPowExpression() {
+    void pow_givenDoubleAndDouble_returnsPowExpression() {
         double base = 1.2d;
         double exponent = 1.2d;
 

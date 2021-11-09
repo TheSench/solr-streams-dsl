@@ -123,7 +123,7 @@ public class SubTest {
     }
     
     @Test
-    void sub_givenintAndField_returnsSubExpression() {
+    void sub_givenIntAndField_returnsSubExpression() {
         int firstValue = 4;
         Field secondValue = new Field("someOtherField");
 
@@ -133,7 +133,7 @@ public class SubTest {
     }
     
     @Test
-    void sub_givenintAndNumberEvaluator_returnsSubExpression() {
+    void sub_givenIntAndNumberEvaluator_returnsSubExpression() {
         int firstValue = 4;
         NumberEvaluator secondValue = abs(-1);;
 
@@ -143,7 +143,7 @@ public class SubTest {
     }
     
     @Test
-    void sub_givenintAndInt_returnsSubExpression() {
+    void sub_givenIntAndInt_returnsSubExpression() {
         int firstValue = 4;
         int secondValue = 4;
 
@@ -153,7 +153,7 @@ public class SubTest {
     }
     
     @Test
-    void sub_givenintAndFloat_returnsSubExpression() {
+    void sub_givenIntAndFloat_returnsSubExpression() {
         int firstValue = 4;
         float secondValue = 3.4f;
 
@@ -163,7 +163,7 @@ public class SubTest {
     }
     
     @Test
-    void sub_givenintAndDouble_returnsSubExpression() {
+    void sub_givenIntAndDouble_returnsSubExpression() {
         int firstValue = 4;
         double secondValue = 1.2d;
 
@@ -173,7 +173,7 @@ public class SubTest {
     }
     
     @Test
-    void sub_givenfloatAndField_returnsSubExpression() {
+    void sub_givenFloatAndField_returnsSubExpression() {
         float firstValue = 3.4f;
         Field secondValue = new Field("someOtherField");
 
@@ -183,7 +183,7 @@ public class SubTest {
     }
     
     @Test
-    void sub_givenfloatAndNumberEvaluator_returnsSubExpression() {
+    void sub_givenFloatAndNumberEvaluator_returnsSubExpression() {
         float firstValue = 3.4f;
         NumberEvaluator secondValue = abs(-1);;
 
@@ -193,7 +193,7 @@ public class SubTest {
     }
     
     @Test
-    void sub_givenfloatAndInt_returnsSubExpression() {
+    void sub_givenFloatAndInt_returnsSubExpression() {
         float firstValue = 3.4f;
         int secondValue = 4;
 
@@ -203,7 +203,7 @@ public class SubTest {
     }
     
     @Test
-    void sub_givenfloatAndFloat_returnsSubExpression() {
+    void sub_givenFloatAndFloat_returnsSubExpression() {
         float firstValue = 3.4f;
         float secondValue = 3.4f;
 
@@ -213,7 +213,7 @@ public class SubTest {
     }
     
     @Test
-    void sub_givenfloatAndDouble_returnsSubExpression() {
+    void sub_givenFloatAndDouble_returnsSubExpression() {
         float firstValue = 3.4f;
         double secondValue = 1.2d;
 
@@ -223,7 +223,7 @@ public class SubTest {
     }
     
     @Test
-    void sub_givendoubleAndField_returnsSubExpression() {
+    void sub_givenDoubleAndField_returnsSubExpression() {
         double firstValue = 1.2d;
         Field secondValue = new Field("someOtherField");
 
@@ -233,7 +233,7 @@ public class SubTest {
     }
     
     @Test
-    void sub_givendoubleAndNumberEvaluator_returnsSubExpression() {
+    void sub_givenDoubleAndNumberEvaluator_returnsSubExpression() {
         double firstValue = 1.2d;
         NumberEvaluator secondValue = abs(-1);;
 
@@ -243,7 +243,7 @@ public class SubTest {
     }
     
     @Test
-    void sub_givendoubleAndInt_returnsSubExpression() {
+    void sub_givenDoubleAndInt_returnsSubExpression() {
         double firstValue = 1.2d;
         int secondValue = 4;
 
@@ -253,7 +253,7 @@ public class SubTest {
     }
     
     @Test
-    void sub_givendoubleAndFloat_returnsSubExpression() {
+    void sub_givenDoubleAndFloat_returnsSubExpression() {
         double firstValue = 1.2d;
         float secondValue = 3.4f;
 
@@ -263,7 +263,7 @@ public class SubTest {
     }
     
     @Test
-    void sub_givendoubleAndDouble_returnsSubExpression() {
+    void sub_givenDoubleAndDouble_returnsSubExpression() {
         double firstValue = 1.2d;
         double secondValue = 1.2d;
 

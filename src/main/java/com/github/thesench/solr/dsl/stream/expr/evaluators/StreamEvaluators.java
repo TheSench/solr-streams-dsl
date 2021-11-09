@@ -9,10 +9,6 @@ public class StreamEvaluators {
         throw new NotImplementedException();
     }
 
-    public static StreamExpression and() {
-        throw new NotImplementedException();
-    }
-
     public static StreamExpression anova() {
         throw new NotImplementedException();
     }
@@ -121,10 +117,6 @@ public class StreamEvaluators {
         throw new NotImplementedException();
     }
 
-    public static StreamExpression eor() {
-        throw new NotImplementedException();
-    }
-
     public static StreamExpression expMovingAge() {
         throw new NotImplementedException();
     }
@@ -169,14 +161,6 @@ public class StreamEvaluators {
         throw new NotImplementedException();
     }
 
-    public static StreamExpression gt() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression gteq() {
-        throw new NotImplementedException();
-    }
-
     public static StreamExpression hist() {
         throw new NotImplementedException();
     }
@@ -207,14 +191,6 @@ public class StreamEvaluators {
     }
 
     public static StreamExpression kolmogorovSmirnov() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression lt() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression lteq() {
         throw new NotImplementedException();
     }
 
@@ -254,15 +230,7 @@ public class StreamEvaluators {
         throw new NotImplementedException();
     }
 
-    public static StreamExpression not() {
-        throw new NotImplementedException();
-    }
-
     public static StreamExpression olsRegress() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression or() {
         throw new NotImplementedException();
     }
 
@@ -299,10 +267,6 @@ public class StreamEvaluators {
     }
 
     public static StreamExpression rev() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression round() {
         throw new NotImplementedException();
     }
 

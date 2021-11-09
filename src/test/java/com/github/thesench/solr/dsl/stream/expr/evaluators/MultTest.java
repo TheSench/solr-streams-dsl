@@ -123,7 +123,7 @@ public class MultTest {
     }
     
     @Test
-    void mult_givenintAndField_returnsMultExpression() {
+    void mult_givenIntAndField_returnsMultExpression() {
         int firstValue = 4;
         Field secondValue = new Field("someOtherField");
 
@@ -133,7 +133,7 @@ public class MultTest {
     }
     
     @Test
-    void mult_givenintAndNumberEvaluator_returnsMultExpression() {
+    void mult_givenIntAndNumberEvaluator_returnsMultExpression() {
         int firstValue = 4;
         NumberEvaluator secondValue = abs(-1);;
 
@@ -143,7 +143,7 @@ public class MultTest {
     }
     
     @Test
-    void mult_givenintAndInt_returnsMultExpression() {
+    void mult_givenIntAndInt_returnsMultExpression() {
         int firstValue = 4;
         int secondValue = 4;
 
@@ -153,7 +153,7 @@ public class MultTest {
     }
     
     @Test
-    void mult_givenintAndFloat_returnsMultExpression() {
+    void mult_givenIntAndFloat_returnsMultExpression() {
         int firstValue = 4;
         float secondValue = 3.4f;
 
@@ -163,7 +163,7 @@ public class MultTest {
     }
     
     @Test
-    void mult_givenintAndDouble_returnsMultExpression() {
+    void mult_givenIntAndDouble_returnsMultExpression() {
         int firstValue = 4;
         double secondValue = 1.2d;
 
@@ -173,7 +173,7 @@ public class MultTest {
     }
     
     @Test
-    void mult_givenfloatAndField_returnsMultExpression() {
+    void mult_givenFloatAndField_returnsMultExpression() {
         float firstValue = 3.4f;
         Field secondValue = new Field("someOtherField");
 
@@ -183,7 +183,7 @@ public class MultTest {
     }
     
     @Test
-    void mult_givenfloatAndNumberEvaluator_returnsMultExpression() {
+    void mult_givenFloatAndNumberEvaluator_returnsMultExpression() {
         float firstValue = 3.4f;
         NumberEvaluator secondValue = abs(-1);;
 
@@ -193,7 +193,7 @@ public class MultTest {
     }
     
     @Test
-    void mult_givenfloatAndInt_returnsMultExpression() {
+    void mult_givenFloatAndInt_returnsMultExpression() {
         float firstValue = 3.4f;
         int secondValue = 4;
 
@@ -203,7 +203,7 @@ public class MultTest {
     }
     
     @Test
-    void mult_givenfloatAndFloat_returnsMultExpression() {
+    void mult_givenFloatAndFloat_returnsMultExpression() {
         float firstValue = 3.4f;
         float secondValue = 3.4f;
 
@@ -213,7 +213,7 @@ public class MultTest {
     }
     
     @Test
-    void mult_givenfloatAndDouble_returnsMultExpression() {
+    void mult_givenFloatAndDouble_returnsMultExpression() {
         float firstValue = 3.4f;
         double secondValue = 1.2d;
 
@@ -223,7 +223,7 @@ public class MultTest {
     }
     
     @Test
-    void mult_givendoubleAndField_returnsMultExpression() {
+    void mult_givenDoubleAndField_returnsMultExpression() {
         double firstValue = 1.2d;
         Field secondValue = new Field("someOtherField");
 
@@ -233,7 +233,7 @@ public class MultTest {
     }
     
     @Test
-    void mult_givendoubleAndNumberEvaluator_returnsMultExpression() {
+    void mult_givenDoubleAndNumberEvaluator_returnsMultExpression() {
         double firstValue = 1.2d;
         NumberEvaluator secondValue = abs(-1);;
 
@@ -243,7 +243,7 @@ public class MultTest {
     }
     
     @Test
-    void mult_givendoubleAndInt_returnsMultExpression() {
+    void mult_givenDoubleAndInt_returnsMultExpression() {
         double firstValue = 1.2d;
         int secondValue = 4;
 
@@ -253,7 +253,7 @@ public class MultTest {
     }
     
     @Test
-    void mult_givendoubleAndFloat_returnsMultExpression() {
+    void mult_givenDoubleAndFloat_returnsMultExpression() {
         double firstValue = 1.2d;
         float secondValue = 3.4f;
 
@@ -263,7 +263,7 @@ public class MultTest {
     }
     
     @Test
-    void mult_givendoubleAndDouble_returnsMultExpression() {
+    void mult_givenDoubleAndDouble_returnsMultExpression() {
         double firstValue = 1.2d;
         double secondValue = 1.2d;
 
