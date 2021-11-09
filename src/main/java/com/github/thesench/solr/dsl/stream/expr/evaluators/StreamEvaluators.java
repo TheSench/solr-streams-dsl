@@ -161,14 +161,6 @@ public class StreamEvaluators {
         throw new NotImplementedException();
     }
 
-    public static StreamExpression gt() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression gteq() {
-        throw new NotImplementedException();
-    }
-
     public static StreamExpression hist() {
         throw new NotImplementedException();
     }
@@ -199,14 +191,6 @@ public class StreamEvaluators {
     }
 
     public static StreamExpression kolmogorovSmirnov() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression lt() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression lteq() {
         throw new NotImplementedException();
     }
 
@@ -283,10 +267,6 @@ public class StreamEvaluators {
     }
 
     public static StreamExpression rev() {
-        throw new NotImplementedException();
-    }
-
-    public static StreamExpression round() {
         throw new NotImplementedException();
     }
 
