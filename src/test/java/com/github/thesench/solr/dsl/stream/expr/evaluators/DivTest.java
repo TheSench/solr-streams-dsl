@@ -112,7 +112,7 @@ public class DivTest {
     }
     
     @Test
-    void div_givenintAndField_returnsDivExpression() {
+    void div_givenIntAndField_returnsDivExpression() {
         int dividend = 4;
         Field divisor = new Field("someOtherField");
 
@@ -122,7 +122,7 @@ public class DivTest {
     }
     
     @Test
-    void div_givenintAndNumberEvaluator_returnsDivExpression() {
+    void div_givenIntAndNumberEvaluator_returnsDivExpression() {
         int dividend = 4;
         NumberEvaluator divisor = abs(-1);
 
@@ -132,7 +132,7 @@ public class DivTest {
     }
     
     @Test
-    void div_givenintAndInt_returnsDivExpression() {
+    void div_givenIntAndInt_returnsDivExpression() {
         int dividend = 4;
         int divisor = 4;
 
@@ -142,7 +142,7 @@ public class DivTest {
     }
     
     @Test
-    void div_givenintAndFloat_returnsDivExpression() {
+    void div_givenIntAndFloat_returnsDivExpression() {
         int dividend = 4;
         float divisor = 3.4f;
 
@@ -152,7 +152,7 @@ public class DivTest {
     }
     
     @Test
-    void div_givenintAndDouble_returnsDivExpression() {
+    void div_givenIntAndDouble_returnsDivExpression() {
         int dividend = 4;
         double divisor = 1.2d;
 
@@ -162,7 +162,7 @@ public class DivTest {
     }
     
     @Test
-    void div_givenfloatAndField_returnsDivExpression() {
+    void div_givenFloatAndField_returnsDivExpression() {
         float dividend = 3.4f;
         Field divisor = new Field("someOtherField");
 
@@ -172,7 +172,7 @@ public class DivTest {
     }
     
     @Test
-    void div_givenfloatAndNumberEvaluator_returnsDivExpression() {
+    void div_givenFloatAndNumberEvaluator_returnsDivExpression() {
         float dividend = 3.4f;
         NumberEvaluator divisor = abs(-1);
 
@@ -182,7 +182,7 @@ public class DivTest {
     }
     
     @Test
-    void div_givenfloatAndInt_returnsDivExpression() {
+    void div_givenFloatAndInt_returnsDivExpression() {
         float dividend = 3.4f;
         int divisor = 4;
 
@@ -192,7 +192,7 @@ public class DivTest {
     }
     
     @Test
-    void div_givenfloatAndFloat_returnsDivExpression() {
+    void div_givenFloatAndFloat_returnsDivExpression() {
         float dividend = 3.4f;
         float divisor = 3.4f;
 
@@ -202,7 +202,7 @@ public class DivTest {
     }
     
     @Test
-    void div_givenfloatAndDouble_returnsDivExpression() {
+    void div_givenFloatAndDouble_returnsDivExpression() {
         float dividend = 3.4f;
         double divisor = 1.2d;
 
@@ -212,7 +212,7 @@ public class DivTest {
     }
     
     @Test
-    void div_givendoubleAndField_returnsDivExpression() {
+    void div_givenDoubleAndField_returnsDivExpression() {
         double dividend = 1.2d;
         Field divisor = new Field("someOtherField");
 
@@ -222,7 +222,7 @@ public class DivTest {
     }
     
     @Test
-    void div_givendoubleAndNumberEvaluator_returnsDivExpression() {
+    void div_givenDoubleAndNumberEvaluator_returnsDivExpression() {
         double dividend = 1.2d;
         NumberEvaluator divisor = abs(-1);
 
@@ -232,7 +232,7 @@ public class DivTest {
     }
     
     @Test
-    void div_givendoubleAndInt_returnsDivExpression() {
+    void div_givenDoubleAndInt_returnsDivExpression() {
         double dividend = 1.2d;
         int divisor = 4;
 
@@ -242,7 +242,7 @@ public class DivTest {
     }
     
     @Test
-    void div_givendoubleAndFloat_returnsDivExpression() {
+    void div_givenDoubleAndFloat_returnsDivExpression() {
         double dividend = 1.2d;
         float divisor = 3.4f;
 
@@ -252,7 +252,7 @@ public class DivTest {
     }
     
     @Test
-    void div_givendoubleAndDouble_returnsDivExpression() {
+    void div_givenDoubleAndDouble_returnsDivExpression() {
         double dividend = 1.2d;
         double divisor = 1.2d;
 

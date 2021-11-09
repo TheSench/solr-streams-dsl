@@ -112,7 +112,7 @@ public class ModTest {
     }
     
     @Test
-    void mod_givenintAndField_returnsDivExpression() {
+    void mod_givenIntAndField_returnsDivExpression() {
         int dividend = 4;
         Field divisor = new Field("someOtherField");
 
@@ -122,7 +122,7 @@ public class ModTest {
     }
     
     @Test
-    void mod_givenintAndNumberEvaluator_returnsDivExpression() {
+    void mod_givenIntAndNumberEvaluator_returnsDivExpression() {
         int dividend = 4;
         NumberEvaluator divisor = abs(-1);;
 
@@ -132,7 +132,7 @@ public class ModTest {
     }
     
     @Test
-    void mod_givenintAndInt_returnsDivExpression() {
+    void mod_givenIntAndInt_returnsDivExpression() {
         int dividend = 4;
         int divisor = 4;
 
@@ -142,7 +142,7 @@ public class ModTest {
     }
     
     @Test
-    void mod_givenintAndFloat_returnsDivExpression() {
+    void mod_givenIntAndFloat_returnsDivExpression() {
         int dividend = 4;
         float divisor = 3.4f;
 
@@ -152,7 +152,7 @@ public class ModTest {
     }
     
     @Test
-    void mod_givenintAndDouble_returnsDivExpression() {
+    void mod_givenIntAndDouble_returnsDivExpression() {
         int dividend = 4;
         double divisor = 1.2d;
 
@@ -162,7 +162,7 @@ public class ModTest {
     }
     
     @Test
-    void mod_givenfloatAndField_returnsDivExpression() {
+    void mod_givenFloatAndField_returnsDivExpression() {
         float dividend = 3.4f;
         Field divisor = new Field("someOtherField");
 
@@ -172,7 +172,7 @@ public class ModTest {
     }
     
     @Test
-    void mod_givenfloatAndNumberEvaluator_returnsDivExpression() {
+    void mod_givenFloatAndNumberEvaluator_returnsDivExpression() {
         float dividend = 3.4f;
         NumberEvaluator divisor = abs(-1);;
 
@@ -182,7 +182,7 @@ public class ModTest {
     }
     
     @Test
-    void mod_givenfloatAndInt_returnsDivExpression() {
+    void mod_givenFloatAndInt_returnsDivExpression() {
         float dividend = 3.4f;
         int divisor = 4;
 
@@ -192,7 +192,7 @@ public class ModTest {
     }
     
     @Test
-    void mod_givenfloatAndFloat_returnsDivExpression() {
+    void mod_givenFloatAndFloat_returnsDivExpression() {
         float dividend = 3.4f;
         float divisor = 3.4f;
 
@@ -202,7 +202,7 @@ public class ModTest {
     }
     
     @Test
-    void mod_givenfloatAndDouble_returnsDivExpression() {
+    void mod_givenFloatAndDouble_returnsDivExpression() {
         float dividend = 3.4f;
         double divisor = 1.2d;
 
@@ -212,7 +212,7 @@ public class ModTest {
     }
     
     @Test
-    void mod_givendoubleAndField_returnsDivExpression() {
+    void mod_givenDoubleAndField_returnsDivExpression() {
         double dividend = 1.2d;
         Field divisor = new Field("someOtherField");
 
@@ -222,7 +222,7 @@ public class ModTest {
     }
     
     @Test
-    void mod_givendoubleAndNumberEvaluator_returnsDivExpression() {
+    void mod_givenDoubleAndNumberEvaluator_returnsDivExpression() {
         double dividend = 1.2d;
         NumberEvaluator divisor = abs(-1);;
 
@@ -232,7 +232,7 @@ public class ModTest {
     }
     
     @Test
-    void mod_givendoubleAndInt_returnsDivExpression() {
+    void mod_givenDoubleAndInt_returnsDivExpression() {
         double dividend = 1.2d;
         int divisor = 4;
 
@@ -242,7 +242,7 @@ public class ModTest {
     }
     
     @Test
-    void mod_givendoubleAndFloat_returnsDivExpression() {
+    void mod_givenDoubleAndFloat_returnsDivExpression() {
         double dividend = 1.2d;
         float divisor = 3.4f;
 
@@ -252,7 +252,7 @@ public class ModTest {
     }
     
     @Test
-    void mod_givendoubleAndDouble_returnsDivExpression() {
+    void mod_givenDoubleAndDouble_returnsDivExpression() {
         double dividend = 1.2d;
         double divisor = 1.2d;
 

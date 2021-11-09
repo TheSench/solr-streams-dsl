@@ -123,7 +123,7 @@ public class AddTest {
     }
     
     @Test
-    void add_givenintAndField_returnsAddExpression() {
+    void add_givenIntAndField_returnsAddExpression() {
         int firstValue = 4;
         Field secondValue = new Field("someOtherField");
 
@@ -133,7 +133,7 @@ public class AddTest {
     }
     
     @Test
-    void add_givenintAndNumberEvaluator_returnsAddExpression() {
+    void add_givenIntAndNumberEvaluator_returnsAddExpression() {
         int firstValue = 4;
         NumberEvaluator secondValue = abs(-1);;
 
@@ -143,7 +143,7 @@ public class AddTest {
     }
     
     @Test
-    void add_givenintAndInt_returnsAddExpression() {
+    void add_givenIntAndInt_returnsAddExpression() {
         int firstValue = 4;
         int secondValue = 4;
 
@@ -153,7 +153,7 @@ public class AddTest {
     }
     
     @Test
-    void add_givenintAndFloat_returnsAddExpression() {
+    void add_givenIntAndFloat_returnsAddExpression() {
         int firstValue = 4;
         float secondValue = 3.4f;
 
@@ -163,7 +163,7 @@ public class AddTest {
     }
     
     @Test
-    void add_givenintAndDouble_returnsAddExpression() {
+    void add_givenIntAndDouble_returnsAddExpression() {
         int firstValue = 4;
         double secondValue = 1.2d;
 
@@ -173,7 +173,7 @@ public class AddTest {
     }
     
     @Test
-    void add_givenfloatAndField_returnsAddExpression() {
+    void add_givenFloatAndField_returnsAddExpression() {
         float firstValue = 3.4f;
         Field secondValue = new Field("someOtherField");
 
@@ -183,7 +183,7 @@ public class AddTest {
     }
     
     @Test
-    void add_givenfloatAndNumberEvaluator_returnsAddExpression() {
+    void add_givenFloatAndNumberEvaluator_returnsAddExpression() {
         float firstValue = 3.4f;
         NumberEvaluator secondValue = abs(-1);;
 
@@ -193,7 +193,7 @@ public class AddTest {
     }
     
     @Test
-    void add_givenfloatAndInt_returnsAddExpression() {
+    void add_givenFloatAndInt_returnsAddExpression() {
         float firstValue = 3.4f;
         int secondValue = 4;
 
@@ -203,7 +203,7 @@ public class AddTest {
     }
     
     @Test
-    void add_givenfloatAndFloat_returnsAddExpression() {
+    void add_givenFloatAndFloat_returnsAddExpression() {
         float firstValue = 3.4f;
         float secondValue = 3.4f;
 
@@ -213,7 +213,7 @@ public class AddTest {
     }
     
     @Test
-    void add_givenfloatAndDouble_returnsAddExpression() {
+    void add_givenFloatAndDouble_returnsAddExpression() {
         float firstValue = 3.4f;
         double secondValue = 1.2d;
 
@@ -223,7 +223,7 @@ public class AddTest {
     }
     
     @Test
-    void add_givendoubleAndField_returnsAddExpression() {
+    void add_givenDoubleAndField_returnsAddExpression() {
         double firstValue = 1.2d;
         Field secondValue = new Field("someOtherField");
 
@@ -233,7 +233,7 @@ public class AddTest {
     }
     
     @Test
-    void add_givendoubleAndNumberEvaluator_returnsAddExpression() {
+    void add_givenDoubleAndNumberEvaluator_returnsAddExpression() {
         double firstValue = 1.2d;
         NumberEvaluator secondValue = abs(-1);;
 
@@ -243,7 +243,7 @@ public class AddTest {
     }
     
     @Test
-    void add_givendoubleAndInt_returnsAddExpression() {
+    void add_givenDoubleAndInt_returnsAddExpression() {
         double firstValue = 1.2d;
         int secondValue = 4;
 
@@ -253,7 +253,7 @@ public class AddTest {
     }
     
     @Test
-    void add_givendoubleAndFloat_returnsAddExpression() {
+    void add_givenDoubleAndFloat_returnsAddExpression() {
         double firstValue = 1.2d;
         float secondValue = 3.4f;
 
@@ -263,7 +263,7 @@ public class AddTest {
     }
     
     @Test
-    void add_givendoubleAndDouble_returnsAddExpression() {
+    void add_givenDoubleAndDouble_returnsAddExpression() {
         double firstValue = 1.2d;
         double secondValue = 1.2d;
 
